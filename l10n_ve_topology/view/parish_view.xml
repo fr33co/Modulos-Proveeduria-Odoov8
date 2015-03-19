@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_parish_tree" model="ir.ui.view">
+            <field name="name">res.country.parish.tree</field>
+            <field name="model">res.country.parish</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Parish">
+                    <field name="municipalities_id"/>
+                    <field name="name"/>
+                    <field name="sector_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_parish_form" model="ir.ui.view">
+            <field name="name">res.country.parish.form</field>
+            <field name="model">res.country.parish</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Parish">
+                    <field name="name"/>
+                    <field name="municipalities_id"/>
+                    <field name="sector_ids"/>
+                </form>
+            </field>
+        </record>
+        
+    </data>
+</openerp>

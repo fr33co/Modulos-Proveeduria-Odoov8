@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <record id="view_zipcode_tree" model="ir.ui.view">
+            <field name="name">res.country.zipcode.tree</field>
+            <field name="model">res.country.zipcode</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Zipcode">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_zipcode_form" model="ir.ui.view">
+            <field name="name">res.country.zipcode.form</field>
+            <field name="model">res.country.zipcode</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Zipcode">
+                    <group colspan="2" >
+                    <field name="name"/>
+                    <newline/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -11,7 +11,7 @@
                 <xpath expr="//form/sheet/notebook/page/group/group" position="replace">
                     <group>
                         <field name="partner_id" readonly="1" required="0" groups="base.group_no_one"/>
-                        <field name="vat" string="R.I.F." on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, bank_ids)"/>
+                        <field name="vat" string="R.I.F." on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, bank_ids)"/>
                         <field name="sector_company" groups="base.group_no_one"/>
                         <label for="street" string="Address"/>
                         <div>
@@ -32,16 +32,16 @@
                             <field name="rml_header1" placeholder="e.g. Global Business Solutions"/>
                         </div>
                         <field name="website" widget="url" placeholder="e.g. www.openerp.com"
-                            on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, bank_ids)"/>
+                            on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, bank_ids)"/>
                     </group>
                 </xpath>
                 <xpath expr="//form/sheet/notebook/page/group/group[2]" position="replace">
                     <group>
                         <field name="inicio_operaciones"/>
                         <field name="base_modificaciones"/>
-                        <field name="phone" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, bank_ids)"/>
-                        <field name="fax" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, bank_ids)"/>
-                        <field name="email" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, bank_ids)"/>
+                        <field name="phone" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, bank_ids)"/>
+                        <field name="fax" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, bank_ids)"/>
+                        <field name="email" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, bank_ids)"/>
                     </group>
                 </xpath>
                 <xpath expr="//form/sheet/notebook/page/group[2]" position="replace">
@@ -70,7 +70,7 @@
                             <page string="Bank Accounts">
                                 <group>
                                     <field name="bank_ids" nolabel="1" context="{'default_company_id': active_id, 'footer_hide': False}"
-                                    on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, bank_ids)"/>
+                                    on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, company_registry, bank_ids)"/>
                                 </group>
                             </page>
 

@@ -26,8 +26,8 @@
 {
     "name" : "Topology for Venezuela",
     "version" : "0.3",
-    "depends" : ["base"],
-    "author" : "Vauxoo",
+    "depends" : ["base", "hr"],
+    "author" : "Angel A. Guadarrama B.",
     "description" : 
     """This module handles the topology according to the sectors of a city.
     Obtain information and managed all states, municipalities, parishes
@@ -35,7 +35,7 @@
     Adds new information sectors of the state, municipality, parish and 
     city to which he belongs. 
     """,
-    "website" : "http://vauxoo.com",
+    "website" : "http://www.batalloncanaimero.org.ve",
     "category" : "Generic Modules/Localization",
     "data" : [
                     "data/states_ve_data.xml",

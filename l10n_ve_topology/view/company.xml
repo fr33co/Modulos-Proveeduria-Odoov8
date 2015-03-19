@@ -42,6 +42,7 @@
                         <field name="phone" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, bank_ids)"/>
                         <field name="fax" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, bank_ids)"/>
                         <field name="email" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, bank_ids)"/>
+                        <field name="email" />
                     </group>
                 </xpath>
                 <xpath expr="//form/sheet/notebook/page/group[2]" position="replace">

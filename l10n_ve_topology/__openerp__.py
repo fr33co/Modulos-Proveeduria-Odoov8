@@ -26,7 +26,7 @@
 {
     "name" : "Topology for Venezuela",
     "version" : "0.3",
-    "depends" : ["base", "hr"],
+    "depends" : ["base"],
     "author" : "Angel A. Guadarrama B.",
     "description" : 
     """This module handles the topology according to the sectors of a city.

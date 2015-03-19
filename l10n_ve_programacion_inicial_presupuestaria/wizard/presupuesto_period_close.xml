@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_l10n_ve_presupuesto_periodocerrar" model="ir.ui.view">
+            <field name="name">l10n_ve_presupuesto_periodocerrar.form</field>
+            <field name="model">l10n_ve_presupuesto_periodocerrar</field>
+            <field name="arch" type="xml">
+                <form string="Cerrar periodo">
+                    <group string="Esta seguro?">
+                        <field name="sure"/>
+                    </group>
+                    <footer>
+                        <button string="Cerrar periodo" name="data_save" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancelar" class="oe_link" special="cancel"/>
+                    </footer>
+               </form>
+            </field>
+        </record>
+
+        <record id="action_l10n_ve_presupuesto_periodocerrar" model="ir.actions.act_window">
+            <field name="name">Cerrar periodo</field>
+            <field name="res_model">l10n_ve_presupuesto_periodocerrar</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_l10n_ve_presupuesto_periodocerrar"/>
+            <field name="target">new</field>
+        </record>
+
+        <record id="action_l10n_ve_presupuesto_periodocerrar_values" model="ir.values">
+            <field name="model_id" ref="model_l10n_ve_presupuesto_periodo" />
+            <field name="name">Cerrar periodo</field>
+            <field name="key2">client_action_multi</field>
+            <field name="value" eval="'ir.actions.act_window,' + str(ref('action_l10n_ve_presupuesto_periodocerrar'))"/>
+            <field name="key">action</field>
+            <field name="model">l10n_ve_presupuesto_periodo</field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <!-- Proyectos -->
+        <record model="ir.actions.act_window" id="proyectos_list_action">
+            <field name="name">Proyectos</field>
+            <field name="res_model">l10n_ve_presupuesto_proyectos</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="proyectos_tree_view">
+            <field name="name">l10n_ve_presupuesto_proyectos.tree</field>
+            <field name="model">l10n_ve_presupuesto_proyectos</field>
+            <field name="arch" type="xml">
+                <tree string="Proyectos">
+                    <field name="code"/>
+                    <field name="denominacion"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="proyectos_form_view">
+            <field name="name">l10n_ve_presupuesto_proyectos.form</field>
+            <field name="model">l10n_ve_presupuesto_proyectos</field>
+            <field name="arch" type="xml">
+                <form string="Proyectos">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="denominacion"/>
+                        </group>
+                        <field name="metas_ids">   
+                            <tree string="Metas">
+                                <field name="proyecto_id"/>
+                                <field name="meta"/>
+                                <field name="unidad_medida_id"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+       
+       
+        <menuitem id="proyectos_menu_final" name="Proyectos"
+            action="proyectos_list_action"
+            parent="programacion_inicial_menu"
+            sequence="20"/>
+        
+    </data>
+</openerp>
+

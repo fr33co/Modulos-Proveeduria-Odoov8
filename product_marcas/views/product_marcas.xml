@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- Product Marcas -->
+
+        <record model="ir.actions.act_window" id="producto_marcas_list_action">
+            <field name="name">Marcas de productos</field>
+            <field name="res_model">product.marcas</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="producto_marcas_tree_view">
+            <field name="name">producto_marcas.tree</field>
+            <field name="model">product.marcas</field>
+            <field name="arch" type="xml">
+                <tree string="Marcas de productos">
+                    <field name="marca"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="producto_marcas_form_view">
+            <field name="name">producto_marcas.form</field>
+            <field name="model">product.marcas</field>
+            <field name="arch" type="xml">
+                <form string="Marcas de productos">
+                    <sheet>
+                        <group>
+                            <field name="marca"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <menuitem id="producto_marcas_menu" name="Marca de productos"
+                  parent="base.menu_product" action="producto_marcas_list_action"
+                  sequence="20"/>
+        
+        <!-- Product template -->
+        <record model="ir.ui.view" id="product_marca_view_form">
+            <field name="name">product.template.marca.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <div>
+                        <h6><label for="marca" string="Marca del producto:"/></h6>
+                        <field name="marca"/>
+                    </div>
+                </field>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="product_marca_view_tree">
+            <field name="name">product.template.marca.tree</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="marca"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

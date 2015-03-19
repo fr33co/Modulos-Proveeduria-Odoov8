@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="programacion_inicial_list_action">
+            <field name="name">Programación Inicial</field>
+            <field name="res_model">l10n_ve_presupuesto_programacion_inicial</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="clasificador_presupuestario_tree_view">
+            <field name="name">l10n_ve_presupuesto_programacion_inicial.tree</field>
+            <field name="model">l10n_ve_presupuesto_programacion_inicial</field>
+            <field name="arch" type="xml">
+                <tree string="Programación Inicial del Organo">
+                    <field name="code"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="clasificador_presupuestario_form_view">
+            <field name="name">l10n_ve_presupuesto_programacion_inicial.form</field>
+            <field name="model">l10n_ve_presupuesto_programacion_inicial</field>
+            <field name="arch" type="xml">
+                <form string="Clasificador Presupuestario">
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="company_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+       
+        <menuitem id="programacion_inicial_menu" name="Programación del Órgano"
+                  parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="1"/>
+        <menuitem id="programacion_inicial_menu_final" name="Programación Inicial" parent="programacion_inicial_menu"
+                  action="programacion_inicial_list_action"/>
+    </data>
+</openerp>
+

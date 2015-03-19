@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="presupuesto_list_action">
+            <field name="name">Clasificador Presupuestario</field>
+            <field name="res_model">l10n_ve_clasificador_presupuestario</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="clasificador_presupuestario_tree_view">
+            <field name="name">clasificador_presupuestario.tree</field>
+            <field name="model">l10n_ve_clasificador_presupuestario</field>
+            <field name="field_parent">child_ids</field>
+            <field name="domain">[('parent_id','=',False)]</field>
+            <field name="arch" type="xml">
+                <tree string="Clasificador Presupuestario" colors="red:account_group=='Egresos';blue:account_group=='Recursos'">
+                    <field name="account_group" invisible="1"/>
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="clasificador_presupuestario_form_view">
+            <field name="name">clasificador_presupuestario.form</field>
+            <field name="model">l10n_ve_clasificador_presupuestario</field>
+            <field name="arch" type="xml">
+                <form string="Clasificador Presupuestario">
+                    <sheet>
+                        <group>
+                            <field name="account_group"/>
+                            <field name="parent_id"/>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="active"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="presupuesto_estructura_list_action">
+            <field name="name">Estructura del Clasificador Presupuestario</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_ve_clasificador_presupuestario</field>
+            <field name="view_type">tree</field>
+            <field name="domain">[('parent_id','=',False)]</field>
+        </record>
+        
+        <record model="ir.ui.view" id="estructura_clasificador_presupuestario_tree_view">
+            <field name="name">estructura_clasificador_presupuestario.tree</field>
+            <field name="model">l10n_ve_clasificador_presupuestario</field>
+            <field name="arch" type="xml">
+                <tree string="Clasificador Presupuestario" colors="orange:account_group=='Egresos';blue:account_group=='Recursos'">
+                    <field name="account_group"/>
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+       
+        <menuitem id="main_presupuesto_menu" name="Presupuesto"/>
+        <menuitem id="presupuesto_menu" name="Clasificador Presupuestario"
+                  parent="main_presupuesto_menu"  sequence="2"/>
+        <menuitem id="clasificador_menu" name="Cuentas" parent="presupuesto_menu"
+                  action="presupuesto_list_action"/>
+        <menuitem id="estructura_clasificador_menu" name="Estructura de cuentas" parent="presupuesto_menu"
+                  action="presupuesto_estructura_list_action"/>
+    </data>
+</openerp>
+

@@ -24,7 +24,6 @@
 ################################################################################
 
 from openerp.osv import osv, fields
-from tools.translate import _
 
 class res_country_city(osv.Model):
     '''

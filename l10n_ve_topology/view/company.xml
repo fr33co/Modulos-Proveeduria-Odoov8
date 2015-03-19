@@ -11,6 +11,8 @@
                 <xpath expr="//form/sheet/notebook/page/group/group" position="replace">
                     <group>
                         <field name="partner_id" readonly="1" required="0" groups="base.group_no_one"/>
+                        <field name="vat" string="R.I.F." on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, bank_ids)"/>
+                        <field name="sector_company" groups="base.group_no_one"/>
                         <label for="street" string="Address"/>
                         <div>
                             <field name="country_id" placeholder="Country" class="oe_no_button" options='{"no_open": True}' on_change="on_change_country(country_id)"/>
@@ -30,11 +32,70 @@
                             <field name="rml_header1" placeholder="e.g. Global Business Solutions"/>
                         </div>
                         <field name="website" widget="url" placeholder="e.g. www.openerp.com"
-                            on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, bank_ids)"/>
+                            on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, bank_ids)"/>
+                    </group>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group/group[2]" position="replace">
+                    <group>
+                        <field name="inicio_operaciones"/>
+                        <field name="base_modificaciones"/>
+                        <field name="phone" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, bank_ids)"/>
+                        <field name="fax" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, bank_ids)"/>
+                        <field name="email" on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, bank_ids)"/>
+                    </group>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page/group[2]" position="replace">
+                    <group>
+                        <notebook>
+                            <page string="Directores/Responsables">
+                                 <field name="responsables_ids" nolabel="1"  widget="one2many_list">
+                                    <tree>
+                                        <field name="cargo"/>
+                                        <field name="responsables"/>
+                                        <field name="telefonos"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Composición del patrimonio">
+                                <field name="accionistas_ids" nolabel="1"  widget="one2many_list">
+                                    <tree>
+                                        <field name="accionistas"/>
+                                        <field name="porcentaje"/>
+                                        <field name="capital_suscrito"/>
+                                        <field name="capital_pagado"/>
+                                        <field name="capital_nopagado"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Bank Accounts">
+                                <group>
+                                    <field name="bank_ids" nolabel="1" context="{'default_company_id': active_id, 'footer_hide': False}"
+                                    on_change="onchange_footer(custom_footer, phone, fax, email, website, vat, company_registry, bank_ids)"/>
+                                </group>
+                            </page>
+
+                        </notebook>
                     </group>
                 </xpath>
             </field>
         </record>
 
+        <record model="ir.ui.view" id="companies_form_add_vmac">
+            <field name="name">MisionVision</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page[@string='Configuration']" position="before">
+                    <page string="Actividad - Misión - Visión">
+                        <label for="activity" string="Actividad principal"/>
+                        <field name="activity" colspan="4" nolabel="1"/>
+                        <label for="mision" string="Misión de la compañia"/>
+                        <field name="mision" colspan="4" nolabel="1"/>
+                        <label for="vision" string="Visión de la compañia"/>
+                        <field name="vision" colspan="4" nolabel="1"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
     </data>
 </openerp>

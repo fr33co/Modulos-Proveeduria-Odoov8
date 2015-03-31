@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="codigo_list_action">
+            <field name="name">Presupuesto General</field>
+            <field name="res_model">presupuesto.codigo</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!--<field name="help" type="xml"></field>-->
+        </record>
+        
+        <record model="ir.ui.view" id="codigo_tree_view">
+            <field name="name">codigo.tree</field>
+            <field name="model">presupuesto.codigo</field>
+            <field name="arch" type="xml">
+                <tree string="codigo">
+                    <field name="codigo_codigo" string="Codigo:"/>
+                    <field name="nombre_codigo" string="Descripción:"/>
+                    <field name="monto_inic_codigo" string="Monto Asignado:" sum="Total Tax Included"/>
+                    <field name="monto_distribuido" string="Monto Distribuido:" sum="Total Tax Included"/>
+                    <field name="disponibilidad_codigo" string="Disponibilidad:" sum="Total Tax Included"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="codigo_form_view">
+            <field name="name">codigo.form</field>
+            <field name="model">presupuesto.codigo</field>
+            <field name="arch" type="xml" >
+                <form string="Formulario de Codigo" version="7.0">
+                    <sheet>
+                        <separator string="Presupuesto General"/>
+                        <table style="width:700px;">
+                            <td><group>
+                                <field name="codigo_a_asignar" on_change="construir_codigo_nombre(codigo_a_asignar,nombre_codigo)"/>
+                            </group></td>
+                            <td style="padding-left:30px;"><group>
+                                <field name="nombre_codigo" on_change="construir_codigo_nombre(codigo_a_asignar,nombre_codigo)"/>
+                                <field name="monto_inic_codigo" on_change="monto_inicial(monto_inic_codigo)"/>
+                                <field name="monto_distribuido" invisible='1'/>
+                                <field name="disponibilidad_codigo" invisible="1"/>
+                                <field name="codigo_nombre_codigo" invisible="1"/>
+                                <field name="codigo_codigo" invisible="1"/>
+                                <field name="codigo" invisible="1"/>
+                            </group></td>
+                        </table>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <menuitem id="programacion_inicial_menu" name="Programación del Órgano" parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="1"/>
+        <menuitem id="ente_menu" name="Ente" parent="programacion_inicial_menu" action="codigo_list_action"/>
+        
+        
+    </data>
+</openerp>

@@ -8,6 +8,3 @@ class Programacion_inicial(models.Model):
     
     code = fields.Char(string="Código del órgano", required=True)
     company_id = fields.Many2one('res.company', 'Organo')
-    
-    
-    

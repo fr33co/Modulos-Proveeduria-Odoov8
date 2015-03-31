@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="documento_credito_list_action">
+            <field name="name">Tipos de Documentos para Creditos</field>
+            <field name="res_model">presupuesto.documento_credito</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+           
+        </record>
+        
+        <record model="ir.ui.view" id="documento_credito_tree_view">
+            <field name="name">documento_credito.tree</field>
+            <field name="model">presupuesto.documento_credito</field>
+            <field name="arch" type="xml">
+                <tree string="Documento para Creditos Adicionales">
+                    <field name="documento"/>
+                    <field name="tipo"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="documento_credito_form_view">
+            <field name="name">documento_credito.form</field>
+            <field name="model">presupuesto.documento_credito</field>
+            <field name="arch" type="xml">
+                <form string="Formulario de Documentos para creditos"  version="7.0">
+                   <sheet>
+                        <separator string="Documentos para Creditos"/>
+                        <table style="width:700px;">
+                            <td><group>
+                                <field name="documento"/>
+                            </group></td>
+                            <td style="padding-left:30px;"><group>
+                                <field name="tipo"/>
+                            </group></td>
+                        </table>
+                    </sheet>
+                 </form>
+            </field>
+        </record>
+        <menuitem id="configuracion_presupuesto_menu" name="Configuración" parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="4"/>
+        <menuitem id="documento_credito_menu" name="Documentos para creditos"  parent="configuracion_presupuesto_menu" action="documento_credito_list_action" />
+    </data>
+</openerp>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="por_partida_especifica_list_action">
+            <field name="name">Distribución por Partida Especifica</field>
+            <field name="res_model">distribucion.especifica</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record model="ir.ui.view" id="distribucion_especifica_tree_view">
+            <field name="name">distribucion.especifica</field>
+            <field name="model">distribucion.especifica</field>
+            <field name="arch" type="xml">
+                <tree string="distribucion_especifica">
+                    <field name="serial" string="Codigo de Proyecto:"/>
+                   
+                    <field name="nombre_distribucion"  string="Descripción:"/>
+                    <field name="monto_inic_distribucion" string="Monto inicial:" sum="Total Tax Included"/>
+                    <field name="disponibilidad_distribucion" string="Disponibilidad:" sum="Total Tax Included"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="distribucion_especifica_form_view">
+            <field name="name">distribucion.form</field>
+            <field name="model">distribucion.especifica</field>
+            <field name="arch" type="xml" >
+                <form string="Formulario de distribucion especifica" version="7.0">
+                    <sheet>
+                        <separator string="DISTRIBUCIÓN POR PARTIDA ESPECIFICA"/>
+                        <table style="width:800px;">
+                            <td><group>
+                                <field name="codigo_padre"        on_change="construccion_multiple(codigo_padre,proyecto_padre,codigo_a_asignar,monto_inic_distribucion)"/>
+                                <field name="proyecto_padre"      on_change="construccion_multiple(codigo_padre,proyecto_padre,codigo_a_asignar,monto_inic_distribucion)"/>
+                                <field name="codigo_a_asignar"    on_change="construccion_multiple(codigo_padre,proyecto_padre,codigo_a_asignar,monto_inic_distribucion)"/>
+                            </group></td>
+                            <td style="padding-left:30px;"><group>
+                                <field name="nombre_distribucion" string='Nombre Partida' invisible='0'/>
+                                <field name="monto_inic_distribucion" on_change="construccion_multiple(codigo_padre,proyecto_padre,codigo_a_asignar,monto_inic_distribucion)"/>
+                                <field name="disponibilidad_distribucion" invisible='0'/>
+                               
+                                
+                               
+                               
+                                <field name="serial" invisible="0"/>
+                                
+                            </group></td>
+                            <tr><td><group></group></td></tr>
+                            <tr><td><group></group></td></tr>
+                            <tr><td><group></group></td></tr>
+                            <tr><td><group></group></td></tr>
+                            <tr><td><group><field name="dispo_proyecto"/></group></td></tr>
+                        </table>
+                    </sheet>  
+                </form>
+            </field>
+        </record>
+        
+ <menuitem id="distribucion_menu" name="Distribución Presupuestaria" parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="2"/>
+ <menuitem id="distribucion_especifica_menu" name="Distribucion"  parent="distribucion_menu" action="por_partida_especifica_list_action"/>
+        
+    </data>
+</openerp>

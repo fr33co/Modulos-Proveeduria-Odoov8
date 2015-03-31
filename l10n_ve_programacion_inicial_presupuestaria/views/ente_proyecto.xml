@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="ente_proyecto_list_action">
+            <field name="name">Ente Proyecto</field>
+            <field name="res_model">ente_proyecto</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="ente_proyecto_tree_view">
+            <field name="name">ente_proyecto.tree</field>
+            <field name="model">ente_proyecto</field>
+            <field name="field_parent">child_ids</field>
+            <field name="domain">[('parent_id','=',False)]</field>
+            <field name="arch" type="xml">
+                <tree string="Ente Proyecto">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="ente_proyecto_form_view">
+            <field name="name">ente_proyecto.form</field>
+            <field name="model">ente_proyecto</field>
+            <field name="arch" type="xml">
+                <form string="ENte Proyecto">
+                    <sheet>
+                        <group>
+                            <field name="parent_id"/>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="active"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="ente_estructura_list_action">
+            <field name="name">Estructura</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ente_proyecto</field>
+            <field name="view_type">tree</field>
+            <field name="domain">[('parent_id','=',False)]</field>
+        </record>
+        
+        <record model="ir.ui.view" id="estructura_ente_proyecto_tree_view">
+            <field name="name">estructura_ente_proyecto.tree</field>
+            <field name="model">ente_proyecto</field>
+            <field name="arch" type="xml">
+                <tree string="Estuctura Ente Proyecto">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+       
+        
+        <menuitem id="programacion_inicial_menu" name="Programación del Órgano" parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="1"/>
+        <menuitem id="ente_proyecto_menu" name="Crear Ente/Proyecto" parent="programacion_inicial_menu" action="ente_proyecto_list_action"/>
+        <menuitem id="estructura_menu" name="Estructura Ente/Proyecto" parent="programacion_inicial_menu" action="ente_estructura_list_action"/>
+    </data>
+</openerp>
+

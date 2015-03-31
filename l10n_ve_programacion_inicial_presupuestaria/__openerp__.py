@@ -20,9 +20,19 @@
 
     'data': [
         'wizard/presupuesto_period_close.xml',
-        'views/programacion_inicial.xml',
-        'views/proyectos.xml',
+        #'views/programacion_inicial.xml',
+        #'views/proyectos.xml',
         'views/configuracion.xml',
+        #'views/ente_proyecto.xml',
+        'views/creditos_adicionales.xml',
+        'views/traspaso.xml',
+        'views/compromisos.xml',
+        'views/codigo.xml',
+        'views/proyecto.xml',
+        'views/documento_traspaso.xml',
+        'views/documento_credito.xml',
+        'views/distribucion_especifica.xml',
+        
     ],
 }
 

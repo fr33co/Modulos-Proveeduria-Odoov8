@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="proyecto_list_action">
+            <field name="name">Proyecto</field>
+            <field name="res_model">presupuesto.proyecto</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!--<field name="help" type="html"></field>-->
+        </record>
+        
+        <record model="ir.ui.view" id="proyecto_tree_view">
+            <field name="name">proyecto.tree</field>
+            <field name="model">presupuesto.proyecto</field>
+            <field name="arch" type="xml">
+                <tree string="actividad">
+                    <field name="codigo_nombre_proyecto"  string="proyecto" invisible="1"/>
+                    <field name="codigo_proyecto" string="Codigo:"/>
+                    <field name="codigo_a_asignar" invisible="1"/>
+                    <field name="nombre_proyecto"  string="Descripción:"/>
+                    <field name="monto_inic_proyecto" string="Monto inicial:" sum="Total Tax Included"/>
+                    <field name="monto_distribuido" string="Monto Distribuido" sum="Total Tax Included"/>
+                    <field name="disponibilidad_proyecto" string="Disponibilidad:" sum="Total Tax Included"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="proyecto_form_view">
+            <field name="name">proyecto.form</field>
+            <field name="model">presupuesto.proyecto</field>
+            <field name="arch" type="xml" >
+                <form string="Formulario de proyecto" version="7.0">
+                    <sheet>
+                        <separator string="PROYECTO"/>
+                        <table style="width:700px;">
+                            <td><group>
+                                <field name="codigo_padre"        on_change="construccion_multiple(codigo_a_asignar,nombre_proyecto,codigo_padre,monto_inic_proyecto)"/>
+                                <field name="codigo_a_asignar"    on_change="construccion_multiple(codigo_a_asignar,nombre_proyecto,codigo_padre,monto_inic_proyecto)"/>
+                            </group></td>
+                            <td style="padding-left:30px;"><group>
+                                <field name="nombre_proyecto"     on_change="construccion_multiple(codigo_a_asignar,nombre_proyecto,codigo_padre,monto_inic_proyecto)"/>
+                                <field name="monto_inic_proyecto" on_change="construccion_multiple(codigo_a_asignar,nombre_proyecto,codigo_padre,monto_inic_proyecto)" />
+                                <field name="monto_distribuido" string="Monto Distribuido" invisible="1"/>
+                                <field name="disponibilidad_proyecto" invisible="1"/>
+                                <field name="codigo_nombre_proyecto" invisible="1"/>                       
+                                <field name="codigo_proyecto" invisible="1"/>
+                                <field name="codigo" invisible="1"/>
+                            </group></td>
+                            <tr><td><group></group></td></tr>
+                            <tr><td><group></group></td></tr>
+                            <tr><td><group></group></td></tr>
+                            <tr><td><group></group></td></tr>
+                            <tr><td><group><field name="dispo_ente"/></group></td></tr>
+                         </table>
+                    </sheet>            
+                </form>
+            </field>
+        </record>
+        
+ <menuitem id="programacion_inicial_menu" name="Programación del Órgano" parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="1"/>
+ <menuitem id="proyecto_menu" name="Acción/proyecto" parent="programacion_inicial_menu" action="proyecto_list_action"/>
+        
+    </data>
+</openerp>

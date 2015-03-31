@@ -1,2 +1,2 @@
-import config
 import models
+import config

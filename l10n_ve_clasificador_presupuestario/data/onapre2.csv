@@ -1,0 +1,481 @@
+"3.00.00.00.00","RECURSOS","3.00.00.00.00-RECURSOS",1
+"3.01.00.00.00","INGRESOS ORDINARIOS","3.01.00.00.00-INGRESOS ORDINARIOS",1
+"3.01.01.00.00","Impuestos dominio forestal","3.01.01.00.00-Impuestos dominio forestal",1
+"3.01.01.01.00","Aprovechamiento o explotación de productos forestales","3.01.01.01.00-Aprovechamiento o explotación de productos forestales",1
+"3.01.01.01.03","Permiso o autorización para la explotación o aprovechamiento de los productos forestales","3.01.01.01.03-Permiso o autorización para la explotación o aprovechamiento de los productos forestales",1
+"3.01.01.01.04","Autorización para deforestación","3.01.01.01.04-Autorización para deforestación",1
+"3.01.01.01.05","Autorización para movilizar productos forestales","3.01.01.01.05-Autorización para movilizar productos forestales",1
+"3.01.01.01.06","Participación por la explotación en zonas de reserva forestal","3.01.01.01.06-Participación por la explotación en zonas de reserva forestal",1
+"3.01.01.01.07","Ventajas especiales por recursos forestal","3.01.01.01.07-Ventajas especiales por recursos forestal",1
+"3.01.02.00.00","Impuestos dominio minero","3.01.02.00.00-Impuestos dominio minero",1
+"3.01.02.01.00","Renta de hidrocarburos","3.01.02.01.00-Renta de hidrocarburos",1
+"3.01.02.01.01","Impuesto de exploración de hidrocarburos","3.01.02.01.01-Impuesto de exploración de hidrocarburos",1
+"3.01.02.01.02","Impuesto inicial de explotación de hidrocarburos","3.01.02.01.02-Impuesto inicial de explotación de hidrocarburos",1
+"3.01.02.01.03","Impuesto superficial sobre hidrocarburos","3.01.02.01.03-Impuesto superficial sobre hidrocarburos",1
+"3.01.02.01.04","Regalía por explotación de petróleo","3.01.02.01.04-Regalía por explotación de petróleo",1
+"3.01.02.01.05","Regalía por explotación de gas","3.01.02.01.05-Regalía por explotación de gas",1
+"3.01.02.01.06","Impuesto de transporte de hidrocarburos","3.01.02.01.06-Impuesto de transporte de hidrocarburos",1
+"3.01.02.01.07","Ventajas especiales por hidrocarburos","3.01.02.01.07-Ventajas especiales por hidrocarburos",1
+"3.01.02.01.08","Impuesto de explotación de azufre","3.01.02.01.08-Impuesto de explotación de azufre",1
+"3.01.03.00.00","Impuestos directos","3.01.03.00.00-Impuestos directos",1
+"3.01.03.01.00","Impuesto sobre la renta","3.01.03.01.00-Impuesto sobre la renta",1
+"3.01.03.01.01","Impuesto a empresas de hidrocarburos","3.01.03.01.01-Impuesto a empresas de hidrocarburos",1
+"3.01.03.01.03","Reparos administrativos a empresas de hidrocarburos","3.01.03.01.03-Reparos administrativos a empresas de hidrocarburos",1
+"3.01.03.02.00","Impuesto sobre sucesiones, donaciones y demás ramos conexos","3.01.03.02.00-Impuesto sobre sucesiones, donaciones y demás ramos conexos",1
+"3.01.03.03.00","Impuesto a los activos empresariales","3.01.03.03.00-Impuesto a los activos empresariales",1
+"3.01.03.04.00","Reparos administrativos a impuesto sobre sucesiones, donaciones y demás ramos conexos","3.01.03.04.00-Reparos administrativos a impuesto sobre sucesiones, donaciones y demás ramos conexos",1
+"3.01.03.05.00","Reparos administrativos a impuesto a los activos empresariales","3.01.03.05.00-Reparos administrativos a impuesto a los activos empresariales",1
+"3.01.04.00.00","Impuestos indirectos","3.01.04.00.00-Impuestos indirectos",1
+"3.01.04.01.00","Régimen de aduanas","3.01.04.01.00-Régimen de aduanas",1
+"3.01.04.01.01","Impuesto de importaciones ordinarias","3.01.04.01.01-Impuesto de importaciones ordinarias",1
+"3.01.04.01.02","Impuesto de importación de bultos postales","3.01.04.01.02-Impuesto de importación de bultos postales",1
+"3.01.04.01.03","Impuesto de exportación","3.01.04.01.03-Impuesto de exportación",1
+"3.01.04.02.00","Sobre la producción y el consumo","3.01.04.02.00-Sobre la producción y el consumo",1
+"3.01.04.02.07","Impuesto sobre telecomunicaciones","3.01.04.02.07-Impuesto sobre telecomunicaciones",1
+"3.01.04.02.08","Derechos de registro inmobiliario","3.01.04.02.08-Derechos de registro inmobiliario",1
+"3.01.04.02.23","Impuesto al valor agregado sobre la importación de bienes y servicios","3.01.04.02.23-Impuesto al valor agregado sobre la importación de bienes y servicios",1
+"3.01.04.02.24","Impuesto al valor agregado sobre la producción, distribución y comercializaciónde bienes y servicio","3.01.04.02.24-Impuesto al valor agregado sobre la producción, distribución y comercializaciónde bienes y servicio",1
+"3.01.04.02.25","Impuesto al valor agregado sobre los hechos imponibles realizados por empresas públicas, institutos autónomos y demás entes descentralizados","3.01.04.02.25-Impuesto al valor agregado sobre los hechos imponibles realizados por empresas públicas, institutos autónomos y demás entes descentralizados",1
+"3.01.04.02.26","Reparos administrativos al impuesto al valor agregado","3.01.04.02.26-Reparos administrativos al impuesto al valor agregado",1
+"3.01.04.03.00","Inmuebles urbanos","3.01.04.03.00-Inmuebles urbanos",1
+"3.01.04.04.00","Participación en el impuesto a la propiedad territorial rural","3.01.04.04.00-Participación en el impuesto a la propiedad territorial rural",1
+"3.01.04.05.00","Patente de industria y comercio","3.01.04.05.00-Patente de industria y comercio",1
+"3.01.04.07.00","Propaganda comercial","3.01.04.07.00-Propaganda comercial",1
+"3.01.05.00.00","Ingresos por aportes y contribuciones","3.01.05.00.00-Ingresos por aportes y contribuciones",1
+"3.01.05.01.00","Aportes patronales a la seguridad social","3.01.05.01.00-Aportes patronales a la seguridad social",1
+"3.01.05.01.01","Aportes del sector privado","3.01.05.01.01-Aportes del sector privado",1
+"3.01.05.01.02","Aportes del sector público","3.01.05.01.02-Aportes del sector público",1
+"3.01.05.02.00","Contribuciones personales a la seguridad social","3.01.05.02.00-Contribuciones personales a la seguridad social",1
+"3.01.05.02.01","Contribuciones personales del sector privado","3.01.05.02.01-Contribuciones personales del sector privado",1
+"3.01.05.02.02","Contribuciones personales del sector público","3.01.05.02.02-Contribuciones personales del sector público",1
+"3.01.05.99.00","Otras contribuciones","3.01.05.99.00-Otras contribuciones",1
+"3.01.10.00.00","Ingresos no tributarios","3.01.10.00.00-Ingresos no tributarios",1
+"3.01.10.01.00","Ingresos por tasas","3.01.10.01.00-Ingresos por tasas",1
+"3.01.10.01.52","Mercado","3.01.10.01.52-Mercado",1
+"3.01.11.01.00","Sobre la plusvalía inmobiliaria","3.01.11.01.00-Sobre la plusvalía inmobiliaria",1
+"3.01.11.02.00","Contribuciones por mejoras","3.01.11.02.00-Contribuciones por mejoras",1
+"3.01.11.99.00","Otras contribuciones especiales","3.01.11.99.00-Otras contribuciones especiales",1
+"3.01.12.00.00","Diversos","3.01.12.00.00-Diversos",1
+"3.01.12.01.00","Intereses por demora","3.01.12.01.00-Intereses por demora",1
+"3.01.12.02.00","Reparos Fiscales","3.01.12.02.00-Reparos Fiscales",1
+"3.01.12.04.00","Diversos conceptos","3.01.12.04.00-Diversos conceptos",1
+"3.01.12.07.00","Juicios y costas procesales","3.01.12.07.00-Juicios y costas procesales",1
+"3.01.12.07.03","Responsabilidad fiscal","3.01.12.07.03-Responsabilidad fiscal",1
+"3.01.12.07.05","Indemnización por incumplimiento de contratos","3.01.12.07.05-Indemnización por incumplimiento de contratos",1
+"3.01.13.00.00","Ingresos por ventas de bienes y servicios de la administración pública","3.01.13.00.00-Ingresos por ventas de bienes y servicios de la administración pública",1
+"3.01.13.01.00","Ventas de bienes o servicios","3.01.13.01.00-Ventas de bienes o servicios",1
+"3.01.13.01.06","Venta de servicios","3.01.13.01.06-Venta de servicios",1
+"3.01.13.01.07","Otros ingresos","3.01.13.01.07-Otros ingresos",1
+"3.01.13.01.99","Otros ingresos por ventas de bienes y servicios de la administración pública","3.01.13.01.99-Otros ingresos por ventas de bienes y servicios de la administración pública",1
+"3.01.14.00.00","Ingresos de la propiedad","3.01.14.00.00-Ingresos de la propiedad",1
+"3.01.14.01.00","Intereses por préstamos concedidos","3.01.14.01.00-Intereses por préstamos concedidos",1
+"3.01.14.01.01","De préstamos concedidos al sector privado","3.01.14.01.01-De préstamos concedidos al sector privado",1
+"3.01.14.01.07","De préstamos concedidos a empresas públicas","3.01.14.01.07-De préstamos concedidos a empresas públicas",1
+"3.01.14.02.00","Intereses por dinero en depósito","3.01.14.02.00-Intereses por dinero en depósito",1
+"3.01.14.03.00","Intereses por títulos y valores","3.01.14.03.00-Intereses por títulos y valores",1
+"3.01.14.07.00","Participaciones comerciales e industriales","3.01.14.07.00-Participaciones comerciales e industriales",1
+"3.01.15.00.00","Ingresos de entidades federales por aportes","3.01.15.00.00-Ingresos de entidades federales por aportes",1
+"3.01.15.01.00","Situado constitucional","3.01.15.01.00-Situado constitucional",1
+"3.01.16.00.00","Ingresos por aportes a municipios","3.01.16.00.00-Ingresos por aportes a municipios",1
+"3.01.16.01.00","Situado municipal","3.01.16.01.00-Situado municipal",1
+"3.02.00.00.00","INGRESOS EXTRAORDINARIOS","3.02.00.00.00-INGRESOS EXTRAORDINARIOS",1
+"3.02.01.00.00","Endeudamiento público","3.02.01.00.00-Endeudamiento público",1
+"3.02.01.01.00","Emisión de títulos y contratación de préstamos internos","3.02.01.01.00-Emisión de títulos y contratación de préstamos internos",1
+"3.02.01.01.01","Colocación de deuda interna a corto plazo","3.02.01.01.01-Colocación de deuda interna a corto plazo",1
+"3.02.01.01.02","Colocación de deuda interna a largo plazo","3.02.01.01.02-Colocación de deuda interna a largo plazo",1
+"3.02.01.01.03","Obtención de préstamos a corto plazo","3.02.01.01.03-Obtención de préstamos a corto plazo",1
+"3.02.01.01.04","Obtención de préstamos a largo plazo","3.02.01.01.04-Obtención de préstamos a largo plazo",1
+"3.02.01.02.00","Emisión de títulos y contratación de préstamos externos","3.02.01.02.00-Emisión de títulos y contratación de préstamos externos",1
+"3.02.02.00.00","Reservas del Tesoro no comprometidas","3.02.02.00.00-Reservas del Tesoro no comprometidas",1
+"3.02.03.00.00","Aportes por transferencias de bienes específicos de las Entidades Federales","3.02.03.00.00-Aportes por transferencias de bienes específicos de las Entidades Federales",1
+"3.02.04.00.00","Aportes especiales a los Municipios","3.02.04.00.00-Aportes especiales a los Municipios",1
+"3.02.05.00.00","Contribuciones especiales","3.02.05.00.00-Contribuciones especiales",1
+"3.02.05.01.00 ","Contribuciones especiales","3.02.05.01.00 -Contribuciones especiales",1
+"3.02.06.00.00","Ingresos por operaciones diversas","3.02.06.00.00-Ingresos por operaciones diversas",1
+"3.02.06.01.00 ","Liquidación de organismos del sector público","3.02.06.01.00 -Liquidación de organismos del sector público",1
+"3.02.06.02.00 ","Ventas de bienes","3.02.06.02.00 -Ventas de bienes",1
+"3.02.06.03.00 ","Intereses sobre venta de bienes","3.02.06.03.00 -Intereses sobre venta de bienes",1
+"3.02.06.04.00 ","Redención de valores negociables adquiridos por el Estado","3.02.06.04.00 -Redención de valores negociables adquiridos por el Estado",1
+"3.02.06.05.00 ","Amortización sobre préstamos concedidos por el Estado","3.02.06.05.00 -Amortización sobre préstamos concedidos por el Estado",1
+"3.02.07.00.00","Impuestos a los débitos a cuentas mantenidas en instituciones financieras","3.02.07.00.00-Impuestos a los débitos a cuentas mantenidas en instituciones financieras",1
+"3.02.07.01.00 ","Impuestos a los débitos a cuentas mantenidas en instituciones financieras","3.02.07.01.00 -Impuestos a los débitos a cuentas mantenidas en instituciones financieras",1
+"3.02.08.00.00","Reintegro de fondos correspondientes a ejercicios anteriores","3.02.08.00.00-Reintegro de fondos correspondientes a ejercicios anteriores",1
+"3.02.09.00.00","Ingresos por aportes del Fondo de Inversión para la Estabilización Macroeconómica","3.02.09.00.00-Ingresos por aportes del Fondo de Inversión para la Estabilización Macroeconómica",1
+"3.02.99.00.00","Otros ingresos extraordinarios","3.02.99.00.00-Otros ingresos extraordinarios",1
+"3.03.00.00.00 ","INGRESOS DE OPERACIÓN","3.03.00.00.00 -INGRESOS DE OPERACIÓN",1
+"3.03.01.00.00","Venta bruta de bienes","3.03.01.00.00-Venta bruta de bienes",1
+"3.03.01.01.00","Venta de productos principales del sector primario","3.03.01.01.00-Venta de productos principales del sector primario",1
+"3.03.01.02.00","Venta de productos principales industriales","3.03.01.02.00-Venta de productos principales industriales",1
+"3.03.01.02.01","Venta Nacional al Detal","3.03.01.02.01-Venta Nacional al Detal",1
+"3.03.01.03.00","Ventas de productos principales no industriales","3.03.01.03.00-Ventas de productos principales no industriales",1
+"3.03.02.00.00","Venta bruta de servicios","3.03.02.00.00-Venta bruta de servicios",1
+"3.03.02.01.00","Ventas de servicios principales","3.03.02.01.00-Ventas de servicios principales",1
+"3.03.02.02.00","Ventas de otros servicios","3.03.02.02.00-Ventas de otros servicios",1
+"3.03.02.99.00","Otras ventas brutas de servicios","3.03.02.99.00-Otras ventas brutas de servicios",1
+"3.03.03.00.00","Ingresos financieros de instituciones financieras","3.03.03.00.00-Ingresos financieros de instituciones financieras",1
+"3.03.03.01.00","Ingresos financieros de instituciones financieras","3.03.03.01.00-Ingresos financieros de instituciones financieras",1
+"3.03.04.00.00","Ingresos de organismos productores de servicios","3.03.04.00.00-Ingresos de organismos productores de servicios",1
+"3.03.04.01.00","Ingresos de organismos productores de servicios","3.03.04.01.00-Ingresos de organismos productores de servicios",1
+"3.03.99.00.00","Otros ingresos de operación","3.03.99.00.00-Otros ingresos de operación",1
+"3.03.99.01.00","Otros ingresos de operación","3.03.99.01.00-Otros ingresos de operación",1
+"3.04.00.00.00","INGRESOS AJENOS A LA OPERACIÓN","3.04.00.00.00-INGRESOS AJENOS A LA OPERACIÓN",1
+"3.04.01.00.00","Subsidios para precios","3.04.01.00.00-Subsidios para precios",1
+"3.04.01.01.00","Subsidios para precios","3.04.01.01.00-Subsidios para precios",1
+"3.04.02.00.00","Incentivos a la exportación","3.04.02.00.00-Incentivos a la exportación",1
+"3.04.03.00.00","Trabajos para el activo fijo","3.04.03.00.00-Trabajos para el activo fijo",1
+"3.04.04.00.00","Ingresos por regalías a entes descentralizados públicos","3.04.04.00.00-Ingresos por regalías a entes descentralizados públicos",1
+"3.04.99.00.00","Otros ingresos ajenos a la operación","3.04.99.00.00-Otros ingresos ajenos a la operación",1
+"3.05.00.00.00","TRANSFERENCIAS","3.05.00.00.00-TRANSFERENCIAS",1
+"3.05.01.00.00","Transferencias para financiar gastos corrientes","3.05.01.00.00-Transferencias para financiar gastos corrientes",1
+"3.05.01.01.00","Del sector privado","3.05.01.01.00-Del sector privado",1
+"3.05.01.01.01","De unidades familiares","3.05.01.01.01-De unidades familiares",1
+"3.05.01.01.02","De instituciones privadas sin fines de lucro","3.05.01.01.02-De instituciones privadas sin fines de lucro",1
+"3.05.01.01.03","De empresas privadas","3.05.01.01.03-De empresas privadas",1
+"3.05.01.02.00","Del sector público","3.05.01.02.00-Del sector público",1
+"3.05.01.02.01","De la administración central","3.05.01.02.01-De la administración central",1
+"3.05.01.02.02","De entes descentralizados","3.05.01.02.02-De entes descentralizados",1
+"3.05.01.02.03","De empresas públicas no financieras","3.05.01.02.03-De empresas públicas no financieras",1
+"3.05.01.02.04","De instituciones públicas financieras","3.05.01.02.04-De instituciones públicas financieras",1
+"3.05.01.02.05","De gobiernos estadales","3.05.01.02.05-De gobiernos estadales",1
+"3.05.01.02.06","De empresas estadales","3.05.01.02.06-De empresas estadales",1
+"3.05.01.02.07","De gobiernos municipales","3.05.01.02.07-De gobiernos municipales",1
+"3.05.01.02.09","De servicios autónomos sin personalidad jurídica","3.05.01.02.09-De servicios autónomos sin personalidad jurídica",1
+"3.05.01.03.00","Del sector externo","3.05.01.03.00-Del sector externo",1
+"3.05.02.00.00","Transferencias para financiar gastos de capital","3.05.02.00.00-Transferencias para financiar gastos de capital",1
+"3.05.02.01.00","Del sector privado","3.05.02.01.00-Del sector privado",1
+"3.05.02.01.01","De unidades familiares","3.05.02.01.01-De unidades familiares",1
+"3.05.02.01.02","De instituciones privadas sin fines de lucro","3.05.02.01.02-De instituciones privadas sin fines de lucro",1
+"3.05.02.01.03","De empresas privadas","3.05.02.01.03-De empresas privadas",1
+"3.05.02.02.00","Del sector público","3.05.02.02.00-Del sector público",1
+"3.05.02.02.01","De la administración central","3.05.02.02.01-De la administración central",1
+"3.05.02.02.02","De entes descentralizados","3.05.02.02.02-De entes descentralizados",1
+"3.05.02.02.03","De empresas públicas no financieras","3.05.02.02.03-De empresas públicas no financieras",1
+"3.05.02.02.04","De instituciones públicas financieras","3.05.02.02.04-De instituciones públicas financieras",1
+"3.05.02.02.05","De gobiernos estadales","3.05.02.02.05-De gobiernos estadales",1
+"3.05.02.02.06","De empresas estadales","3.05.02.02.06-De empresas estadales",1
+"3.05.02.02.07","De gobiernos municipales","3.05.02.02.07-De gobiernos municipales",1
+"3.05.02.02.08","De empresas municipales","3.05.02.02.08-De empresas municipales",1
+"3.05.02.02.09","Servicios autónomos sin personalidad jurídica","3.05.02.02.09-Servicios autónomos sin personalidad jurídica",1
+"3.05.02.03.00","Del sector externo","3.05.02.03.00-Del sector externo",1
+"3.05.02.03.01","Del sector privado extranjero","3.05.02.03.01-Del sector privado extranjero",1
+"3.06.00.00.00","INGRESOS POR RECURSOS PROPIOS DE CAPITAL","3.06.00.00.00-INGRESOS POR RECURSOS PROPIOS DE CAPITAL",1
+"3.06.01.00.00","Ventas de activos fijos","3.06.01.00.00-Ventas de activos fijos",1
+"3.06.01.01.00","Venta de tierras y terrenos","3.06.01.01.00-Venta de tierras y terrenos",1
+"3.06.01.03.00","Venta de maquinarias y equipos","3.06.01.03.00-Venta de maquinarias y equipos",1
+"3.06.02.00.00","Venta de activos bienes intangibles","3.06.02.00.00-Venta de activos bienes intangibles",1
+"3.06.03.00.00","Ventas de existencias","3.06.03.00.00-Ventas de existencias",1
+"3.06.03.01.00","Ventas de existencias","3.06.03.01.00-Ventas de existencias",1
+"3.06.04.00.00","Depreciación y amortización acumulada","3.06.04.00.00-Depreciación y amortización acumulada",1
+"3.06.05.00.00","Venta de títulos y valores","3.06.05.00.00-Venta de títulos y valores",1
+"3.06.06.00.00","Venta de acciones y participaciones de capital","3.06.06.00.00-Venta de acciones y participaciones de capital",1
+"3.06.07.00.00","Recuperación de préstamos","3.06.07.00.00-Recuperación de préstamos",1
+"3.06.07.01.00","Recuperación de préstamos de corto plazo","3.06.07.01.00-Recuperación de préstamos de corto plazo",1
+"3.06.07.02.00","Recuperación de préstamos de largo plazo","3.06.07.02.00-Recuperación de préstamos de largo plazo",1
+"3.06.08.00.00","Disminución de inventarios","3.06.08.00.00-Disminución de inventarios",1
+"3.06.08.01.00 ","Disminución de inventarios de materia prima, materiales y suministros de producción","3.06.08.01.00 -Disminución de inventarios de materia prima, materiales y suministros de producción",1
+"3.06.08.02.00","Disminución de inventarios de productos terminados","3.06.08.02.00-Disminución de inventarios de productos terminados",1
+"3.06.08.03.00","Disminución de inventarios de productos en proceso","3.06.08.03.00-Disminución de inventarios de productos en proceso",1
+"3.06.08.04.00","Disminución de inventarios de repuestos","3.06.08.04.00-Disminución de inventarios de repuestos",1
+"3.06.08.05.00","Disminución de inventarios de mercancías","3.06.08.05.00-Disminución de inventarios de mercancías",1
+"3.07.00.00.00","DISMINUCIÓN DE OTROS ACTIVOS FINANCIEROS","3.07.00.00.00-DISMINUCIÓN DE OTROS ACTIVOS FINANCIEROS",1
+"3.07.01.00.00","Disminución de activos circulantes","3.07.01.00.00-Disminución de activos circulantes",1
+"3.07.01.01.00","Disminución de caja","3.07.01.01.00-Disminución de caja",1
+"3.07.01.02.00","Disminución de bancos","3.07.01.02.00-Disminución de bancos",1
+"3.07.01.04.00","Disminución de deudores","3.07.01.04.00-Disminución de deudores",1
+"3.07.01.09.00","Disminución de anticipos a proveedores","3.07.01.09.00-Disminución de anticipos a proveedores",1
+"3.07.02.00.00","Disminución de activos no circulantes","3.07.02.00.00-Disminución de activos no circulantes",1
+"3.07.02.01.00","Disminución de otros activos no circulantes","3.07.02.01.00-Disminución de otros activos no circulantes",1
+"3.07.02.07.00","Fondo de Estabilización Macroeconómica","3.07.02.07.00-Fondo de Estabilización Macroeconómica",1
+"3.07.02.08.00","Fondo de Ahorro Intergeneracional","3.07.02.08.00-Fondo de Ahorro Intergeneracional",1
+"3.07.03.00.00","Disminución de revaluación de activos","3.07.03.00.00-Disminución de revaluación de activos",1
+"3.08.00.00.00","INCREMENTO DE PASIVOS","3.08.00.00.00-INCREMENTO DE PASIVOS",1
+"3.08.01.00.00","Incremento de pasivos circulantes","3.08.01.00.00-Incremento de pasivos circulantes",1
+"3.08.01.01.00","Incremento de cuentas a pagar","3.08.01.01.00-Incremento de cuentas a pagar",1
+"3.08.01.01.01","Incremento de proveedores","3.08.01.01.01-Incremento de proveedores",1
+"3.08.01.01.03","Incremento de sueldos a pagar","3.08.01.01.03-Incremento de sueldos a pagar",1
+"3.08.02.00.00","Incremento de otros pasivos","3.08.02.00.00-Incremento de otros pasivos",1
+"3.08.02.01.00","Incremento de intereses por pagar","3.08.02.01.00-Incremento de intereses por pagar",1
+"3.08.03.00.00","Incremento de pasivos a mediano y largo plazo","3.08.03.00.00-Incremento de pasivos a mediano y largo plazo",1
+"3.09.00.00.00","INCREMENTO DE PATRIMONIO","3.09.00.00.00-INCREMENTO DE PATRIMONIO",1
+"3.09.01.00.00","Incremento de capital","3.09.01.00.00-Incremento de capital",1
+"3.09.01.01.00","Incremento de capital social","3.09.01.01.00-Incremento de capital social",1
+"3.09.02.00.00","Incremento de reservas de capital","3.09.02.00.00-Incremento de reservas de capital",1
+"3.09.03.00.00","Incremento de resultados acumulados","3.09.03.00.00-Incremento de resultados acumulados",1
+"3.10.00.00.00","DEVOLUCIÓN DE FONDOS CORRESPONDIENTES AL EJERCICIO VIGENTE","3.10.00.00.00-DEVOLUCIÓN DE FONDOS CORRESPONDIENTES AL EJERCICIO VIGENTE",1
+"3.10.01.00.00","Devolución de fondos efectuados por particulares","3.10.01.00.00-Devolución de fondos efectuados por particulares",1
+"3.10.02.00.00","Devolución de fondos efectuados por cuentadantes","3.10.02.00.00-Devolución de fondos efectuados por cuentadantes",1
+"3.10.03.00.00","Devolución de fondos efectuados por organismos públicos, provenientes de bonos de exportación","3.10.03.00.00-Devolución de fondos efectuados por organismos públicos, provenientes de bonos de exportación",1
+"3.10.99.00.00","Devolución de fondos efectuados por organismos públicos, provenientes de otros conceptos","3.10.99.00.00-Devolución de fondos efectuados por organismos públicos, provenientes de otros conceptos",1
+"4.00.00.00.00","EGRESOS","4.00.00.00.00-EGRESOS",1
+"4.01.00.00.00 ","GASTOS DE PERSONAL","4.01.00.00.00 -GASTOS DE PERSONAL",1
+"4.01.01.00.00","Sueldos, salarios y otras retribuciones","4.01.01.00.00-Sueldos, salarios y otras retribuciones",1
+"4.01.01.01.00","Sueldos básicos personal fijo a tiempo completo","4.01.01.01.00-Sueldos básicos personal fijo a tiempo completo",1
+"4.01.01.01.01","Sueldo de Empleados","4.01.01.01.01-Sueldo de Empleados",1
+"4.01.01.01.02","Sueldo de Directivos","4.01.01.01.02-Sueldo de Directivos",1
+"4.01.01.02.00","Sueldos básicos personal fijo a tiempo parcial","4.01.01.02.00-Sueldos básicos personal fijo a tiempo parcial",1
+"4.01.01.03.00","Suplencias a empleados","4.01.01.03.00-Suplencias a empleados",1
+"4.01.01.06.00","Remuneraciones al personal contratado","4.01.01.06.00-Remuneraciones al personal contratado",1
+"4.01.02.00.00","Compensaciones previstas en las escalas de sueldos y salarios","4.01.02.00.00-Compensaciones previstas en las escalas de sueldos y salarios",1
+"4.01.02.01.00","Compensaciones previstas en las escalas de sueldos al personal fijo a tiempo completo","4.01.02.01.00-Compensaciones previstas en las escalas de sueldos al personal fijo a tiempo completo",1
+"4.01.02.02.00","Compensaciones previstas en las escalas de sueldos al personal fijo a tiempo parcial","4.01.02.02.00-Compensaciones previstas en las escalas de sueldos al personal fijo a tiempo parcial",1
+"4.01.02.03.00","Compensaciones previstas en las escalas de salarios","4.01.02.03.00-Compensaciones previstas en las escalas de salarios",1
+"4.01.03.00.00","Primas a empleados, obreros y personal militar","4.01.03.00.00-Primas a empleados, obreros y personal militar",1
+"4.01.03.01.00","Primas por mérito a empleados","4.01.03.01.00-Primas por mérito a empleados",1
+"4.01.03.01.01","Bono de Cargo","4.01.03.01.01-Bono de Cargo",1
+"4.01.03.01.02","Bono de Responsabilidad","4.01.03.01.02-Bono de Responsabilidad",1
+"4.01.03.02.00","Primas de transporte a empleados","4.01.03.02.00-Primas de transporte a empleados",1
+"4.01.03.02.01","Bono de Transporte","4.01.03.02.01-Bono de Transporte",1
+"4.01.03.03.00","Primas por hogar a empleados","4.01.03.03.00-Primas por hogar a empleados",1
+"4.01.03.04.00","Primas por hijos a empleados","4.01.03.04.00-Primas por hijos a empleados",1
+"4.01.03.05.00","Primas por alquileres a empleados","4.01.03.05.00-Primas por alquileres a empleados",1
+"4.01.03.06.00","Primas por residencia a empleados","4.01.03.06.00-Primas por residencia a empleados",1
+"4.01.03.07.00","Primas por categoría de escuelas a empleados","4.01.03.07.00-Primas por categoría de escuelas a empleados",1
+"4.01.03.09.00","Primas personal servicio exterior","4.01.03.09.00-Primas personal servicio exterior",1
+"4.01.03.11.00","Primas por mérito a obreros","4.01.03.11.00-Primas por mérito a obreros",1
+"4.01.03.12.00","Primas por hogar a obreros","4.01.03.12.00-Primas por hogar a obreros",1
+"4.01.03.98.00","Otras primas a empleados","4.01.03.98.00-Otras primas a empleados",1
+"4.01.03.99.00","Otras primas a obreros","4.01.03.99.00-Otras primas a obreros",1
+"4.01.04.00.00","Complementos de sueldos y salarios","4.01.04.00.00-Complementos de sueldos y salarios",1
+"4.01.04.01.00","Complemento por horas extraordinarias o por sobre tiempo a empleados","4.01.04.01.00-Complemento por horas extraordinarias o por sobre tiempo a empleados",1
+"4.01.04.01.01","Horas Extras Diurnas","4.01.04.01.01-Horas Extras Diurnas",1
+"4.01.04.02.00","Complemento por trabajo nocturno a empleados","4.01.04.02.00-Complemento por trabajo nocturno a empleados",1
+"4.01.04.02.01","Horas Extras Nocturnas","4.01.04.02.01-Horas Extras Nocturnas",1
+"4.01.04.03.00","Complemento por gastos de alimentación a empleados","4.01.04.03.00-Complemento por gastos de alimentación a empleados",1
+"4.01.04.03.01","Bono de Alimentación","4.01.04.03.01-Bono de Alimentación",1
+"4.01.04.04.00","Complemento por gastos de representación a empleados","4.01.04.04.00-Complemento por gastos de representación a empleados",1
+"4.01.04.05.00","Bono vacacional a empleados","4.01.04.05.00-Bono vacacional a empleados",1
+"4.01.04.06.00","Bonificación a empleados","4.01.04.06.00-Bonificación a empleados",1
+"4.01.04.14.00","Bono vacacional a obreros","4.01.04.14.00-Bono vacacional a obreros",1
+"4.01.04.17.00","Bono a la alimentación y transporte a empleados","4.01.04.17.00-Bono a la alimentación y transporte a empleados",1
+"4.01.04.18.00","Bono a la alimentación y transporte a obreros","4.01.04.18.00-Bono a la alimentación y transporte a obreros",1
+"4.01.05.00.00","Aguinaldos, utilidades y bonificación legal a empleados, obreros, personal militar y parlamentarios","4.01.05.00.00-Aguinaldos, utilidades y bonificación legal a empleados, obreros, personal militar y parlamentarios",1
+"4.01.05.01.00","Aguinaldos a empleados","4.01.05.01.00-Aguinaldos a empleados",1
+"4.01.05.02.00","Utilidades legales y convencionales a empleados","4.01.05.02.00-Utilidades legales y convencionales a empleados",1
+"4.01.05.03.00","Aguinaldos a obreros","4.01.05.03.00-Aguinaldos a obreros",1
+"4.01.05.04.00","Utilidades legales y convencionales a obreros","4.01.05.04.00-Utilidades legales y convencionales a obreros",1
+"4.01.06.00.00","Aportes patronales por empleados, obreros, personal militar y parlamentarios","4.01.06.00.00-Aportes patronales por empleados, obreros, personal militar y parlamentarios",1
+"4.01.06.01.00","Aporte patronal al Instituto Venezolano de los Seguros Sociales (IVSS), por empleados","4.01.06.01.00-Aporte patronal al Instituto Venezolano de los Seguros Sociales (IVSS), por empleados",1
+"4.01.06.01.01","Contribuciones I.V.S.S","4.01.06.01.01-Contribuciones I.V.S.S",1
+"4.01.06.03.00","Aporte patronal al Fondo de Jubilaciones por empleados","4.01.06.03.00-Aporte patronal al Fondo de Jubilaciones por empleados",1
+"4.01.06.04.00","Aporte patronal al Fondo de Seguro de Paro Forzoso por empleados","4.01.06.04.00-Aporte patronal al Fondo de Seguro de Paro Forzoso por empleados",1
+"4.01.06.05.00","Aporte patronal al Fondo de Ahorro Habitacional por empleados","4.01.06.05.00-Aporte patronal al Fondo de Ahorro Habitacional por empleados",1
+"4.01.06.05.01","Contribuciones F.A.O.V","4.01.06.05.01-Contribuciones F.A.O.V",1
+"4.01.06.06.00","Aporte patronal al Instituto Venezolano de los Seguros Sociales (IVSS) por obreros","4.01.06.06.00-Aporte patronal al Instituto Venezolano de los Seguros Sociales (IVSS) por obreros",1
+"4.01.06.07.00","Aporte patronal al Fondo de Jubilaciones por obreros","4.01.06.07.00-Aporte patronal al Fondo de Jubilaciones por obreros",1
+"4.01.06.08.00","Aporte patronal al Fondo de Seguro de Paro Forzoso por obreros","4.01.06.08.00-Aporte patronal al Fondo de Seguro de Paro Forzoso por obreros",1
+"4.01.07.00.00","Asistencia socio-económica a empleados, obreros y personal militar","4.01.07.00.00-Asistencia socio-económica a empleados, obreros y personal militar",1
+"4.01.07.01.00","Capacitación y adiestramiento a empleados","4.01.07.01.00-Capacitación y adiestramiento a empleados",1
+"4.01.07.02.00","Becas a empleados","4.01.07.02.00-Becas a empleados",1
+"4.01.07.04.00","Ayudas por nacimiento de hijos a empleados","4.01.07.04.00-Ayudas por nacimiento de hijos a empleados",1
+"4.01.07.07.00","Aporte patronal a cajas de ahorro por empleados","4.01.07.07.00-Aporte patronal a cajas de ahorro por empleados",1
+"4.01.08.00.00","Prestaciones sociales y otras indemnizaciones a empleados, obreros y parlamentarios","4.01.08.00.00-Prestaciones sociales y otras indemnizaciones a empleados, obreros y parlamentarios",1
+"4.01.08.01.00","Prestaciones sociales y otras indemnizaciones a empleados","4.01.08.01.00-Prestaciones sociales y otras indemnizaciones a empleados",1
+"4.01.08.02.00","Prestaciones sociales y otras indemnizaciones a obreros","4.01.08.02.00-Prestaciones sociales y otras indemnizaciones a obreros",1
+"4.01.08.03.00","Prestaciones sociales y otras indemnizaciones al personal contratado","4.01.08.03.00-Prestaciones sociales y otras indemnizaciones al personal contratado",1
+"4.01.09.00.00","Capacitación y adiestramiento realizado por personal del organismo","4.01.09.00.00-Capacitación y adiestramiento realizado por personal del organismo",1
+"4.01.97.00.00","Otros gastos del personal militar","4.01.97.00.00-Otros gastos del personal militar",1
+"4.01.98.00.00","Otros gastos de personal empleados","4.01.98.00.00-Otros gastos de personal empleados",1
+"4.01.99.00.00","Otros gastos de personal obreros","4.01.99.00.00-Otros gastos de personal obreros",1
+"4.02.00.00.00","MATERIALES Y SUMINISTROS","4.02.00.00.00-MATERIALES Y SUMINISTROS",1
+"4.02.01.00.00","Productos alimenticios y agropecuarios","4.02.01.00.00-Productos alimenticios y agropecuarios",1
+"4.02.01.01.00","Alimentos y bebidas para personas","4.02.01.01.00-Alimentos y bebidas para personas",1
+"4.02.02.00.00","Productos de minas y canteras","4.02.02.00.00-Productos de minas y canteras",1
+"4.02.03.00.00","Textiles y vestuarios","4.02.03.00.00-Textiles y vestuarios",1
+"4.02.03.01.00","Textiles","4.02.03.01.00-Textiles",1
+"4.02.03.03.00","Calzados","4.02.03.03.00-Calzados",1
+"4.02.04.00.00","Productos de cuero y caucho","4.02.04.00.00-Productos de cuero y caucho",1
+"4.02.05.00.00","Productos de papel, cartón e impresos","4.02.05.00.00-Productos de papel, cartón e impresos",1
+"4.02.05.03.00","Productos de papel y cartón para oficina","4.02.05.03.00-Productos de papel y cartón para oficina",1
+"4.02.05.07.00","Productos de papel y cartón para computación","4.02.05.07.00-Productos de papel y cartón para computación",1
+"4.02.05.08.00","Productos de papel y cartón para la imprenta y reproducción","4.02.05.08.00-Productos de papel y cartón para la imprenta y reproducción",1
+"4.02.06.00.00","Productos químicos y derivados","4.02.06.00.00-Productos químicos y derivados",1
+"4.02.06.08.00","Productos plásticos","4.02.06.08.00-Productos plásticos",1
+"4.02.07.00.00","Productos minerales no metálicos","4.02.07.00.00-Productos minerales no metálicos",1
+"4.02.08.00.00","Productos metálicos","4.02.08.00.00-Productos metálicos",1
+"4.02.09.00.00","Productos de madera","4.02.09.00.00-Productos de madera",1
+"4.02.10.00.00","Productos varios y útiles diversos","4.02.10.00.00-Productos varios y útiles diversos",1
+"4.02.10.02.00","Juguetes","4.02.10.02.00-Juguetes",1
+"4.02.10.03.00","Materiales y útiles de limpieza y aseo","4.02.10.03.00-Materiales y útiles de limpieza y aseo",1
+"4.02.10.06.00","Útiles de escritorio, oficina y materiales de instrucción","4.02.10.06.00-Útiles de escritorio, oficina y materiales de instrucción",1
+"4.02.99.00.00","Otros materiales y suministros","4.02.99.00.00-Otros materiales y suministros",1
+"4.03.00.00.00","SERVICIOS NO PERSONALES","4.03.00.00.00-SERVICIOS NO PERSONALES",1
+"4.03.01.00.00","Alquileres de inmuebles","4.03.01.00.00-Alquileres de inmuebles",1
+"4.03.02.00.00","Alquileres de equipos","4.03.02.00.00-Alquileres de equipos",1
+"4.03.03.00.00","Servicios básicos","4.03.03.00.00-Servicios básicos",1
+"4.03.03.01.00","Electricidad","4.03.03.01.00-Electricidad",1
+"4.03.03.02.00","Gas","4.03.03.02.00-Gas",1
+"4.03.03.03.00","Agua","4.03.03.03.00-Agua",1
+"4.03.03.04.00","Teléfonos","4.03.03.04.00-Teléfonos",1
+"4.03.03.05.00","Servicio de comunicaciones","4.03.03.05.00-Servicio de comunicaciones",1
+"4.03.03.06.00","Servicio de aseo urbano y domiciliario","4.03.03.06.00-Servicio de aseo urbano y domiciliario",1
+"4.03.03.99.00","Otros servicios básicos","4.03.03.99.00-Otros servicios básicos",1
+"4.03.04.00.00","Servicios de transporte y almacenaje","4.03.04.00.00-Servicios de transporte y almacenaje",1
+"4.03.05.00.00","Servicios de información, impresión y relaciones públicas","4.03.05.00.00-Servicios de información, impresión y relaciones públicas",1
+"4.03.06.00.00","Primas y otros gastos de seguros y comisiones","4.03.06.00.00-Primas y otros gastos de seguros y comisiones",1
+"4.03.07.00.00","Viáticos y pasajes","4.03.07.00.00-Viáticos y pasajes",1
+"4.03.08.00.00","Servicios profesionales y técnicos","4.03.08.00.00-Servicios profesionales y técnicos",1
+"4.03.09.00.00","Conservación y reparaciones menores de maquinarias y equipos","4.03.09.00.00-Conservación y reparaciones menores de maquinarias y equipos",1
+"4.03.10.00.00","Conservación y reparaciones menores de inmuebles","4.03.10.00.00-Conservación y reparaciones menores de inmuebles",1
+"4.03.11.00.00","Construcciones temporales","4.03.11.00.00-Construcciones temporales",1
+"4.03.12.00.00","Servicios fiscales","4.03.12.00.00-Servicios fiscales",1
+"4.03.13.00.00","Servicios de construcción de edificaciones para la venta","4.03.13.00.00-Servicios de construcción de edificaciones para la venta",1
+"4.03.14.00.00","Servicios de acuñación de moneda","4.03.14.00.00-Servicios de acuñación de moneda",1
+"4.03.15.00.00","Servicios de diversión, esparcimiento y culturales","4.03.15.00.00-Servicios de diversión, esparcimiento y culturales",1
+"4.03.16.00.00","Servicios de gestión administrativa prestados por organismos de asistencia técnica","4.03.16.00.00-Servicios de gestión administrativa prestados por organismos de asistencia técnica",1
+"4.03.17.00.00","Impuesto al valor agregado","4.03.17.00.00-Impuesto al valor agregado",1
+"4.03.99.00.00","Otros servicios no personales","4.03.99.00.00-Otros servicios no personales",1
+"4.04.00.00.00","ACTIVOS REALES","4.04.00.00.00-ACTIVOS REALES",1
+"4.04.01.00.00","Repuestos y reparaciones mayores","4.04.01.00.00-Repuestos y reparaciones mayores",1
+"4.04.01.01.00","Repuestos mayores","4.04.01.01.00-Repuestos mayores",1
+"4.04.01.01.08","Repuestos mayores para equipos de computación","4.04.01.01.08-Repuestos mayores para equipos de computación",1
+"4.04.02.00.00","Conservaciones, ampliaciones y mejoras","4.04.02.00.00-Conservaciones, ampliaciones y mejoras",1
+"4.04.03.00.00","Maquinarias y demás equipos de construcción, campo, industria y taller","4.04.03.00.00-Maquinarias y demás equipos de construcción, campo, industria y taller",1
+"4.04.04.00.00","Equipos de transporte, tracción y elevación","4.04.04.00.00-Equipos de transporte, tracción y elevación",1
+"4.04.05.00.00","Equipos de comunicaciones y de señalamiento","4.04.05.00.00-Equipos de comunicaciones y de señalamiento",1
+"4.04.06.00.00","Equipos médico-quirúrgicos, dentales y de veterinaria","4.04.06.00.00-Equipos médico-quirúrgicos, dentales y de veterinaria",1
+"4.04.07.00.00","Equipos científicos, religiosos, de enseñanza y recreación","4.04.07.00.00-Equipos científicos, religiosos, de enseñanza y recreación",1
+"4.04.08.00.00","Equipos para la seguridad pública","4.04.08.00.00-Equipos para la seguridad pública",1
+"4.04.09.00.00","Máquinas, muebles y demás equipos de oficina y alojamiento","4.04.09.00.00-Máquinas, muebles y demás equipos de oficina y alojamiento",1
+"4.04.09.01.00","Mobiliario y equipos de oficina","4.04.09.01.00-Mobiliario y equipos de oficina",1
+"4.04.09.02.00","Equipos de procesamiento de datos","4.04.09.02.00-Equipos de procesamiento de datos",1
+"4.04.10.00.00","Semovientes","4.04.10.00.00-Semovientes",1
+"4.04.11.02.00","Adquisición de inmuebles","4.04.11.02.00-Adquisición de inmuebles",1
+"4.04.12.00.00","Activos intangibles","4.04.12.00.00-Activos intangibles",1
+"4.04.12.04.00","Paquetes y programas de computación","4.04.12.04.00-Paquetes y programas de computación",1
+"4.04.13.00.00","Estudios y proyectos para inversión en activos fijos","4.04.13.00.00-Estudios y proyectos para inversión en activos fijos",1
+"4.04.14.00.00","Contratación de inspección de obras","4.04.14.00.00-Contratación de inspección de obras",1
+"4.04.15.00.00","Construcciones del dominio privado","4.04.15.00.00-Construcciones del dominio privado",1
+"4.04.16.00.00","Construcciones del dominio público","4.04.16.00.00-Construcciones del dominio público",1
+"4.04.99.00.00","Otros activos reales","4.04.99.00.00-Otros activos reales",1
+"4.05.00.00.00","ACTIVOS FINANCIEROS","4.05.00.00.00-ACTIVOS FINANCIEROS",1
+"4.05.01.00.00","Aportes directos para participaciones de capital","4.05.01.00.00-Aportes directos para participaciones de capital",1
+"4.05.02.00.00","Adquisición de títulos y valores","4.05.02.00.00-Adquisición de títulos y valores",1
+"4.05.03.00.00","Concesión de préstamos a corto plazo","4.05.03.00.00-Concesión de préstamos a corto plazo",1
+"4.05.04.00.00","Concesión de préstamos a mediano y largo plazo","4.05.04.00.00-Concesión de préstamos a mediano y largo plazo",1
+"4.05.05.00.00","Incremento de disponibilidades","4.05.05.00.00-Incremento de disponibilidades",1
+"4.05.05.01.00","Incremento de caja y bancos","4.05.05.01.00-Incremento de caja y bancos",1
+"4.05.05.01.01","Incremento de caja","4.05.05.01.01-Incremento de caja",1
+"4.05.05.01.02","Incremento en bancos públicos","4.05.05.01.02-Incremento en bancos públicos",1
+"4.05.05.01.03","Incremento en bancos privados","4.05.05.01.03-Incremento en bancos privados",1
+"4.05.06.00.00","Incremento de cuentas a cobrar a corto plazo","4.05.06.00.00-Incremento de cuentas a cobrar a corto plazo",1
+"4.05.07.00.00","Incremento de documentos a cobrar a corto plazo","4.05.07.00.00-Incremento de documentos a cobrar a corto plazo",1
+"4.05.08.00.00","Incremento de documentos a cobrar a mediano y largo plazo","4.05.08.00.00-Incremento de documentos a cobrar a mediano y largo plazo",1
+"4.05.09.00.00","Incremento de anticipos financieros y activos diferidos","4.05.09.00.00-Incremento de anticipos financieros y activos diferidos",1
+"4.05.09.01.00","Incremento de anticipos a contratistas","4.05.09.01.00-Incremento de anticipos a contratistas",1
+"4.05.09.04.00","Incremento de anticipo a proveedores","4.05.09.04.00-Incremento de anticipo a proveedores",1
+"4.05.10.00.00","Incremento de inventarios","4.05.10.00.00-Incremento de inventarios",1
+"4.05.10.04.00","Incremento de inventarios de repuestos","4.05.10.04.00-Incremento de inventarios de repuestos",1
+"4.05.10.05.00","Incremento de inventarios de mercancías","4.05.10.05.00-Incremento de inventarios de mercancías",1
+"4.05.12.00.00","Incremento de activos financieros no circulantes","4.05.12.00.00-Incremento de activos financieros no circulantes",1
+"4.05.99.00.00","Otros activos financieros","4.05.99.00.00-Otros activos financieros",1
+"4.06.00.00.00","SERVICIO DE LA DEUDA PÚBLICA Y DISMINUCIÓN DE OTROS PASIVOS","4.06.00.00.00-SERVICIO DE LA DEUDA PÚBLICA Y DISMINUCIÓN DE OTROS PASIVOS",1
+"4.06.01.00.00","Servicio de la deuda pública interna a corto y largo plazo","4.06.01.00.00-Servicio de la deuda pública interna a corto y largo plazo",1
+"4.06.02.00.00","Servicio de la deuda pública externa","4.06.02.00.00-Servicio de la deuda pública externa",1
+"4.06.03.00.00","Obligaciones de ejercicios anteriores","4.06.03.00.00-Obligaciones de ejercicios anteriores",1
+"4.06.03.01.00","Devoluciones de cobros indebidos","4.06.03.01.00-Devoluciones de cobros indebidos",1
+"4.06.03.02.00","Devoluciones y reintegros diversos","4.06.03.02.00-Devoluciones y reintegros diversos",1
+"4.06.03.03.00","Indemnizaciones diversas","4.06.03.03.00-Indemnizaciones diversas",1
+"4.06.04.00.00","Disminución de depósitos de instituciones financieras","4.06.04.00.00-Disminución de depósitos de instituciones financieras",1
+"4.06.05.00.00","Disminución de cuentas y efectos a pagar a proveedores","4.06.05.00.00-Disminución de cuentas y efectos a pagar a proveedores",1
+"4.06.06.00.00","Disminución de cuentas y efectos a pagar a contratistas","4.06.06.00.00-Disminución de cuentas y efectos a pagar a contratistas",1
+"4.06.07.00.00","Disminución de cuentas a pagar por retenciones laborales","4.06.07.00.00-Disminución de cuentas a pagar por retenciones laborales",1
+"4.06.07.01.00","Retenciones laborales para instituciones de seguridad social","4.06.07.01.00-Retenciones laborales para instituciones de seguridad social",1
+"4.06.07.03.00","Retenciones laborales por Ley de Política Habitacional","4.06.07.03.00-Retenciones laborales por Ley de Política Habitacional",1
+"4.06.08.00.00","Disminución de intereses por pagar","4.06.08.00.00-Disminución de intereses por pagar",1
+"4.06.09.00.00","Disminución de otras cuentas y efectos a pagar","4.06.09.00.00-Disminución de otras cuentas y efectos a pagar",1
+"4.06.10.00.00","Disminución de préstamos a corto plazo por la parte de la conversión del mediano y largo plazo","4.06.10.00.00-Disminución de préstamos a corto plazo por la parte de la conversión del mediano y largo plazo",1
+"4.06.11.00.00","Disminución de deudas por préstamos a corto plazo","4.06.11.00.00-Disminución de deudas por préstamos a corto plazo",1
+"4.06.12.00.00","Disminución de deuda por préstamos a mediano y largo plazo","4.06.12.00.00-Disminución de deuda por préstamos a mediano y largo plazo",1
+"4.06.13.00.00","Disminución de previsiones","4.06.13.00.00-Disminución de previsiones",1
+"4.06.14.00.00","Disminución de provisiones","4.06.14.00.00-Disminución de provisiones",1
+"4.06.15.00.00","Disminución de pasivos diferidos","4.06.15.00.00-Disminución de pasivos diferidos",1
+"4.06.16.00.00","Disminución de emisión monetaria","4.06.16.00.00-Disminución de emisión monetaria",1
+"4.06.17.00.00","Disminución de depreciación y amortización acumulada","4.06.17.00.00-Disminución de depreciación y amortización acumulada",1
+"4.06.20.00.00","Devoluciones y otras indemnizaciones en el ejercicio presupuestario vigente","4.06.20.00.00-Devoluciones y otras indemnizaciones en el ejercicio presupuestario vigente",1
+"4.06.98.00.00","Disminución de otros pasivos a corto plazo","4.06.98.00.00-Disminución de otros pasivos a corto plazo",1
+"4.06.99.00.00","Disminución de otros pasivos a mediano y largo plazo","4.06.99.00.00-Disminución de otros pasivos a mediano y largo plazo",1
+"4.07.00.00.00","TRANSFERENCIAS","4.07.00.00.00-TRANSFERENCIAS",1
+"4.07.01.00.00","Transferencias corrientes internas","4.07.01.00.00-Transferencias corrientes internas",1
+"4.07.01.01.00","Transferencias corrientes al sector privado","4.07.01.01.00-Transferencias corrientes al sector privado",1
+"4.07.01.01.01","Pensiones","4.07.01.01.01-Pensiones",1
+"4.07.01.01.02","Jubilaciones","4.07.01.01.02-Jubilaciones",1
+"4.07.01.01.07","Donaciones a personas","4.07.01.01.07-Donaciones a personas",1
+"4.07.01.01.08","Previsión por accidentes de trabajo","4.07.01.01.08-Previsión por accidentes de trabajo",1
+"4.07.01.02.00","Transferencias corrientes al sector público","4.07.01.02.00-Transferencias corrientes al sector público",1
+"4.07.01.03.00","Asistencia social al personal pensionado","4.07.01.03.00-Asistencia social al personal pensionado",1
+"4.07.01.04.00","Asistencia social al personal jubilado","4.07.01.04.00-Asistencia social al personal jubilado",1
+"4.07.02.00.00","Transferencias de capital internas","4.07.02.00.00-Transferencias de capital internas",1
+"4.07.02.01.00","Transferencias de capital al sector privado interno","4.07.02.01.00-Transferencias de capital al sector privado interno",1
+"4.07.02.02.00","Transferencias de capital al sector público","4.07.02.02.00-Transferencias de capital al sector público",1
+"4.07.03.00.00","Transferencias al exterior","4.07.03.00.00-Transferencias al exterior",1
+"4.07.03.01.00","Transferencias al exterior para financiar gastos corrientes","4.07.03.01.00-Transferencias al exterior para financiar gastos corrientes",1
+"4.07.03.02.00","Transferencias al exterior para financiar gastos de capital","4.07.03.02.00-Transferencias al exterior para financiar gastos de capital",1
+"4.07.03.99.00","Otras transferencias al exterior","4.07.03.99.00-Otras transferencias al exterior",1
+"4.07.04.00.00","Situado","4.07.04.00.00-Situado",1
+"4.07.05.00.00","Indemnizaciones temporales únicas y por pensiones y demás prestaciones en dinero","4.07.05.00.00-Indemnizaciones temporales únicas y por pensiones y demás prestaciones en dinero",1
+"4.07.05.01.00","Incapacidad temporal","4.07.05.01.00-Incapacidad temporal",1
+"4.07.05.02.00","Pensiones y demás prestaciones en dinero","4.07.05.02.00-Pensiones y demás prestaciones en dinero",1
+"4.07.05.03.00","Indemnizaciones únicas a los trabajadores","4.07.05.03.00-Indemnizaciones únicas a los trabajadores",1
+"4.07.05.03.03","Incapacidad parcial por accidente de trabajo","4.07.05.03.03-Incapacidad parcial por accidente de trabajo",1
+"4.07.05.03.09","Sobrevivientes por accidentes de trabajo","4.07.05.03.09-Sobrevivientes por accidentes de trabajo",1
+"4.07.05.05.00","Asignación por funeraria","4.07.05.05.00-Asignación por funeraria",1
+"4.07.06.00.00","Asignaciones económicas especiales","4.07.06.00.00-Asignaciones económicas especiales",1
+"4.07.07.00.00","Fondo Intergubernamental para la Descentralización - FIDES","4.07.07.00.00-Fondo Intergubernamental para la Descentralización - FIDES",1
+"4.07.99.00.00","Transferencias corrientes y de capital diversas","4.07.99.00.00-Transferencias corrientes y de capital diversas",1
+"4.08.00.00.00","OTROS GASTOS DE INSTITUCIONES DESCENTRALIZADAS","4.08.00.00.00-OTROS GASTOS DE INSTITUCIONES DESCENTRALIZADAS",1
+"4.08.01.00.00","Depreciación y amortización","4.08.01.00.00-Depreciación y amortización",1
+"4.08.01.10.00","Asignación por funeraria","4.08.01.10.00-Asignación por funeraria",1
+"4.08.02.00.00","Intereses por operaciones financieras","4.08.02.00.00-Intereses por operaciones financieras",1
+"4.08.02.01.00","Intereses de instituciones financieras bancarias","4.08.02.01.00-Intereses de instituciones financieras bancarias",1
+"4.08.03.00.00","Pérdidas ajenas a la operación","4.08.03.00.00-Pérdidas ajenas a la operación",1
+"4.08.03.01.00","Pérdidas en inventarios","4.08.03.01.00-Pérdidas en inventarios",1
+"4.08.03.03.00","Pérdidas en ventas de activos","4.08.03.03.00-Pérdidas en ventas de activos",1
+"4.08.05.00.00","Descuentos, bonificaciones y devoluciones","4.08.05.00.00-Descuentos, bonificaciones y devoluciones",1
+"4.08.05.01.00","Descuentos sobre ventas","4.08.05.01.00-Descuentos sobre ventas",1
+"4.09.00.00.00","DISMINUCIÓN DEL PATRIMONIO","4.09.00.00.00-DISMINUCIÓN DEL PATRIMONIO",1
+"4.09.01.00.00","Disminución del capital social","4.09.01.00.00-Disminución del capital social",1
+"4.09.02.00.00","Disminución de reservas de capital","4.09.02.00.00-Disminución de reservas de capital",1
+"4.09.03.00.00","Disminución de los resultados acumulados","4.09.03.00.00-Disminución de los resultados acumulados",1
+"4.10.00.00.00","GASTOS POR INDEMNIZACIONES Y SANCIONES PECUNIARIAS","4.10.00.00.00-GASTOS POR INDEMNIZACIONES Y SANCIONES PECUNIARIAS",1
+"4.10.01.00.00","Indemnizaciones por daños y perjuicios ocasionados por organismos del sector público","4.10.01.00.00-Indemnizaciones por daños y perjuicios ocasionados por organismos del sector público",1
+"4.10.02.00.00","Sanciones pecuniarias ocasionadas por los organismos del sector público","4.10.02.00.00-Sanciones pecuniarias ocasionadas por los organismos del sector público",1
+"4.51.01.00.00","Gastos de defensa y seguridad del Estado","4.51.01.00.00-Gastos de defensa y seguridad del Estado",1
+"4.52.01.00.00","Asignaciones no distribuidas de la Asamblea Nacional","4.52.01.00.00-Asignaciones no distribuidas de la Asamblea Nacional",1
+"4.52.02.00.00","Reestructuración de organismos del sector público","4.52.02.00.00-Reestructuración de organismos del sector público",1
+"4.52.03.00.00","Productividad y calidad de la gerencia pública","4.52.03.00.00-Productividad y calidad de la gerencia pública",1
+"4.52.04.00.00","Jubilados y pensionados de la Administración Pública","4.52.04.00.00-Jubilados y pensionados de la Administración Pública",1
+"4.52.05.00.00","JFondo de Apoyo al trabajador y su grupo familiar","4.52.05.00.00-JFondo de Apoyo al trabajador y su grupo familiar",1
+"4.52.06.00.00","Remuneraciones y demás retribuciones","4.52.06.00.00-Remuneraciones y demás retribuciones",1
+"4.52.07.00.00","Proyecto Sectorial Social (BID-BM)","4.52.07.00.00-Proyecto Sectorial Social (BID-BM)",1
+"4.52.08.00.00","Fondo para Programas de Fortalecimiento Social","4.52.08.00.00-Fondo para Programas de Fortalecimiento Social",1
+"4.52.09.00.00","Fondo de alimentación y transporte para los trabajadores de la administración pública","4.52.09.00.00-Fondo de alimentación y transporte para los trabajadores de la administración pública",1
+"4.52.10.00.00","Apoyo al proceso presupuestario y análisis de política económica","4.52.10.00.00-Apoyo al proceso presupuestario y análisis de política económica",1
+"4.52.11.00.00","Reforma de la seguridad social","4.52.11.00.00-Reforma de la seguridad social",1
+"4.52.12.00.00","Programa de fortalecimiento del sector financiero","4.52.12.00.00-Programa de fortalecimiento del sector financiero",1
+"4.52.13.00.00","Recapitalización del Fondo de Pensiones del Instituto Venezolano de los Seguros Sociales","4.52.13.00.00-Recapitalización del Fondo de Pensiones del Instituto Venezolano de los Seguros Sociales",1
+"4.52.14.00.00","Programa sectorial financiero","4.52.14.00.00-Programa sectorial financiero",1
+"4.52.15.00.00","Emergencias en el territorio nacional","4.52.15.00.00-Emergencias en el territorio nacional",1
+"4.52.16.00.00","Fondo para la cancelación de pasivos laborales","4.52.16.00.00-Fondo para la cancelación de pasivos laborales",1
+"4.52.19.00.00","Programas de fortalecimiento de las finanzas públicas de las Gobernaciones de Venezuela","4.52.19.00.00-Programas de fortalecimiento de las finanzas públicas de las Gobernaciones de Venezuela",1
+"4.52.20.00.00","Fondo para la cancelación de deuda por servicios de electricidad, teléfono, aseo, agua y condominio","4.52.20.00.00-Fondo para la cancelación de deuda por servicios de electricidad, teléfono, aseo, agua y condominio",1
+"4.52.22.00.00","Fondo para remuneraciones, pensiones y jubilaciones y otras retribuciones","4.52.22.00.00-Fondo para remuneraciones, pensiones y jubilaciones y otras retribuciones",1
+"4.52.23.00.00","Asignaciones no distribuidas del Tribunal Supremo de Justicia","4.52.23.00.00-Asignaciones no distribuidas del Tribunal Supremo de Justicia",1
+"4.52.24.00.00","Asignaciones no distribuidas del Ministerio Público","4.52.24.00.00-Asignaciones no distribuidas del Ministerio Público",1
+"4.52.25.00.00","Asignaciones no distribuidas de la Defensoría del Pueblo","4.52.25.00.00-Asignaciones no distribuidas de la Defensoría del Pueblo",1
+"4.52.26.00.00","Asignaciones no distribuidas de la Contraloría General de la República","4.52.26.00.00-Asignaciones no distribuidas de la Contraloría General de la República",1
+"4.52.27.00.00","Asignaciones no distribuidas del Consejo Nacional Electoral","4.52.27.00.00-Asignaciones no distribuidas del Consejo Nacional Electoral",1
+"4.52.28.00.00","Fondo para atender compromisos generados de la Ley Orgánica del Trabajo","4.52.28.00.00-Fondo para atender compromisos generados de la Ley Orgánica del Trabajo",1
+"4.52.29.00.00","Asignaciones no distribuidas del Consejo Moral Republicano","4.52.29.00.00-Asignaciones no distribuidas del Consejo Moral Republicano",1
+"4.52.30.00.00","Asignaciones no distribuidas de la Presidencia de la República","4.52.30.00.00-Asignaciones no distribuidas de la Presidencia de la República",1
+"4.52.31.00.00","Asignaciones para cancelar compromisos pendientes de ejercicios anteriores","4.52.31.00.00-Asignaciones para cancelar compromisos pendientes de ejercicios anteriores",1
+"4.52.32.00.00","Asignaciones para cancelar deuda Fogade – Ministerio de Finanzas – Banco Central de Venezuela","4.52.32.00.00-Asignaciones para cancelar deuda Fogade – Ministerio de Finanzas – Banco Central de Venezuela",1
+"4.52.33.00.00","Asignaciones para atender los gastos de la referenda y elecciones","4.52.33.00.00-Asignaciones para atender los gastos de la referenda y elecciones",1
+"4.52.34.00.00","Asignaciones para atender los gastos por honorarios profesionales de bufetes internacionales, costas y costos judiciales","4.52.34.00.00-Asignaciones para atender los gastos por honorarios profesionales de bufetes internacionales, costas y costos judiciales",1
+"4.52.35.00.00","Fondo para atender compromisos generados por la Contratación Colectiva","4.52.35.00.00-Fondo para atender compromisos generados por la Contratación Colectiva",1
+"4.52.36.00.00","Programa Social Especial","4.52.36.00.00-Programa Social Especial",1
+"4.52.37.00.00","Asignaciones para programas y proyectos financiados con multilaterales","4.52.37.00.00-Asignaciones para programas y proyectos financiados con multilaterales",1
+"4.52.38.00.00","Asignación para facilitar la preparación de proyectos","4.52.38.00.00-Asignación para facilitar la preparación de proyectos",1
+"4.52.39.00.00","Programas de inversión para las Entidades Estadales, Municipios y Otras Instituciones","4.52.39.00.00-Programas de inversión para las Entidades Estadales, Municipios y Otras Instituciones",1
+"4.98.00.00.00","RECTIFICACIONES AL PRESUPUESTO","4.98.00.00.00-RECTIFICACIONES AL PRESUPUESTO",1
+"4.98.01.00.00","Rectificaciones al presupuesto","4.98.01.00.00-Rectificaciones al presupuesto",1
+"4.98.01.01.00","Rectificaciones al presupuesto","4.98.01.01.00-Rectificaciones al presupuesto",1

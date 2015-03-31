@@ -1,3 +1,12 @@
 import configuracion
-import programacion_inicial
-import proyectos
+#import programacion_inicial
+#import proyectos
+#import ente_proyecto
+import creditos_adicionales
+import codigo
+import proyecto
+import traspaso
+import compromisos
+import documento_traspaso
+import documento_credito
+import distribucion_especifica

@@ -23,7 +23,7 @@
     'depends': ['base'],
 
     'data': [
-        'config/res_config.xml',
+	'config/res_config.xml',
         'views/clasificador_presupuestario.xml',
     ],
 }

@@ -31,9 +31,8 @@
                         <group>
                             <field name="account_group"/>
                             <field name="parent_id"/>
-                            <field name="code" on_change="construir_codigo_nombre(code,name)"/>
-                            <field name="name" on_change="construir_codigo_nombre(code,name)"/>
-                            <field name="code_name" invisible="1"/>
+                            <field name="code"/>
+                            <field name="name"/>
                             <field name="active"/>
                             <field name="description"/>
                         </group>
@@ -64,7 +63,7 @@
        
         <menuitem id="main_presupuesto_menu" name="Presupuesto"/>
         <menuitem id="presupuesto_menu" name="Clasificador Presupuestario"
-                  parent="main_presupuesto_menu"  sequence="3"/>
+                  parent="main_presupuesto_menu"  sequence="4"/>
         <menuitem id="clasificador_menu" name="Cuentas" parent="presupuesto_menu"
                   action="presupuesto_list_action"/>
         <menuitem id="estructura_clasificador_menu" name="Estructura de cuentas" parent="presupuesto_menu"

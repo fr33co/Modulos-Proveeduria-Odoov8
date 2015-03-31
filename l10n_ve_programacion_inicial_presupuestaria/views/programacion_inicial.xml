@@ -34,10 +34,8 @@
             </field>
         </record>
        
-        <menuitem id="programacion_inicial_menu" name="Programación del Órgano"
-                  parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="1"/>
-        <menuitem id="programacion_inicial_menu_final" name="Programación Inicial" parent="programacion_inicial_menu"
-                  action="programacion_inicial_list_action"/>
+        <menuitem id="programacion_inicial_menu" name="Programación del Órgano" parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="1"/>
+        <menuitem id="programacion_inicial_menu_final" name="Programación Inicial" parent="programacion_inicial_menu" action="programacion_inicial_list_action"/>
     </data>
 </openerp>
 

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="traspaso_list_action">
+            <field name="name">Traspaso</field>
+            <field name="res_model">presupuesto.traspaso</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!--<field name="help" type="html"></field>-->
+        </record>
+        
+        <record model="ir.ui.view" id="traspaso_tree_view">
+            <field name="name">traspaso.tree</field>
+            <field name="model">presupuesto.traspaso</field>
+            <field name="arch" type="xml">
+                <tree string="TRASPASO">
+                    <field name="numero"/>
+                    <field name="motivo"/>
+                    <field name="fecha" string='Fecha'/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="traspaso_form_view">
+            <field name="name">traspaso.form</field>
+            <field name="model">presupuesto.traspaso</field>
+            <field name="arch" type="xml" >
+                <form string="Formulario de Traspaso" version="7.0">
+                    <header>
+                        <button name="confirmar"  class="oe_highlight" type="object" string="Validar" confirm="¿Esta usted seguro de cambiar al estado seleccionado?"   attrs="{'invisible':[('status','!=','borrador')]}"/>
+                        <button name="cancelar"   type="object" string="Cancelar" confirm="¿Esta usted seguro que desea cancelar este traspaso y revertir los cambios?" attrs="{'invisible':[('status','!=','confirmado')]}"/>
+                        <field name="status"  widget="statusbar" />
+                    </header>
+                    <table>
+                        <td style="padding-left:30px;"><group>
+                            <field name="numero"/>
+                            </group></td>
+                    </table>
+                    <sheet>
+                        <separator string="TRASPASO"/>
+                        <table style="width:800px;">
+                            <td><group>
+                                <field name="codigo_padre"/>
+                                <field name="proyecto_padre"/>      
+                                <field name="motivo"/>
+                            </group></td>
+                            <td style="padding-left:30px;"><group>
+                                <field name="codigo" invisible='1'/>
+                                <field name="unidad" invisible='1'/>
+                                <field name="fuente"/>
+                                <field name="gastos"/>
+                                <field name="numero_oficio"/>
+                                <field name="fecha_resolucion"/>
+                                <field name="fecha" invisible='1'/>
+                             </group></td>
+                        </table>
+                            <field name="movimientos">
+                                <tree string="Movimientos" colors="red:disminuir&gt;0" version="7.0" editable="bottom">
+                                    <field name="partida" invisible='1'/>
+                                    <field name="nombre_partida"/>
+                                    <field name="disminuir"/>
+                                    <field name="disponibilidad_virtual" />
+                                    <field name="disponibilidad_real" invisible='1'/>
+                                </tree>
+                            </field>
+                            <field name="movimientos2">
+                                <tree string="Movimientos" colors="blue:aumentar&gt;0" version="7.0" editable="bottom">
+                                    <!--<field name="serial"/>-->
+                                    <field name="partida" invisible='1'/>
+                                    <field name="nombre_partida"/>
+                                    <field name="aumentar" />
+                                    <field name="disponibilidad_virtual" />
+                                    <field name="disponibilidad_real" invisible='1'/>
+                                </tree>
+                            </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <menuitem id="modificacion_presupuesto_menu" name="Modificacion Presupuestaria" parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="3"/>
+        <menuitem id="traspaso_menu" name="Traspaso"  parent="modificacion_presupuesto_menu" action="traspaso_list_action" />
+        
+    </data>
+</openerp>

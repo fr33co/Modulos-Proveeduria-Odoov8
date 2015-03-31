@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="compromisos_list_action">
+            <field name="name">Compromisos</field>
+            <field name="res_model">presupuesto.compromisos</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!--<field name="help" type="html"></field>-->
+        </record>
+        
+        <record model="ir.ui.view" id="compromisos_tree_view">
+            <field name="name">compromisos.tree</field>
+            <field name="model">presupuesto.compromisos</field>
+            <field name="arch" type="xml">
+                <tree string="COMPROMISOS">
+                    <field name="numero"/>
+                    <field name="tipo_documento"/>
+                    <field name="fecha"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="compromisos_form_view">
+            <field name="name">compromisos.form</field>
+            <field name="model">presupuesto.compromisos</field>
+            <field name="arch" type="xml" >
+                <form string="Formulario de Compromisos" version="7.0">
+                    <header>
+                        <button name="confirmar"  class="oe_highlight" type="object" string="Validar" confirm="¿Esta usted seguro de cambiar al estado seleccionado?"   attrs="{'invisible':[('status','!=','borrador')]}"/>
+                        <button name="cancelar"   type="object" string="Cancelar" confirm="¿Esta usted seguro que desea cancelar este traspaso y revertir los cambios?" attrs="{'invisible':[('status','!=','confirmado')]}"/>
+                        <field name="status"  widget="statusbar" />
+                    </header>
+                   <sheet>
+                        <separator string="COMPROMISOS"/>
+                        <table style="width:800px;">
+                            <td><group>
+                                <field name="codigo_padre" on_change="construir_serial(codigo_padre,proyecto_padre)"/>
+                                <field name="proyecto_padre" on_change="construir_serial(codigo_padre,proyecto_padre)"/>
+                                <field name="tipo_documento"/>
+                                <field name="numero"/>
+                            </group></td>
+                            <td style="padding-left:30px;"><group>
+                                <field name="numero_oficio"/>
+                                <field name="motivo"/>
+                                <field name="fecha"/>
+                                <field name="fecha_resolucion"/>
+                             </group></td>
+                        </table>
+                                <field name="movimientos">
+                                    <tree string="Movimientos" version="7.0" editable="bottom">
+                                        <field name="partida"/>
+                                        <field name="nombre_partida" />
+                                        <field name="monto_mov"/>
+                                        <field name="disponibilidad_real" string='Disponibilidad'/>
+                                     </tree>
+                                </field>
+                     </sheet>
+                </form>
+            </field>
+        </record>
+     <menuitem id="modificacion_presupuesto_menu" name="Modificacion Presupuestaria" parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="3"/>
+     <menuitem id="compromisos_menu" name="Compromisos"  parent="modificacion_presupuesto_menu" action="compromisos_list_action" />
+        
+    </data>
+</openerp>

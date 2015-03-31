@@ -16,4 +16,5 @@ class prresupuesto_config_settings(osv.osv_memory):
     _columns = {
 
     'module_l10n_ve_programacion_inicial_presupuestaria': fields.boolean("Programacion inicial presupuestaria - Instructivos 3, 5 y 8 de la ONAPRE"),
+    'module_presupuesto_compras': fields.boolean("Licitaciones de compras"),
     }

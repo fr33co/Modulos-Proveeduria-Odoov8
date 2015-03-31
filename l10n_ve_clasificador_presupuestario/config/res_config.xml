@@ -18,6 +18,13 @@
                         <label for="module_l10n_ve_programacion_inicial_presupuestaria"/>
                     </div>
                 </group>
+                <separator string="Modulo de licitaciones de compras"/>
+                <group>
+                    <div>
+                        <field name="module_presupuesto_compras" class="oe_inline"/>
+                        <label for="module_presupuesto_compras"/>
+                    </div>
+                </group>
             </form>
         </field>
     </record>

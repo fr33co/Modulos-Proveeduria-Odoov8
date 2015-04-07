@@ -36,7 +36,7 @@
             </field>
         </record>
        
-        <menuitem id="configuracion_presupuesto_menu" name="Configuración" parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="6"/>
+        <menuitem id="configuracion_presupuesto_menu" name="Configuración" parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="26"/>
         <menuitem id="unidad_medida_menu_final" name="Unidad de Medida" parent="configuracion_presupuesto_menu"
                   action="unidad_medida_list_action"/>
         

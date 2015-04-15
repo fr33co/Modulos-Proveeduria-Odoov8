@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.actions.act_window" id="cheques_list_action">
+            <field name="name">cheques</field>
+            <field name="res_model">tesoreria.cheques</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            
+        </record>
+        <record model="ir.ui.view" id="cheques_tree_view">
+            <field name="name">cheques.tree</field>
+            <field name="model">tesoreria.cheques</field>
+            <field name="arch" type="xml">
+                <tree string="Cheque">
+                    <field name="n_cheque"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="cheques_form_view">
+            <field name="name">cheques.form</field>
+            <field name="model">tesoreria.cheques</field>
+            <field name="arch" type="xml" >
+                <form string="Formulario de Cheuqes" version="7.0">
+                    <table>
+                    <td style="padding-left:30px;"><group>
+                            <field name="n_cheque"/>
+                            </group></td>
+                    </table>
+                    <sheet>
+                        <separator string="ELABORACIÓN DE CHEQUE"/>
+                        <table style="width:825px;">
+                            <td><group>
+                                <field name="beneficiario"/>
+                                <field name="rif_cedula"/>
+                                <field name="fecha_creacion"/>
+                             </group></td>
+                            <td style="padding-left:30px;"><group>
+                                <field name="numero"/>
+                                <field name="banco"/>
+                                <field name="monto"/>
+                            </group></td>
+                        </table>
+                        <table style="width:825px;">
+                            <tr><th><span>Descripción:</span></th></tr>
+                            <tr>
+                                <td><field name="descripcion"/></td>
+                            </tr>
+                        </table>
+                        <separator string="Partidas Presupuestarias" style="text-align:center;"/>
+                         <field name="partidas">
+                                <tree string="Partidas" version="7.0" editable="bottom" >
+                                    <field name="codigo"/>
+                                    <field name="descripcion"/>
+                                    <field name="debe"/>
+                                    <field name="haber"/>
+                                </tree>
+                            </field>
+                         <table style="width:500px">    
+                            <tr>
+                                <th><span>Debe</span></th>
+                                <td><field name="t_debe"/></td>
+                            </tr>
+                            <tr>
+                                <th><span>Haber</span></th>
+                                <td><field name="t_haber"/></td>
+                            </tr>
+                         </table>
+                    </sheet>  
+                </form>
+            </field>
+        </record>
+<menuitem id="main_tesoreria_menu" name="Tesoreria"/>
+<menuitem id="ordenes_menu" name="Ordenes de Pago" parent="main_tesoreria_menu" sequence="1"/>
+<menuitem id="cheques_menu" name="Crear Cheque"  parent="ordenes_menu" action="cheques_list_action" />
+    </data>
+</openerp>

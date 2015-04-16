@@ -8,7 +8,7 @@ Modulos administrativos para la Proveeduria de transporte del estado Aragua en O
 | --- | ----------------------------  | ------------------------------------- | ----------------------------- |
 |  1  | Yenny Delgado                 |                                       |                               |
 |  2  | Victor Magallanes             |                                       |                               |
-|  3  | Angel Guadarrama              |                                       |                               |
+|  3  | Angel Guadarrama              | @fr33co                               | guadarramaangel ( at ) gmail  |
 
 
 #### Módulos Propuestos:

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.actions.act_window" id="ordenes_pago_list_action">
+            <field name="name">ordenes_pago</field>
+            <field name="res_model">tesoreria.ordenes_pago</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record model="ir.ui.view" id="ordenes_pago_tree_view">
+            <field name="name">ordenes_pago.tree</field>
+            <field name="model">tesoreria.ordenes_pago</field>
+            <field name="arch" type="xml">
+                <tree string="Ordenes de Pago">
+                    <field name="n_orden"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="ordenes_pago_form_view">
+            <field name="name">ordenes_pago.form</field>
+            <field name="model">tesoreria.ordenes_pago</field>
+            <field name="arch" type="xml" >
+                <form string="Formulario de Ordenes de Pago" version="7.0">
+                    <table>
+                    <td style="padding-left:30px;"><group>
+                            <field name="n_orden"/>
+                            </group></td>
+                    </table>
+                    <sheet>
+                        <separator string="ORDENE DE PAGO"/>
+                        <table style="width:825px;">
+                            <td><group>
+                                <field name="beneficiario"/>
+                                <field name="rif"/>
+                             </group></td>
+                            <td style="padding-left:30px;"><group>
+                                <field name="numero"/>
+                                <field name="fecha_creacion" invisible='0'/>
+                            </group></td>
+                        </table>
+                        <table style="width:825px;">
+                            <tr><th><span>Por concepto de:</span></th></tr>
+                            <tr>
+                                <td><field name="concepto"/></td>
+                            </tr>
+                        </table>
+                        <separator string="Partidas Presupuestarias" style="text-align:center;"/>
+                         <field name="partidas">
+                                <tree string="Partidas" version="7.0" editable="bottom" >
+                                    <field name="partida"/>
+                                    <field name="descripcion"/>
+                                    <field name="monto"/>
+                                </tree>
+                            </field>
+                         <table style="width:500px">    
+                            <tr>
+                                <th><span>Sub Total</span></th>
+                                <td><field name="sub_total_d"/></td>
+                            </tr>
+                            <tr>
+                                <th><span>Total</span></th>
+                                <td><field name="total_d"/></td>
+                            </tr>
+                         </table>
+                         <separator string="Detalle Contable de la Orden de Pago" style="text-align:center;"/>
+                         <field name="detalles">
+                                <tree string="Detalles" version="7.0" editable="bottom" >
+                                    <field name="deducciones"/>
+                                    <field name="debe"/>
+                                    <field name="haber"/>
+                                </tree>
+                            </field>
+                          <table style="width:500px">    
+                            <tr>
+                                <th><span>Sub Total</span></th>
+                                <td><field name="sub_total_p"/></td>
+                            </tr>
+                            <tr>
+                                <th><span>Total</span></th>
+                                <td><field name="total_p"/></td>
+                            </tr>
+                        </table>
+                         </sheet>  
+                </form>
+            </field>
+        </record>
+<menuitem id="main_tesoreria_menu" name="Tesoreria"/>
+<menuitem id="ordenes_menu" name="Ordenes de Pago" parent="main_tesoreria_menu" sequence="1"/>
+<menuitem id="ordenes_pago_menu" name="Crear Orden de Pago"  parent="ordenes_menu" action="ordenes_pago_list_action" />
+    </data>
+</openerp>

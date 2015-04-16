@@ -15,7 +15,7 @@ class Proyecto(models.Model):
     disponibilidad_proyecto = fields.Float(string="Disponibilidad:",required=False)
     codigo_proyecto         = fields.Char(string="Codigo Proyecto:",size=100, required=False)
     codigo_nombre_proyecto  = fields.Char(string="Proyecto:",required=False)
-    codigo                  = fields.Char(string="Codigo:",required=False)
+    codigo                  = fields.Char(string="Codigo:",required=False, default='00')
     dispo_ente              = fields.Float(string="Monto a Distribuir:",readonly=True)
     
     def construccion_multiple(self, cr, uid, ids, codigo,nombre,codigo_padre,monto, context=None):

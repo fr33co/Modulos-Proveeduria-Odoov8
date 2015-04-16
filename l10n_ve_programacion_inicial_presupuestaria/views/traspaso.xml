@@ -40,8 +40,8 @@
                         <separator string="TRASPASO"/>
                         <table style="width:800px;">
                             <td><group>
-                                <field name="codigo_padre"/>
-                                <field name="proyecto_padre"/>      
+                                <field name="codigo_padre"   on_change="completar_nombre(codigo_padre,proyecto_padre)"/>
+                                <field name="proyecto_padre" on_change="completar_nombre(codigo_padre,proyecto_padre)"/>      
                                 <field name="motivo"/>
                             </group></td>
                             <td style="padding-left:30px;"><group>
@@ -56,7 +56,8 @@
                         </table>
                             <field name="movimientos">
                                 <tree string="Movimientos" colors="red:disminuir&gt;0" version="7.0" editable="bottom">
-                                    <field name="partida" invisible='1'/>
+                                    <field name="serial" on_change="completar_campos(serial)"/>
+                                    <field name="partida" invisible="1"/>
                                     <field name="nombre_partida"/>
                                     <field name="disminuir"/>
                                     <field name="disponibilidad_virtual" />
@@ -65,8 +66,8 @@
                             </field>
                             <field name="movimientos2">
                                 <tree string="Movimientos" colors="blue:aumentar&gt;0" version="7.0" editable="bottom">
-                                    <!--<field name="serial"/>-->
-                                    <field name="partida" invisible='1'/>
+                                    <field name="serial" on_change="completar_campos(serial)"/>
+                                    <field name="partida" invisible="1"/>
                                     <field name="nombre_partida"/>
                                     <field name="aumentar" />
                                     <field name="disponibilidad_virtual" />

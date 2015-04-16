@@ -1,0 +1,27 @@
+{
+    "name": "Presupuesto_bva",
+        "version": "1.0",
+        "depends": ["base"],
+        "author": "Victor",
+        "category": "Category",
+        "description": """
+            Description text
+            """,
+        'data': [
+        'view/actualizacion/sector.xml',
+        'view/actualizacion/adscripcion.xml',
+        'view/actualizacion/codigo.xml',
+        'view/actualizacion/proyecto.xml',
+        'view/distribuciones/distribucion_clase.xml',
+        'view/distribuciones/distribucion_partida.xml',
+        'view/distribuciones/distribucion_generica.xml',
+        'view/distribuciones/distribucion_especifica.xml',
+        'view/distribuciones/distribucion_subespecifica.xml',
+        'view/clasificador/clase.xml',
+        'view/clasificador/partida.xml',
+        'view/clasificador/generica.xml',
+        'view/clasificador/especifica.xml',
+        'view/clasificador/subespecifica.xml',
+        ],
+}
+

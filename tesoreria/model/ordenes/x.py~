@@ -1,0 +1,41 @@
+#-*- coding:utf-8 -*-
+import time
+from datetime import date
+from openerp.osv import osv, fields
+
+class Adscripcion(osv.Model):
+
+    _name = "presupuesto.adscripcion"
+    _rec_name= 'codigo_nombre_adscripcion'
+    _columns = {
+        
+	'sector_padre'               :fields.many2one('presupuesto.sector','Sector', required=True),
+        'codigo_a_asignar'           :fields.selection((('01','01'),('02','02'),('03','03'),('04','04'),('05','05'),('06','06'),('07','07'),('08','08'),('09','09'),('10','10')), "Codigo a asignar" , required = False),
+        'nombre_adscripcion'         :fields.char(string="Nombre del adscripcion:",size=100, required=False),
+        'monto_inic_adscripcion'     :fields.float(string="Monto:",size=12, digits=(12,2) ,required=False),
+        'disponibilidad_adscripcion' :fields.float(string="Disponibilidad Actual",required=False),
+	'codigo_adscripcion'         :fields.char(string="Codigo adscripcion:",size=100, required=False),
+        'codigo_nombre_adscripcion'  :fields.char(string="adscripcion",required=False),
+    }
+    
+    
+    def construccion_multiple(self, cr, uid, ids, codigo,nombre,sector, context=None):
+	values = {}
+	if not codigo:
+	    return values
+	if not nombre:
+	    return values
+	if not sector:
+	    return values
+        cr.execute('SELECT codigo_sector FROM presupuesto_sector WHERE id='+str(sector))
+	result= cr.fetchone()[0]
+        codigo_nombre = codigo+'-'+nombre
+	codigo_adscripcion = result+'-'+codigo
+        values.update({
+	    'codigo_nombre_adscripcion':codigo_nombre,
+	    'codigo_adscripcion':codigo_adscripcion+'-'+str('00-00'),
+	    
+	})
+	return {'value' : values}
+
+	

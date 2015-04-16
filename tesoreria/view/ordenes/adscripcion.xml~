@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.actions.act_window" id="adscripcion_list_action">
+            <field name="name">adscripcion</field>
+            <field name="res_model">presupuesto.adscripcion</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html"></field>
+        </record>
+        <record model="ir.ui.view" id="adscripcion_tree_view">
+            <field name="name">adscripcion.tree</field>
+            <field name="model">presupuesto.adscripcion</field>
+            <field name="arch" type="xml">
+                <tree string="adscripcion">
+                    <field name="codigo_nombre_adscripcion"  string="Adscripcion:" invisible="1"/>
+                    <field name="codigo_adscripcion" string="Codigo:" invisible="0"/>
+                    <field name="codigo_a_asignar" invisible="1"/>
+                    <field name="nombre_adscripcion"  string="Descripción:"/>
+                    <field name="monto_inic_adscripcion" string="Monto inicial:"/>
+                    <field name="disponibilidad_adscripcion" string="Disponibilidad:"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="adscripcion_form_view">
+            <field name="name">adscripcion.form</field>
+            <field name="model">presupuesto.adscripcion</field>
+            <field name="arch" type="xml" >
+                <form string="Formulario de adscripcion" version="7.0">
+                    <table style="width:700px;">
+                        <tbody>
+                        <tr>
+                            <td style="font-weight:bold;">Sector:</td>
+                            <td style="width:300px;"><field name="sector_padre" on_change="construccion_multiple(codigo_a_asignar,nombre_adscripcion,sector_padre)"/></td>
+                        </tr>    
+                        <tr>
+                            <td style="font-weight:bold;">Codigo:</td>
+                            <td style="width:300px;"><field name="codigo_a_asignar" type='selection' on_change="construccion_multiple(codigo_a_asignar,nombre_adscripcion,sector_padre)"/></td>
+                            <td style="font-weight:bold;">Nombre:</td>
+                            <td><field name="nombre_adscripcion"  string="adscripcion" on_change="construccion_multiple(codigo_a_asignar,nombre_adscripcion,sector_padre)"/></td>
+                        </tr>
+                        <tr><td></td><td></td>
+                            <td style="font-weight:bold;">Monto inicial:</td>
+                            <td><field name="monto_inic_adscripcion"/></td>
+                        </tr>
+                        <tr><td></td><td></td>
+                            <td style="font-weight:bold;" invisible="0">Disponibilidad:</td>
+                            <td invisible="0"><field name="disponibilidad_adscripcion"/></td>
+                        </tr>
+                        <tr invisible="1">
+                            <td style="font-weight:bold;" invisible="0">Adscripcion:</td>
+                            <td><field name="codigo_nombre_adscripcion"  string="Adscripcion" invisible="0"/></td>
+                        </tr>
+                        <tr invisible="1">
+                            <td style="font-weight:bold;">Codigo a construir:</td>
+                            <td style="width:300px;"><field name="codigo_adscripcion"/></td>
+                            <td style="font-weight:bold;"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </field>
+        </record>
+ <menuitem id="adscripcion_menu" name="Adscripcion"  parent="actualizar_menu" action="adscripcion_list_action" />
+        
+    </data>
+</openerp>

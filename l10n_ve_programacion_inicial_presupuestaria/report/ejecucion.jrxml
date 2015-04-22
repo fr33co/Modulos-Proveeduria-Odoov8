@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ejecucion" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.1000000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="17"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="175" height="10"/>
+				<textElement lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CODIGO PRESUPUESTARIO DEL  ENTE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="124" height="10"/>
+				<textElement lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ORGANO DE ADSCRIPCIÓN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="79" height="10"/>
+				<textElement lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[TRIMESTRE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="31" height="12"/>
+				<textElement lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[AÑO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="40" width="332" height="20"/>
+				<textElement textAlignment="Center" lineSpacing="Single"/>
+				<text><![CDATA[PRESUPUESTO DE GASTOS DE EJECUCIÓN FINANCIERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="15"/>
+				<textElement textAlignment="Center" lineSpacing="Single"/>
+				<text><![CDATA[PROYECTO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="189" height="10"/>
+				<textElement lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DENOMINACIÓN DEL ORGANO O ENTE:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="0" width="15" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[GENERICA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="0" width="16" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ESPECIFICA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="0" width="19" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ESPECIFICA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="16" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[PARTIDA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="66" y="0" width="157" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[DENOMINACIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="0" width="59" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[PRESUPUESTO APROBADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="0" width="55" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[PRESUPUESTO MODIFICADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="337" y="0" width="64" height="46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[PRESUPUESTO ACORDADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="12" width="58" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[COMPROMISO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="12" width="54" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[COMPROMISO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="513" y="12" width="60" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[COMPROMISO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="573" y="12" width="55" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[COMPROMISO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="628" y="12" width="64" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[COMPROMISO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="692" y="12" width="56" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[COMPROMISO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="748" y="12" width="54" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[COMPROMISO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="1" width="123" height="11"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[EJECUTADO EN EL TRIMESTRE No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="573" y="1" width="146" height="11"/>
+				<textElement textAlignment="Right" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[EJECUTADO EN EL TRIMESTRE No.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="401" y="1" width="172" height="11"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="573" y="1" width="229" height="11"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="1" width="16" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="16" y="1" width="16" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="32" y="1" width="16" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="48" y="1" width="19" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="66" y="1" width="157" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="401" y="12" width="58" height="34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="459" y="12" width="54" height="34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="513" y="12" width="60" height="34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="573" y="12" width="55" height="34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="628" y="12" width="64" height="34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="692" y="12" width="56" height="34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="748" y="12" width="54" height="34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="223" y="1" width="59" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="282" y="1" width="55" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="337" y="1" width="64" height="45"/>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="71" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="233" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="233" y="0" width="59" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="292" y="0" width="55" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="347" y="0" width="54" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="401" y="0" width="58" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="459" y="0" width="54" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="513" y="0" width="60" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="573" y="0" width="55" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="628" y="0" width="64" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="692" y="0" width="56" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="748" y="0" width="54" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="233" height="20"/>
+			</rectangle>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

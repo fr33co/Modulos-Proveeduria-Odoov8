@@ -15,8 +15,8 @@ class Cheques(models.Model):
     banco           = fields.Char(string="Banco:",size=100, required=False)
     monto           = fields.Float(string="Monto",size=100, required=False)
     descripcion     = fields.Text(string="Descripcion:",size=100, required=False)
-    t_debe          = fields.Float(string="Total Debe:",size=100, required=False)
-    t_haber         = fields.Float(string="Total Haber:",size=100, required=False)
+    t_debe          = fields.Float(string="Total Debe",size=100, required=False)
+    t_haber         = fields.Float(string="Total Haber",size=100, required=False)
     partidas        = fields.One2many('tesoreria.cheques_partidas',  'conexion', "Partidas", ondelete='cascade')
     
 class Cheques_Partidas(models.Model):

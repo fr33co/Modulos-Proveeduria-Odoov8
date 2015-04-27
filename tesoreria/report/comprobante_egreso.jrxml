@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="creditos_adicionales" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.6105100000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="384"/>
+	<property name="OPENERP_RELATIONS" value="movimientos"/>
+	<style name="table" lineSpacing="Single">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#D9C3C3" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFE6E6" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF" lineSpacing="Single">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center" lineSpacing="Single"/>
+	<queryString language="xPath">
+		<![CDATA[]]>
+	</queryString>
+	<field name="Fuente_de_Financiamiento-fuente" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Fuente_de_Financiamiento-fuente]]></fieldDescription>
+	</field>
+	<field name="Motivo-motivo" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Motivo-motivo]]></fieldDescription>
+	</field>
+	<field name="Cod.Partida-partida" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Movimientos-movimientos/Cod.Partida-partida]]></fieldDescription>
+	</field>
+	<field name="Codigo_y_nombre-codigo_nombre_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Ente-codigo_padre/Codigo_y_nombre-codigo_nombre_codigo]]></fieldDescription>
+	</field>
+	<field name="Codigo_a_Asignar-codigo_a_asignar" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Proyecto-proyecto_padre/Codigo_a_Asignar-codigo_a_asignar]]></fieldDescription>
+	</field>
+	<field name="Unidad_Administradora-unidad" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Unidad_Administradora-unidad]]></fieldDescription>
+	</field>
+	<field name="Codigo-codigo2" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Codigo-codigo]]></fieldDescription>
+	</field>
+	<field name="Fecha_Actual-fecha" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Fecha_Actual-fecha]]></fieldDescription>
+	</field>
+	<field name="Codigo-codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Codigo-codigo]]></fieldDescription>
+	</field>
+	<field name="Codigo-codigo3" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Ente-codigo_padre/Codigo-codigo]]></fieldDescription>
+	</field>
+	<field name="Nombre_del_Codigo-nombre_codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Ente-codigo_padre/Nombre_del_Codigo-nombre_codigo]]></fieldDescription>
+	</field>
+	<field name="Codigo-codigo4" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Ente-codigo_padre/Codigo-codigo]]></fieldDescription>
+	</field>
+	<field name="Nombre_Partida-nombre_partida" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Movimientos-movimientos/Nombre_Partida-nombre_partida]]></fieldDescription>
+	</field>
+	<field name="Aumentar-aumentar" class="java.lang.String">
+		<fieldDescription><![CDATA[/data/record/Movimientos-movimientos/Aumentar-aumentar]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="134" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="306" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Transparent" x="-224" y="-108" width="47" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="1" y="286" width="106" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CODIGOS/PARTIDAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="286" width="236" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONCEPTOS / DESCRIPCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="286" width="106" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEBE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="286" width="106" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HABER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="79" width="305" height="12"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROVEEDURIA SOCIALISTA DEL TRANSPORTE ARAGUEÑO JACINTO PEÑA S.A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="69" width="271" height="10"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GOBERNACIÓN DEL ESTADO ARAGUA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="59" width="271" height="10"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPUBLICA BOLIVARIANA DE VE VENEZUELA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="421" y="33" width="135" height="59"/>
+				<imageExpression class="java.lang.String"><![CDATA["/home/administrador/openerp7/openerp/addons/presupuesto_proveeduria/report/img/proveeduria.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="2" y="32" width="121" height="59"/>
+				<imageExpression class="java.lang.String"><![CDATA["/home/administrador/openerp7/openerp/addons/presupuesto_proveeduria/report/img/Logo gobernacion.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="14" y="200" width="530" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCIÓN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="185" width="106" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="170" width="106" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° CHEQUE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="357" y="170" width="106" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BANCO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="357" y="185" width="106" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MONTO DE CHEQUE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="107" width="530" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BENEFICIARIO/C.I.N°/RIF.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="92" width="342" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPROBANTE DE EGRESO (VAUCHER)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="92" width="106" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="91" width="344" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="107" width="555" height="14"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="356" y="184" width="107" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="356" y="170" width="107" height="14"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="170" width="105" height="14"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="184" width="105" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="450" y="91" width="105" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="343" y="91" width="107" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="199" width="554" height="14"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="105" y="170" width="251" height="14"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="463" y="170" width="91" height="14"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="463" y="184" width="91" height="15"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="286" width="107" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="107" y="286" width="235" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="342" y="286" width="105" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="447" y="286" width="107" height="20"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="107" y="0" width="236" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MONTOS TOTALES:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="105" y="0" width="235" height="14"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="340" y="0" width="108" height="14"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="447" y="0" width="107" height="14"/>
+			</rectangle>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="129" splitType="Stretch">
+			<textField>
+				<reportElement x="494" y="110" width="24" height="17"/>
+				<textElement textAlignment="Right" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="441" y="110" width="53" height="17"/>
+				<textElement textAlignment="Right" lineSpacing="Single"/>
+				<text><![CDATA[Pagina]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="532" y="110" width="23" height="17"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="518" y="110" width="14" height="17"/>
+				<textElement textAlignment="Center" lineSpacing="Single"/>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="340" y="71" width="101" height="13"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="441" y="71" width="114" height="13"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="71" width="120" height="13"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="120" y="71" width="220" height="13"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="67" width="120" height="16"/>
+				<box topPadding="5"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Elaborado por:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="67" width="210" height="16"/>
+				<box topPadding="5"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Revisado por:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="67" width="101" height="16"/>
+				<box topPadding="5"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Autorizado por:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="67" width="114" height="16"/>
+				<box topPadding="5"/>
+				<textElement textAlignment="Center" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contabilizado por:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="84" width="120" height="26"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="120" y="84" width="220" height="26"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="340" y="84" width="101" height="26"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="441" y="84" width="114" height="26"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="58" width="555" height="13"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="343" y="42" width="45" height="16"/>
+				<box topPadding="5"/>
+				<textElement lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[C.I / Rif:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="0" width="213" height="16"/>
+				<box topPadding="5"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recibido: firma y sello beneficiario:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="0" width="343" height="16"/>
+				<box topPadding="5"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Notas / Oservaciones:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="340" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="340" y="0" width="214" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="340" y="44" width="214" height="14"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="340" y="16" width="214" height="42"/>
+			</rectangle>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

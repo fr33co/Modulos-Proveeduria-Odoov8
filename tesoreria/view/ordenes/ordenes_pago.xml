@@ -53,16 +53,15 @@
                                     <field name="monto"/>
                                 </tree>
                             </field>
-                         <table style="width:500px">    
-                            <tr>
-                                <th><span>Sub Total</span></th>
-                                <td><field name="sub_total_d"/></td>
-                            </tr>
-                            <tr>
-                                <th><span>Total</span></th>
-                                <td><field name="total_d"/></td>
-                            </tr>
-                         </table>
+                         <group class="oe_subtotal_footer oe_right">
+                                <field name="sub_total_p" widget="monetary" readonly="1"/>
+                                <field name="total_p" widget="monetary" readonly="1"/>
+                                <div class="oe_subtotal_footer_separator oe_inline">
+                                    <label for="total_p"/>
+                                    
+                                </div>
+                                <field name="total_p" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary" readonly="1"/>
+                            </group>
                          <separator string="Detalle Contable de la Orden de Pago" style="text-align:center;"/>
                          <field name="detalles">
                                 <tree string="Detalles" version="7.0" editable="bottom" >
@@ -71,16 +70,15 @@
                                     <field name="haber"/>
                                 </tree>
                             </field>
-                          <table style="width:500px">    
-                            <tr>
-                                <th><span>Sub Total</span></th>
-                                <td><field name="sub_total_p"/></td>
-                            </tr>
-                            <tr>
-                                <th><span>Total</span></th>
-                                <td><field name="total_p"/></td>
-                            </tr>
-                        </table>
+                         <group class="oe_subtotal_footer oe_right">
+                                <field name="sub_total_p" widget="monetary" readonly="1"/>
+                                <field name="total_p" widget="monetary" readonly="1"/>
+                                <div class="oe_subtotal_footer_separator oe_inline">
+                                    <label for="total_p"/>
+                                </div>
+                                <field name="total_p" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary" readonly="1"/>
+                            </group>
+                <separator string="" style="text-align:center;"/>
                          </sheet>  
                 </form>
             </field>

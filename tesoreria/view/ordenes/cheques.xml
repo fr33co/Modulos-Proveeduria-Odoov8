@@ -7,7 +7,6 @@
             <field name="res_model">tesoreria.cheques</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
-            
         </record>
         <record model="ir.ui.view" id="cheques_tree_view">
             <field name="name">cheques.tree</field>
@@ -57,15 +56,18 @@
                                     <field name="haber"/>
                                 </tree>
                             </field>
-                         <table style="width:500px">    
-                            <tr>
-                                <th><span>Debe</span></th>
-                                <td><field name="t_debe"/></td>
-                            </tr>
-                            <tr>
-                                <th><span>Haber</span></th>
-                                <td><field name="t_haber"/></td>
-                            </tr>
+                         <table style="width:825px">
+                            <td><group>
+                             </group></td>
+                            <td><group>
+                               <th><span>Totales:</span></th>
+                             </group></td>
+                           <td style="padding-left:250px;"><group>
+                               <field name="t_debe" readonly="1"/>
+                             </group></td>
+                            <td style="padding-left:30px;"><group class="oe_subtotal_footer oe_center">
+                               <field name="t_haber" readonly="1"/>
+                            </group></td>
                          </table>
                     </sheet>  
                 </form>

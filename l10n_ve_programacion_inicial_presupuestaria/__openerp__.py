@@ -16,7 +16,7 @@
     'category': 'Accounting & Finance',
     'version': '0.1',
 
-    'depends': ['l10n_ve_clasificador_presupuestario'],
+    'depends': ['l10n_ve_clasificador_presupuestario', 'purchase',],
 
     'data': [
         'wizard/presupuesto_period_close.xml',

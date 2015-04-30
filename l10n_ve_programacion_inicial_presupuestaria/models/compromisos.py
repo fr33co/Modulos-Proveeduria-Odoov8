@@ -20,15 +20,24 @@ class Compromisos(models.Model):
     
     @api.onchange('referencia')
     def onchange_referencia(self):
-        print 'ON CHANGE'
-        print self.referencia.producto.name
-        print self.env['purchase.order'].search([['name', '=', self.referencia.name]])
-
-             	
+        value = {}
+	movimientos = []
+	print self.referencia.name
+        datos_src = self.env['purchase.order'].search([['name', '=', self.referencia.name]])
+	print datos_src.order_line.product_id.name
+	print datos_src.order_line.product_qty
+	print datos_src.order_line.price_unit
+	print datos_src.order_line.price_subtotal      
+	movimientos.append([0,0, {'producto':datos_src.order_line.product_id.name}])
+	value.update(movimientos=movimientos)
+	return {'value' : {'movimientos' : movimientos}}
+	print movimientos
+	print value
+	       	
 class Compromisos_Movimientos(models.Model):
     _name = "presupuesto.compromisos_movimientos"
     _rec_name ='producto'
-
+ 
        
     compromisos    = fields.Many2one("presupuesto.creditos_adicionales","Traspaso",required=False)
     producto       = fields.Char(string="Producto",required=False)

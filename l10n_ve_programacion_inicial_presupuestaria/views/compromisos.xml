@@ -51,7 +51,7 @@
                                 <field name="fecha_resolucion"/>
                              </group></td>
                         </table>
-                                <field name="movimientos">
+                                <field name="movimientos" on_change="onchange_referencia(referencia)">
                                     <tree string="Movimientos" version="7.0" editable="bottom">
                                         <field name="producto"/>
                                         <field name="descripcion" invisible="1"/>

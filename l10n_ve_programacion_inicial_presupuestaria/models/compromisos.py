@@ -20,11 +20,11 @@ class Compromisos(models.Model):
     
     @api.onchange('referencia')
     def onchange_referencia(self):
-        if self.referencia == True:
-            values = {}
-            values = self.resolve_2many_commands(cr, uid, 'movimientos', movimientos, ['producto'], context)
-            print values
-		
+        print 'ON CHANGE'
+        print self.referencia.producto.name
+        print self.env['purchase.order'].search([['name', '=', self.referencia.name]])
+
+             	
 class Compromisos_Movimientos(models.Model):
     _name = "presupuesto.compromisos_movimientos"
     _rec_name ='producto'
@@ -43,19 +43,18 @@ class Compromisos_Movimientos(models.Model):
     
     
     def completar_campos(self, cr, uid, ids,serial, context=None):
-	    values = {}
-	    if not serial:return values
-	    cr.execute('SELECT serial FROM distribucion_especifica WHERE id='+str(serial))
-	    partida= cr.fetchone()[0]
-	    cr.execute('SELECT nombre_distribucion FROM distribucion_especifica WHERE id='+str(serial))
-	    nom_partida= cr.fetchone()[0]
-	    cr.execute('SELECT disponibilidad_distribucion FROM distribucion_especifica WHERE id='+str(serial))
-	    dispo_partida= cr.fetchone()[0]
-	    values.update({
-		'nom_partida':nom_partida,
-		'disponibilidad_real':dispo_partida,
-		'disponibilidad_virtual':dispo_partida,
-		
-	    })
-	    return {'value' : values}
-	
+        values = {}
+        if not serial:return values
+        cr.execute('SELECT serial FROM distribucion_especifica WHERE id='+str(serial))
+        partida= cr.fetchone()[0]
+        cr.execute('SELECT nombre_distribucion FROM distribucion_especifica WHERE id='+str(serial))
+        nom_partida= cr.fetchone()[0]
+        cr.execute('SELECT disponibilidad_distribucion FROM distribucion_especifica WHERE id='+str(serial))
+        dispo_partida= cr.fetchone()[0]
+        values.update({
+            'nom_partida':nom_partida,
+            'disponibilidad_real':dispo_partida,
+            'disponibilidad_virtual':dispo_partida,
+            
+        })
+        return {'value' : values}

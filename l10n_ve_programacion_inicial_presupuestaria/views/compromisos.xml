@@ -42,7 +42,6 @@
                                 <field name="tipo_documento"/>
                                 <field name="numero"/>
                                 <field name="referencia"/>
-                                <!--<field name="referencia"/>-->
                             </group></td>
                             <td style="padding-left:30px;"><group>
                                 <field name="numero_oficio"/>
@@ -51,8 +50,8 @@
                                 <field name="fecha_resolucion"/>
                              </group></td>
                         </table>
-                                <field name="movimientos" on_change="onchange_referencia(referencia)">
-                                    <tree string="Movimientos" version="7.0" editable="bottom">
+                                <field name="movimientos">
+                                    <tree string="Movimientos" version="7.0" on_change="onchange_referencia(referencia)" editable="bottom">
                                         <field name="producto"/>
                                         <field name="descripcion" invisible="1"/>
                                         <field name="cantidad" />

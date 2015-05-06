@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 from openerp import models, fields, api
 
+
 class Compromisos(models.Model):
 
     _name = "presupuesto.compromisos"
@@ -16,22 +17,27 @@ class Compromisos(models.Model):
     motivo           = fields.Char(string="Motivo:", required=False)
     referencia       = fields.Many2one('purchase.order','Referencia:', required=True)
     movimientos      = fields.One2many('presupuesto.compromisos_movimientos', 'compromisos', "Movimientos", ondelete='cascade')
-    status	         = fields.Selection((('borrador','Borrador'),('compromiso','Comprometido'),('confirmado','Causado'),('pagado','Pagado'),('cancelado','Cancelado')),'Estatus',required=False, default='borrador')
-    
-    @api.onchange('referencia')
-    def onchange_referencia(self):
-        print 'ON CHANGE'
-        print self.referencia.producto.name
-        print self.env['purchase.order'].search([['name', '=', self.referencia.name]])
+    status	     = fields.Selection((('borrador','Borrador'),('compromiso','Comprometido'),('confirmado','Causado'),('pagado','Pagado'),('cancelado','Cancelado')),'Estatus',required=False, default='borrador')
 
-             	
+    @api.onchange('referencia') 
+    def onchange_referencia(self):
+        #datos_src = self.env['purchase.order'].search([['name', '=', self.referencia.name]])
+        for val in self.referencia:
+            self.movimientos  = [((0, 0, {'producto': val.order_line.product_id.name,
+                                          'cantidad': val.order_line.product_qty,
+                                          #'descripcion': val.order_line.description,
+                                          'precio_unit': val.order_line.price_unit,
+                                          'total': val.order_line.price_subtotal,
+                                }))]
+
+
 class Compromisos_Movimientos(models.Model):
     _name = "presupuesto.compromisos_movimientos"
     _rec_name ='producto'
-
        
     compromisos    = fields.Many2one("presupuesto.creditos_adicionales","Traspaso",required=False)
     producto       = fields.Char(string="Producto",required=False)
+    #Elimianar campo descipcion
     descripcion    = fields.Char(string="Descripción",required=False)
     cantidad       = fields.Float(string="Cantidad",required=False)
     precio_unit    = fields.Float(string="Precio Unit",readonly=False)
@@ -41,7 +47,7 @@ class Compromisos_Movimientos(models.Model):
     disponibilidad_real    = fields.Char(string="Disponibilidad Real",readonly=False)
     disponibilidad_virtual = fields.Char(string="Disponibilidad Virtual",required=False)
     
-    
+    #Modificar al nuevo api
     def completar_campos(self, cr, uid, ids,serial, context=None):
         values = {}
         if not serial:return values

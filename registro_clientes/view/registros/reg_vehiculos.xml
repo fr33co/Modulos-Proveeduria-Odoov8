@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    
+    <data>
+        <record model="ir.actions.act_window" id="reg_vehiculos_list_action">
+            <field name="name">Vehículos</field>
+            <field name="res_model">reg.vehiculos</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Registro de Vehículos según DT9 o DT10</p>
+            </field>            
+        </record>
+        
+        <record model="ir.ui.view" id="vista_form_reg_vehiculos">
+            <field name="name">reg.vehiculos.form</field>
+            <field name="model">reg.vehiculos</field>
+            <field name="arch" type="xml">
+                <form string="Vehículo Formulario" version="7.0">
+                    <sheet>
+                        <header>
+                            <button name="action_button" type="object" string="Validar Estado" class="oe_highlight"/>
+                            <field name="estado" widget="statusbar" />                           
+                        </header>
+                        <group>
+                        <group colpan="2">
+                            <separator string="" colspan="2"/>
+                                <field name="placa"  placeholder="Placa, ejemplo: DAL03F" estado="Reg Organizacion, Reg Propietario, Completo"/>
+                                <field name="carroceria" colspan="1" placeholder="Serial de Carroceria"/>
+                                <field name="cantidad_puestos" colspan="1" placeholder="Puestos, ejemplo: 26"/>
+                                <field name="color" colspan="2"  placeholder="Seleccionar color..." domain="[('activo','=',True)]"/>
+                        </group>
+                        
+                        <group colpan="2">  
+                            <separator string="" colspan="2"/>
+                                <field name="tipo_vehiculo" colspan="2" placeholder="Seleccionar Tipo de Vehiculo..." domain="[('activo','=',True)]"/>
+                                <field name="fecha_inicial" colspan="2"/>
+                                <field name="activo" colspan="1" />
+                                <field name="bloquear" colspan="1" on_change="onchange_bloquear(bloquear,organizacion_ids, propietario_ids)"/>
+                        </group>
+                        </group>
+                        <notebook colspan="4" >
+                            <page string="Organizaciones" >
+                                <field name="organizacion_ids" nolabel="1" >
+                                    <tree editable="bottom">
+                                        <field name="organizacion" domain= "[('is_company','=', True)]"  placeholder="Seleccionar una Organizacion..." />
+                                        <field name="cedula_rif" string="CED / RIF"/>
+                                        <field name="telefono" string="Telefono"/>
+                                        <field name="celular" string="Celular"/>
+                                        <field name="cupo" />
+                                        <field name="fecha_inicial" />
+                                        <field name="activo" readonly="False"/>
+                                        <field name="bloquear" readonly="True" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        
+                        <notebook colspan="4">
+                            <page string="Propietarios" >
+                                <field name="propietario_ids" nolabel="1" >
+                                    <tree editable="bottom">
+                                        <field name="propietario" domain="[('customer','=',True)]" placeholder="Seleccionar un Propietario..." on_change="onchange_propietario(propietario)"/>
+                                        <field name="cedula_rif" string="CED / RIF"/>
+                                        <field name="telefono" string= "Telefono"/>
+                                        <field name="celular" string= "Celular"/>
+                                        <field name="fecha_inicial" />
+                                        <field name="activo" readonly="False"/>
+                                        <field name="bloquear" readonly="True"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="vista_tree_reg_vehiculos">
+            <field name="name">reg.vehiculos.tree</field>
+            <field name="model">reg.vehiculos</field>
+            <field name="arch" type="xml">
+                <tree string="Vehiculos Tree" >
+                    <field name="placa" readonly="1" />
+                    <field name="tipo_vehiculo" readonly="1" />
+                    <field name="fecha_inicial" readonly="1"  />
+                    <field name="organizacion_ids" domain="[('activo','=',True)]" readonly="1"  />
+                    <field name="propietario_ids" domain="[('activo','=',True)]" readonly="1" />
+                    <field name="activo" />
+                    <field name="bloquear"/>
+                    <field name="estado" readonly="1" />
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="vista_search_reg_vehiculos">
+            <field name="name">reg.vehiculos.search</field>
+            <field name="model">reg.vehiculos</field>
+            <field name="arch" type="xml">
+                <search string="Vehiculo">
+                    <field name="placa" />
+                    <filter name="filter_activo_todos" string="Todos" domain="['|',('activo','=', True),('activo','=', False) ]"/>
+                    <filter name="filter_activo" string="Activo" domain="[('activo','=', True) ]"/>
+                    <filter name="filter_inactivo" string="Inactivo" domain="[('activo','=', False) ]"/>
+                    <filter name="filter_bloquear" string="Bloqueado" domain="[('bloquear,'=', True) ]"/>
+                    <filter name="filter_no_bloquear" string="No Bloqueado" domain="[('bloquear','=', False) ]"/>
+                </search>
+            </field>
+        </record>
+        
+        <menuitem id="registros_menu_principal" name="Registro Clientes" />
+        <menuitem id="menu_registro" name="Registro" parent="registros_menu_principal"/>
+        <menuitem id="menu_reg_vehiculos" name="Vehículos" parent="menu_registro" action="reg_vehiculos_list_action" />
+       
+    </data>
+</openerp>

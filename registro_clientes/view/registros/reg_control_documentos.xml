@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    
+    <data>
+        <record model="ir.actions.act_window" id="reg_control_documentos_list_action">
+            <field name="name">Control Documentos</field>
+            <field name="res_model">reg.control.documentos</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="auto_refresh">10</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Control de Renovación de Documentos</p>
+            </field>            
+        </record>
+        
+        <record model="ir.ui.view" id="vista_form_reg_control_documentos">
+            <field name="name">reg.control.documentos.form</field>
+            <field name="model">reg.control.documentos</field>
+            <field name="arch" type="xml">
+                <form string="Control Renovacion Documentos Formulario" version="8.0">
+                    <sheet>
+                        <group>
+
+                            <group>
+                                <field name='vencimiento'/>
+                            </group>
+                            
+                        </group>
+                        
+                        <notebook colspan="4" >
+                            <page string="Datos del Vehiculo" >
+                                <group colspan="4" >
+                                    <group>
+                                        <field name="vehiculo" placeholder="Seleccione un vehiculo..."
+                                               domain= "[('activo','=', True)]">
+                                            
+                                        </field>
+                                        <field name="carroceria" string="Carroceria" />
+                                    </group>
+                                    <group>
+                                        <field name="cantidad_puestos" string="Cantidad Puestos"/>
+                                        <field name="color" />
+                                        <field name="tipo_vehiculo" />
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                        
+                        <notebook colspan="4" >
+                            <page string="Control de Documento" >
+                                <field name="control_documentos" nolabel="1" >
+                                    <tree editable="bottom">
+                                        <field name="documento"  placeholder="Seleccione el documento..."
+                                        domain="[('activo','=',True),('vehiculo','=',True)]" eval='2'/>
+                                        <field name="periodo" />
+                                        <field name="cantidad_dias" string="Cantidad Dias"/>
+                                        <field name="fecha_inicial" string="Fecha Registro" />
+                                        <field name="fecha_final" eval='5' />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="vista_tree_reg_control_documentos">
+            <field name="name">reg.control.documentos.tree</field>
+            <field name="model">reg.control.documentos</field>
+            <field name="arch" type="xml">
+                <tree string="Control Renovacion Documentos Tree" colors="red: vencimiento &lt; fecha_actual" >
+                    <field name="vehiculo" />
+                    <field name="vencimiento"/>
+                    <field name="fecha_actual"  eval="2" invisible="0"/>
+                </tree>
+            </field>
+        </record>
+        
+        <menuitem id="registros_menu_principal" name="Registro Clientes" />
+        <menuitem id="menu_registro" name="Registro" parent="registros_menu_principal"/>
+        <menuitem id="menu_reg_control_documentos" name="Control Documentos" parent="menu_registro" action="reg_control_documentos_list_action" />
+       
+    </data>
+</openerp>

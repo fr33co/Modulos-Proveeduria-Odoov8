@@ -1,0 +1,6 @@
+import reg_vehiculos
+import reg_control_documentos
+import reg_subform_control_documentos
+import reg_respartner
+import reg_subform_organizacion_respartner
+import reg_subform_propietario_respartner

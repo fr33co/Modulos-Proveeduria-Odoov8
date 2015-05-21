@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    
+    <data>
+        <record model="ir.actions.act_window" id="reg_tipos_vehiculos_list_action">
+            <field name="name">Tipos de Vehículos</field>
+            <field name="res_model">reg.tipos.vehiculos</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Registrar Tipos de Vehículos</p>
+            </field>            
+        </record>
+        
+        <record model="ir.ui.view" id="vista_form_reg_tipos_vehiculos">
+            <field name="name">reg.tipos.vehiculos.form</field>
+            <field name="model">reg.tipos.vehiculos</field>
+            <field name="arch" type="xml">
+                <form string="Tipos de Vehículos Formulario" version="7.0">
+                    <sheet>
+                        <group colspan="2">
+                            <field name="tipo_vehiculo" colspan="1" placeholder="Ejemplo: Minibus"/>
+                            <field name="activo" colspan="1" />
+                            <field name="cantidad_puesto_desde" colspan="1" placeholder="Rango puesto inicial, ejemplo: 26"/>
+                            <field name="cantidad_puesto_hasta" colspan="1" placeholder="Rango puesto final, ejemplo: 32"/>
+                        </group>
+                        </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="vista_tree_reg_tipos_vehiculos">
+            <field name="name">reg.tipos.vehiculos.tree</field>
+            <field name="model">reg.tipos.vehiculos</field>
+            <field name="arch" type="xml">
+                <tree string="Tipos Vehiculos Tree" editable="bottom">
+                    <field name="tipo_vehiculo" />
+                    <field name="cantidad_puesto_desde" />
+                    <field name="cantidad_puesto_hasta" />
+                    <field name="activo" colspan="4" />
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="vista_search_reg_tipos_vehiculos">
+            <field name="name">reg.tipos.vehiculos.search</field>
+            <field name="model">reg.tipos.vehiculos</field>
+            <field name="arch" type="xml">
+                <search string="Tipos Vehiculos">
+                    <field name="tipo_vehiculo" />
+                    <filter name="filter_activo_todos" string="Todos" domain="['|',('activo','=', True),('activo','=', False) ]"/>
+                    <filter name="filter_activo" string="Activo" domain="[('activo','=', True) ]"/>
+                    <filter name="filter_inactivo" string="Inactivo" domain="[('activo','=', False) ]"/>
+                </search>
+            </field>
+        </record>
+        
+        <menuitem id="registros_menu_principal" name="Registro Clientes" />
+        <menuitem id="menu_maestros" name="Maestros" parent="registros_menu_principal"/>
+        <menuitem id="menu_reg_tipos_vehiculos" name="Tipos de Vehiculos" parent="menu_maestros" action="reg_tipos_vehiculos_list_action" />
+       
+    </data>
+</openerp>

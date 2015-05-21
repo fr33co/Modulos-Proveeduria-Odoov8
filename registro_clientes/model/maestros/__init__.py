@@ -1,0 +1,4 @@
+import reg_tipos_vehiculos
+import reg_colores_vehiculos
+import reg_periodos_renovacion
+import reg_tipos_documentos

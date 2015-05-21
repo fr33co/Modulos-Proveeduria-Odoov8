@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    
+    <data>
+        <record model="ir.actions.act_window" id="reg_periodos_renovacion_list_action">
+            <field name="name">Periodos de Renovacion</field>
+            <field name="res_model">reg.periodos.renovacion</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Definir Periodos de Renovacion</p>
+            </field>            
+        </record>
+        
+        <record model="ir.ui.view" id="vista_form_reg_periodos_renovacion">
+            <field name="name">reg.periodos.renovacion.form</field>
+            <field name="model">reg.periodos.renovacion</field>
+            <field name="arch" type="xml">
+                <form string="Periodos de Renovacion Formulario" version="7.0">
+                    <sheet>
+                        <group colspan="2">
+                        <field name="periodo" colspan="1" placeholder="Periodo, ejemplo: Trimestral"/>
+                        <field name="cantidad_dias" colspan="1" placeholder="Cantidad Dias, ejemplo: 90"/>
+                        <field name="activo" colspan="1" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="vista_tree_reg_periodos_renovacion">
+            <field name="name">reg.periodos.renovacion.tree</field>
+            <field name="model">reg.periodos.renovacion</field>
+            <field name="arch" type="xml">
+                <tree string="Periodos Renovacion Tree" editable="bottom">
+                    <field name="periodo" />
+                    <field name="cantidad_dias" />
+                    <field name="activo" />
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="vista_search_reg_periodos_renovacion">
+            <field name="name">reg.periodos.renovacion.search</field>
+            <field name="model">reg.periodos.renovacion</field>
+            <field name="arch" type="xml">
+                <search string="Periodos Renovacion">
+                    <field name="periodo" />
+                    <filter name="filter_activo_todos" string="Todos" domain="['|',('activo','=', True),('activo','=', False) ]"/>
+                    <filter name="filter_activo" string="Activo" domain="[('activo','=', True) ]"/>
+                    <filter name="filter_inactivo" string="Inactivo" domain="[('activo','=', False) ]"/>
+                </search>
+            </field>
+        </record>
+        
+        <menuitem id="registros_menu_principal" name="Registro Clientes" />
+        <menuitem id="menu_maestros" name="Maestros" parent="registros_menu_principal"/>
+        <menuitem id="menu_reg_periodos_renovacion" name="Periodos de Renovación" parent="menu_maestros" action="reg_periodos_renovacion_list_action" />
+       
+    </data>
+</openerp>

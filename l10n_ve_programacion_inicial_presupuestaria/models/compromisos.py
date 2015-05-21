@@ -18,23 +18,23 @@ class Compromisos(models.Model):
     referencia       = fields.Many2one('purchase.order','Referencia:', required=True)
     movimientos      = fields.One2many('presupuesto.compromisos_movimientos', 'compromisos', "Movimientos", ondelete='cascade')
     status	     = fields.Selection((('borrador','Borrador'),('compromiso','Comprometido'),('confirmado','Causado'),('pagado','Pagado'),('cancelado','Cancelado')),'Estatus',required=False, default='borrador')
-    
+	
     @api.onchange('referencia') 
     def onchange_referencia(self):
         #datos_src = self.env['purchase.order'].search([['name', '=', self.referencia.name]])
         values = {}
-	    movimientos = []
-	    for val in self.referencia:
-		    '''Verifico purchase.order'''
-		    for a in val.order_line:
-			'''Traigo datos de purchase.order.line desde purchase.order'''
-			movimientos.append([0, 0, {'producto': a.product_id.name,
-					'cantidad': a.product_qty,
-					#'descripcion': val.order_line.description,
-					'precio_unit': a.price_unit,
-					'total': a.price_subtotal,
-					}])
-			self.movimientos = movimientos		
+	movimientos = []
+	for val in self.referencia:
+	    '''Verifico purchase.order'''
+	    for a in val.order_line:
+		'''Traigo datos de purchase.order.line desde purchase.order'''
+		movimientos.append([0, 0, {'producto': a.product_id.name,
+				'cantidad': a.product_qty,
+				#'descripcion': val.order_line.description,
+				'precio_unit': a.price_unit,
+				'total': a.price_subtotal,
+				}])
+		self.movimientos = movimientos		
 
 class Compromisos_Movimientos(models.Model):
     _name = "presupuesto.compromisos_movimientos"

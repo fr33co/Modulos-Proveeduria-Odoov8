@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    
+    <data>
+        <record model="ir.actions.act_window" id="reg_colores_vehiculos_list_action">
+            <field name="name">Colores Vehiculos</field>
+            <field name="res_model">reg.colores.vehiculos</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Colores de los Vehiculos</p>
+            </field>            
+        </record>
+        
+        <record model="ir.ui.view" id="vista_form_reg_colores_vehiculos">
+            <field name="name">reg.colores.vehiculos.form</field>
+            <field name="model">reg.colores.vehiculos</field>
+            <field name="arch" type="xml">
+                <form string="Colores Vehiculos Formulario" version="8.0">
+                    <sheet>
+                        <group colspan="4">
+                        <field name="color" colspan="2" placeholder="Colores, ejemplo: Multicolor"/>
+                        <field name="activo" colspan="2" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="vista_tree_reg_colores_vehiculos">
+            <field name="name">reg.colores.vehiculos.tree</field>
+            <field name="model">reg.colores.vehiculos</field>
+            <field name="arch" type="xml">
+                <tree string="Colores Vehiculos Tree" editable="bottom">
+                    <field name="color" />
+                    <field name="activo" /> 
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="vista_search__reg_colores_vehiculos">
+            <field name="name">reg.colores.vehiculos.search</field>
+            <field name="model">reg.colores.vehiculos</field>
+            <field name="arch" type="xml">
+                <search string="Colores Vehiculos">
+                    <field name="color" />
+                    <filter name="filter_activo_todos" string="Todos" domain="['|',('activo','=', True),('activo','=', False) ]"/>
+                    <filter name="filter_activo" string="Activo" domain="[('activo','=', True) ]"/>
+                    <filter name="filter_inactivo" string="Inactivo" domain="[('activo','=', False) ]"/>
+                </search>
+            </field>
+        </record>
+        
+        <menuitem id="registros_menu_principal" name="Registros Clientes" />
+        <menuitem id="menu_maestros" name="Maestros" parent="registros_menu_principal"/>
+        <menuitem id="menu_reg_colores_vehiculos" name="Colores Vehiculos" parent="menu_maestros" action="reg_colores_vehiculos_list_action" />
+       
+    </data>
+</openerp>

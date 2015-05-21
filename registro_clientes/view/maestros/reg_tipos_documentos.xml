@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    
+    <data>
+        <record model="ir.actions.act_window" id="reg_tipos_documentos_list_action">
+            <field name="name">Tipos de Documentos</field>
+            <field name="res_model">reg.tipos.documentos</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Establecer Tipos de Documentos con su periodo de renovacion</p>
+            </field>            
+        </record>
+        
+        <record model="ir.ui.view" id="vista_form_reg_tipos_documentos">
+            <field name="name">reg.tipos.documentos.form</field>
+            <field name="model">reg.tipos.documentos</field>
+            <field name="arch" type="xml">
+                <form string="Tipos Documentos Formulario" version="8.0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="documento" colspan="1" placeholder="Documento, ejemplo: Copia Titulo de Propiedad"/>
+                                <field name="tipo_renovacion" colspan="1" placeholder="Renovacion, ejemplo: Trimestral" domain="[('activo','=',True)]" />
+                                <field name="cantidad_dias" string="Cantidad Dias" colspan="1"/>
+                            </group>
+                            <group>
+                                <field name="organizacion" colspan="1" />
+                                <field name="vehiculo" colspan="1" />
+                                <field name="activo" colspan="1" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="vista_tree_reg_tipos_documentos">
+            <field name="name">reg.tipos.documentos.tree</field>
+            <field name="model">reg.tipos.documentos</field>
+            <field name="arch" type="xml">
+                <tree string="Tipos Documentos Tree">
+                    <field name="documento" />
+                    <field name="tipo_renovacion" />
+                    <field name="organizacion" />
+                    <field name="vehiculo" />
+                    <field name="activo" />
+                </tree>
+            </field>
+        </record>
+        
+        <menuitem id="registro_menu_principal" name="Registro Clientes" />
+        <menuitem id="menu_maestros" name="Maestros" parent="registro_menu_principal"/>
+        <menuitem id="menu_reg_tipos_documentos" name="Tipos de Documentos" parent="menu_maestros" action="reg_tipos_documentos_list_action" />
+       
+    </data>
+</openerp>

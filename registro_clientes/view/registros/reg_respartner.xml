@@ -40,6 +40,20 @@
                 <field name="cant_puesto" required="1"  placeholder="Ejemplo: 120" attrs="{'invisible': [('is_company','=', False)]}"/>
             </field>
 
+	    <xpath expr="//form/sheet/notebook/page[@string='Contacts']" position="before">
+                    <page string="Vehiculos asociados">
+                        <field name="vehiculos_ids">
+			    <tree string="Vehiculos">
+				<field name="tipo_vehiculo" string="Tipo de Vehiculo"/>
+				<field name="color" string="Color"/>
+				<field name="carroceria" string="Carroceria"/>
+				<field name="placa" string="Placa"/>
+			    </tree>
+			</field>
+		    </page>
+            </xpath>
+	    
+	    
         </field>
        </record>
        

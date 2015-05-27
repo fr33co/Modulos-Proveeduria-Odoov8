@@ -7,6 +7,7 @@ class res_partner(models.Model):
     cant_puesto = fields.Integer(string="Cantidad de Puesto DT9 o DT10")
     bloquear = fields.Boolean('Bloquear')
     activo = fields.Boolean('Activo')
+    vehiculos_ids = fields.One2many ('reg.vehiculos', 'res_partner_id')
     
     _sql_constraints = [
         ('rif_cedula_unico',

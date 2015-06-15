@@ -32,11 +32,11 @@
                         <separator string="Presupuesto General"/>
                         <table style="width:700px;">
                             <td><group>
-                                <field name="codigo_a_asignar" on_change="construir_codigo_nombre(codigo_a_asignar,nombre_codigo)"/>
+                                <field name="codigo_a_asignar"/>
                             </group></td>
                             <td style="padding-left:30px;"><group>
-                                <field name="nombre_codigo" on_change="construir_codigo_nombre(codigo_a_asignar,nombre_codigo)"/>
-                                <field name="monto_inic_codigo" on_change="monto_inicial(monto_inic_codigo)"/>
+                                <field name="nombre_codigo"/>
+                                <field name="monto_inic_codigo"/>
                                 <field name="monto_distribuido" invisible='1'/>
                                 <field name="disponibilidad_codigo" invisible="1"/>
                                 <field name="codigo_nombre_codigo" invisible="1"/>

@@ -21,18 +21,11 @@ class Traspaso(models.Model):
     movimientos2    = fields.One2many('presupuesto.traspaso_movimientos', 'traspaso2', "Movimientos2", ondelete='cascade')
     status	    = fields.Selection((('borrador','Borrador'),('confirmado','Confirmado'),('cancelado','Cancelado')),'Estatus',required=True, default='borrador')
     
-    def completar_nombre(self, cr, uid, ids,codigo,proyecto, context=None):
-	values = {}
-	if not proyecto: return values
-	if not codigo: return values
-	cr.execute('SELECT nombre_proyecto FROM presupuesto_proyecto WHERE id='+str(proyecto))
-	nombre_proyecto= cr.fetchone()[0]
-	cr.execute('SELECT codigo FROM presupuesto_codigo WHERE id='+str(codigo))
-	ente= cr.fetchone()[0]
-        values.update({
-	    'unidad':nombre_proyecto,
-	})
-	return {'value' : values}
+    @api.onchange('proyecto_padre') 
+    def onchange_monto_inicial(self):
+	for val in self.proyecto_padre:
+	    nombre_proyecto_ = val.nombre_proyecto
+	    self.unidad = nombre_proyecto_
     
     def confirmar(self, cr, uid, ids, context=None):
 	values = {}
@@ -44,7 +37,6 @@ class Traspaso(models.Model):
                 dism=mov.disminuir
 		result=float(dis)-float(dism)
 		cr.execute("UPDATE distribucion_especifica Set disponibilidad_distribucion="+str(result)+" WHERE id='"+str(cod_serial)+"'")
-		
 	    for mov2 in form.movimientos2:
 		cod_serial2=mov2.serial.id
 		dis2=mov2.disponibilidad_real
@@ -63,7 +55,6 @@ class Traspaso(models.Model):
 		aum=mov.aumentar
 		result=float(dispo_partida)+float(aum)
 		cr.execute("UPDATE distribucion_especifica Set disponibilidad_distribucion="+str(result)+" WHERE serial='"+str(codigo_serial)+"'")
-		
 	    for mov in form.movimientos:
 		codigo_serial=mov.partida
 		cr.execute("SELECT disponibilidad_distribucion FROM distribucion_especifica WHERE serial='"+str(codigo_serial)+"'")
@@ -91,19 +82,14 @@ class Traspaso_Movimientos(models.Model):
     disponibilidad_real   = fields.Char(string="Disponibilidad Real",readonly=False)
     disponibilidad_virtual= fields.Char(string="Disponibilidad Virtual",required=False)
     
-    def completar_campos(self, cr, uid, ids,serial, context=None):
-	values = {}
-	if not serial:return values
-	cr.execute('SELECT serial FROM distribucion_especifica WHERE id='+str(serial))
-	partida= cr.fetchone()[0]
-        cr.execute('SELECT nombre_distribucion FROM distribucion_especifica WHERE id='+str(serial))
-	nom_partida= cr.fetchone()[0]
-	cr.execute('SELECT disponibilidad_distribucion FROM distribucion_especifica WHERE id='+str(serial))
-	dispo_partida= cr.fetchone()[0]
-        values.update({
-	    'nombre_partida':nom_partida,
-	    'disponibilidad_real':dispo_partida,
-	    'disponibilidad_virtual':dispo_partida,
-	    'partida': partida
-	})
-	return {'value' : values}
+    
+    @api.onchange('serial') 
+    def onchange_serial(self):
+	for val in self.serial:
+	    partida_ = val.serial
+	    nombre_distribucion_ = val.nombre_distribucion
+	    disponibilidad_distribucion_ = val.disponibilidad_distribucion
+	    self.nombre_partida = nombre_distribucion_
+	    self.disponibilidad_real = disponibilidad_distribucion_
+	    self.disponibilidad_virtual = disponibilidad_distribucion_
+	    self.partida = partida_

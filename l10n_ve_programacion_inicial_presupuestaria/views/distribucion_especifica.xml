@@ -31,20 +31,16 @@
                         <separator string="DISTRIBUCIÓN POR PARTIDA ESPECIFICA"/>
                         <table style="width:800px;">
                             <td><group>
-                                <field name="codigo_padre"        on_change="construccion_multiple(codigo_padre,proyecto_padre,codigo_a_asignar,monto_inic_distribucion)"/>
-                                <field name="proyecto_padre"      on_change="construccion_multiple(codigo_padre,proyecto_padre,codigo_a_asignar,monto_inic_distribucion)"/>
-                                <field name="codigo_a_asignar"    on_change="construccion_multiple(codigo_padre,proyecto_padre,codigo_a_asignar,monto_inic_distribucion)"/>
+                                <field name="codigo_padre"/>
+                                <field name="proyecto_padre"/>
+                              
+                                <field name="codigo_a_asignar"/>
                             </group></td>
                             <td style="padding-left:30px;"><group>
-                                <field name="nombre_distribucion" string='Nombre Partida' invisible='0'/>
-                                <field name="monto_inic_distribucion" on_change="construccion_multiple(codigo_padre,proyecto_padre,codigo_a_asignar,monto_inic_distribucion)"/>
-                                <field name="disponibilidad_distribucion" invisible='0'/>
-                               
-                                
-                               
-                               
+                                <field name="nombre_distribucion" string='Nombre Partida' invisible='1'/>
+                                <field name="monto_inic_distribucion"/>
+                                <field name="disponibilidad_distribucion" invisible='1'/>
                                 <field name="serial" invisible="0"/>
-                                
                             </group></td>
                             <tr><td><group></group></td></tr>
                             <tr><td><group></group></td></tr>

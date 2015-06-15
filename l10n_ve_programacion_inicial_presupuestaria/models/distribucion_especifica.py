@@ -16,45 +16,30 @@ class Distribucion_Especifica(models.Model):
     serial                         = fields.Char(string="Serial:", required=False)
     dispo_proyecto                 = fields.Float(string="Monto a Distribuir:",readonly=True)
 
-    
-    def construccion_multiple(self, cr, uid, ids, codigo_padre,proyecto,codigo,monto, context=None):
-	values = {}
-	mensaje = {}
-	if not codigo_padre: return values
-	if not codigo: return values
-	if not proyecto: return values
-	
-	cr.execute('SELECT monto_inic_proyecto FROM presupuesto_proyecto WHERE id='+str(proyecto))
-	monto_inicial= cr.fetchone()[0]
-	cr.execute('SELECT monto_distribuido FROM presupuesto_proyecto WHERE id='+str(proyecto))
-	monto_distribuido= cr.fetchone()[0]
-        cr.execute('SELECT codigo FROM presupuesto_codigo WHERE id='+str(codigo_padre))
-	result1= cr.fetchone()[0]
-	#print result1
-        cr.execute('SELECT codigo FROM presupuesto_proyecto WHERE id='+str(proyecto))
-	result2= cr.fetchone()[0]
-	print result2
-	cr.execute('SELECT code FROM l10n_ve_clasificador_presupuestario WHERE id='+str(codigo))
-	result3= cr.fetchone()[0]
-	cr.execute('SELECT name FROM l10n_ve_clasificador_presupuestario WHERE id='+str(codigo))
-	result4= cr.fetchone()[0]
-	
-	
-	result= float(monto_inicial) - float(monto_distribuido)
-	
-	if monto and result:
-	    if monto > result:
-		mensaje = {'title':'Alerta','message':'Disculpe usted no dispone de fondos suficientes'}
-		values.update({
-			'monto_inic_distribucion':False,
-				})
-        values.update({
-	    'nombre_distribucion':result4,
-	    'serial':result1+"-"+result2+"-"+result3,
-	    'disponibilidad_distribucion':monto,
-	    'dispo_proyecto':result,
-	})
-	return {'value' : values, 'warning':mensaje}
+    @api.onchange('codigo_padre', 'proyecto_padre','codigo_a_asignar','monto_inic_distribucion')
+    def onchange_construccion_multiple(self):
+	mensaje= {}
+	for val1 in self.codigo_padre:
+	    codigo_padre_ = val1.codigo
+	for val2 in self.proyecto_padre:
+	    proyecto_padre_ = val2.codigo
+	    disponibilidad_proyecto_  = val2.disponibilidad_proyecto
+	for val3 in self.codigo_a_asignar:
+	    codigo_ = val3.code
+	    name_ = val3.name
+	    codigo_distribucion    = codigo_padre_+'-'+proyecto_padre_+'-'+str(codigo_)
+	    self.nombre_distribucion  = name_
+	    self.serial = codigo_distribucion
+	    self.dispo_proyecto = disponibilidad_proyecto_
+	    if disponibilidad_proyecto_ and self.monto_inic_distribucion:
+		if disponibilidad_proyecto_ < self.monto_inic_distribucion:
+		    mensaje = {'title':'Alerta','message':'Disculpe usted no dispone de fondos suficientes'}
+		    self.monto_inic_distribucion = False
+	return {'warning':mensaje}
+	       
+    @api.onchange('monto_inic_distribucion') 
+    def onchange_monto_inicial(self):
+	self.disponibilidad_distribucion = self.monto_inic_distribucion
     
     def create(self, cr, uid, vals, context=None):
         v_monto= None
@@ -66,7 +51,5 @@ class Distribucion_Especifica(models.Model):
 	    monto_distribuido= cr.fetchone()[0]
 	    suma=float(monto_distribuido)+float(v_monto)
 	    cr.execute("UPDATE presupuesto_proyecto Set monto_distribuido="+str(suma)+" WHERE id='"+str(proyecto_padre)+"'")
-	   
-	    
         result = super(Distribucion_Especifica,self).create(cr, uid, vals, context=context)
         return result

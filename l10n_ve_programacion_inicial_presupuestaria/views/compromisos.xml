@@ -15,8 +15,10 @@
             <field name="arch" type="xml">
                 <tree string="COMPROMISOS">
                     <field name="numero"/>
+                    <field name="referencia"/>
                     <field name="tipo_documento"/>
                     <field name="fecha"/>
+                    
                 </tree>
             </field>
         </record>
@@ -27,10 +29,15 @@
             <field name="arch" type="xml" >
                 <form string="Formulario de Compromisos" version="7.0">
                     <header>
-                        <button name="confirmar"  class="oe_highlight" type="object" string="Validar" confirm="¿Esta usted seguro de cambiar al estado seleccionado?"   attrs="{'invisible':[('status','!=','borrador')]}"/>
+                        <button name="causar"  class="oe_highlight" type="object" string="Causar" confirm="¿Esta usted seguro de cambiar al estado seleccionado?"   attrs="{'invisible':[('status','!=','borrador')]}"/>
                         <button name="cancelar"   type="object" string="Cancelar" confirm="¿Esta usted seguro que desea cancelar este traspaso y revertir los cambios?" attrs="{'invisible':[('status','!=','confirmado')]}"/>
                         <field name="status"  widget="statusbar" />
                     </header>
+                    <table>
+                    <td style="padding-left:30px;"><group>
+                            <field name="numero"/>
+                            </group></td>
+                </table>
                    <sheet>
                         <separator string="COMPROMISOS"/>
                         <table style="width:800px;">
@@ -40,7 +47,7 @@
                                 <field name="proyecto_padre"/>
                                 <!--<field name="proyecto_padre" on_change="construir_serial(codigo_padre,proyecto_padre)"/>-->
                                 <field name="tipo_documento"/>
-                                <field name="numero"/>
+                                
                                 <field name="referencia"/>
                             </group></td>
                             <td style="padding-left:30px;"><group>
@@ -53,14 +60,21 @@
                                 <field name="movimientos">
                                     <tree string="Movimientos" version="7.0" on_change="onchange_referencia(referencia)" editable="bottom">
                                         <field name="producto"/>
-                                        <field name="descripcion" invisible="1"/>
                                         <field name="cantidad" />
                                         <field name="precio_unit" invisible="0"/>
                                         <field name="total"/>
-                                        <field name="cod_partida" on_change="completar_campos(cod_partida)"/>
+                                        <field name="cod_partida"/>
                                         <field name="nom_partida"/>
                                         <field name="disponibilidad_virtual" string="Disponibilidad"/>
                                         <field name="disponibilidad_real" invisible='1'/>
+                                     </tree>
+                                </field>
+                                 <separator string="IMPUESTOS"/>
+                                  <field name="impuesto">
+                                    <tree string="Impuestos" version="7.0" editable="bottom">
+                                        <field name="cod_partida"/>
+                                        <field name="nom_partida"/>
+                                        <field name="total"/>
                                      </tree>
                                 </field>
                      </sheet>

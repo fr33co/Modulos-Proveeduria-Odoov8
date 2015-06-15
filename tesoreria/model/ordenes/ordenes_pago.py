@@ -4,11 +4,11 @@ from openerp import models, fields, api
 class Ordenes_Pago(models.Model):
 
     _name = "tesoreria.ordenes_pago"
-    _rec_name= 'numero'
+    _rec_name= 'n_orden'
         
-    numero         = fields.Char(string="Numero:",size=100, required=False)
-    n_orden        = fields.Char(string="Numero de Orden:",size=100, required=False)
-    beneficiario   = fields.Char(string="Beneficiario:",size=100, required=False)
+    
+    n_orden        = fields.Char(string="Numero de Orden:",size=100, required=True)
+    beneficiario   = fields.Many2one("res.partner","Beneficiario",required=False)
     rif            = fields.Char(string="Rif/C.I:",size=100, required=False)
     fecha_creacion = fields.Date(string="Fecha:",size=100, required=False)
     concepto       = fields.Text(string="Por concepto de:",size=100, required=False)
@@ -18,7 +18,29 @@ class Ordenes_Pago(models.Model):
     total_d        = fields.Char(string="Total",size=100, required=False)
     partidas       = fields.One2many('tesoreria.ordenes_partida',  'conexion', "Partidas", ondelete='cascade')
     detalles       = fields.One2many('tesoreria.detalle_contable', 'conexion', "Detalles", ondelete='cascade')
+    n_compromiso   = fields.Many2one('presupuesto.compromisos', string="N. Compromiso:")
     
+	    
+    @api.onchange('n_compromiso') 
+    def onchange_n_compromiso(self):
+	partidas = []
+	impuestos= []
+	for val in self.n_compromiso:
+	    for a in val.movimientos:
+		partidas.append([0, 0, {   'partida'    :a.cod_partida.serial,
+					   'descripcion':a.nom_partida,
+					   'monto'      :a.total,
+				       }])
+		print a.total
+	    for b in val.impuesto:
+		impuestos.append([0, 0, {'partida'    :b.cod_partida.serial,
+					 'descripcion':b.nom_partida,    
+				     'monto'      :b.total,
+				    }])
+		print b.total
+		self.partidas = partidas + impuestos
+		
+
     
 class Ordenes_Partidas(models.Model):
 
@@ -37,7 +59,7 @@ class Detalle_Contable(models.Model):
     _rec_name= 'deducciones'
         
     conexion           = fields.Many2one("tesoreria.ordenes_pago","detalle",required=False)
-    deducciones        = fields.Char(string="Deducciones:",size=100, required=False)
+    deducciones        = fields.Many2one("tesoreria.detalle","Detalle",required=False)
     debe               = fields.Char(string="Debe:",size=100, required=False)
     haber              = fields.Char(string="Haber:",size=100, required=False)
     sub_total          = fields.Char(string="Total Decucciones:",size=100, required=False)

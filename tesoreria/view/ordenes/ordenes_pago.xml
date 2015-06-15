@@ -28,14 +28,18 @@
                             </group></td>
                     </table>
                     <sheet>
-                        <separator string="ORDENE DE PAGO"/>
+                        <separator string="ORDENES DE PAGO"/>
                         <table style="width:825px;">
                             <td><group>
                                 <field name="beneficiario"/>
+                                <!--<field name="beneficiario" on_change="onchange_beneficiario(beneficiario)"/>-->
                                 <field name="rif"/>
+                                
+                                <!--<field name="compromiso"/>-->
                              </group></td>
                             <td style="padding-left:30px;"><group>
-                                <field name="numero"/>
+                                <!--<field name="numero"/>-->
+                                <field name="n_compromiso"/>
                                 <field name="fecha_creacion" invisible='0'/>
                             </group></td>
                         </table>
@@ -50,24 +54,24 @@
                                 <tree string="Partidas" version="7.0" editable="bottom" >
                                     <field name="partida"/>
                                     <field name="descripcion"/>
-                                    <field name="monto"/>
+                                    <!--<field name="monto" sum="Total Tax Included"/>-->
+                                    <field name="monto" />
                                 </tree>
                             </field>
                          <group class="oe_subtotal_footer oe_right">
-                                <field name="sub_total_p" widget="monetary" readonly="1"/>
-                                <field name="total_p" widget="monetary" readonly="1"/>
+                                <!--<field name="sub_total_p" widget="monetary" readonly="1"/>-->
+                                <!--<field name="total_p" widget="monetary" readonly="1"/>-->
                                 <div class="oe_subtotal_footer_separator oe_inline">
                                     <label for="total_p"/>
-                                    
                                 </div>
-                                <field name="total_p" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary" readonly="1"/>
+                                <field name="total_d" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary" readonly="1"/>
                             </group>
                          <separator string="Detalle Contable de la Orden de Pago" style="text-align:center;"/>
                          <field name="detalles">
                                 <tree string="Detalles" version="7.0" editable="bottom" >
                                     <field name="deducciones"/>
                                     <field name="debe"/>
-                                    <field name="haber"/>
+                                    <field name="haber" />
                                 </tree>
                             </field>
                          <group class="oe_subtotal_footer oe_right">

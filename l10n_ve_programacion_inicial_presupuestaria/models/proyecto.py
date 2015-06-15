@@ -16,40 +16,29 @@ class Proyecto(models.Model):
     codigo_proyecto         = fields.Char(string="Codigo Proyecto:",size=100, required=False)
     codigo_nombre_proyecto  = fields.Char(string="Proyecto:",required=False)
     codigo                  = fields.Char(string="Codigo:",required=False, default='00')
-    dispo_ente              = fields.Float(string="Monto a Distribuir:",readonly=True)
+    dispo_ente              = fields.Float(string="Disponibilidad:",readonly=True)
     
-    def construccion_multiple(self, cr, uid, ids, codigo,nombre,codigo_padre,monto, context=None):
-	values = {}
-	mensaje = {}
-	if not codigo:return values
-	if not nombre:return values
-        if not codigo_padre:return values
-        cr.execute('SELECT codigo FROM presupuesto_codigo WHERE id='+str(codigo_padre))
-	result1= cr.fetchone()[0]
-	cr.execute('SELECT monto_inic_codigo FROM presupuesto_codigo WHERE id='+str(codigo_padre))
-	monto_inicial= cr.fetchone()[0]
-	cr.execute('SELECT monto_distribuido FROM presupuesto_codigo WHERE id='+str(codigo_padre))
-	monto_distribuido= cr.fetchone()[0]
-        codigo_nombre = codigo+'-'+nombre
-	codigo_proyecto = result1+'-'+codigo
-	
-	result= float(monto_inicial) - float(monto_distribuido)
-	
-	if monto and result:
-	    if monto > result:
-		mensaje = {'title':'Alerta','message':'Disculpe usted no dispone de fondos suficientes'}
-		values.update({
-			'monto_inic_proyecto'   : False,
-				})
-        values.update({
-	    'codigo_nombre_proyecto':codigo_nombre,
-	    'codigo_proyecto':codigo_proyecto,
-	    'codigo':codigo,
-	    'disponibilidad_proyecto':monto,
-	    'dispo_ente':result,
-	})
-	
-	return {'value' : values,'warning':mensaje}
+    @api.onchange('codigo_padre', 'codigo_a_asignar','nombre_proyecto','monto_inic_proyecto') 
+    def onchange_construccion_multiple(self):
+	mensaje= {}
+	for val in self.codigo_padre:
+	    codigo_padre_ = val.codigo
+	    disponibilidad_ente = val.disponibilidad_codigo
+	    codigo_nombre    = str(self.codigo_a_asignar)+'-'+str(self.nombre_proyecto)
+	    codigo_proyecto_ = codigo_padre_+'-'+str(self.codigo_a_asignar)
+	    self.codigo_nombre_proyecto  = codigo_nombre
+	    self.codigo_proyecto = codigo_proyecto_
+	    self.codigo = self.codigo_a_asignar
+	    self.dispo_ente = disponibilidad_ente
+	    if disponibilidad_ente and self.monto_inic_proyecto:
+		if disponibilidad_ente < self.monto_inic_proyecto:
+		    mensaje = {'title':'Alerta','message':'Disculpe usted no dispone de fondos suficientes'}
+		    self.monto_inic_proyecto = False
+	return {'warning':mensaje}
+		    
+    @api.onchange('monto_inic_proyecto') 
+    def onchange_monto_inicial(self):
+	self.disponibilidad_proyecto = self.monto_inic_proyecto
     
     def create(self, cr, uid, vals, context=None):
         v_monto= None

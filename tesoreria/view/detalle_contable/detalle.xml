@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.actions.act_window" id="detalle_list_action">
+            <field name="name">detalle</field>
+            <field name="res_model">tesoreria.detalle</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record model="ir.ui.view" id="detalle_tree_view">
+            <field name="name">detalle.tree</field>
+            <field name="model">tesoreria.detalle</field>
+            <field name="arch" type="xml">
+                <tree string="Detalle">
+                    <field name="retencion"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="detalle_form_view">
+            <field name="name">detalle.form</field>
+            <field name="model">tesoreria.detalle</field>
+            <field name="arch" type="xml" >
+                <form string="Formulario de Detalle" version="7.0">
+                    <sheet>
+                        <separator string="ELABORACIÓN DE DETALLE"/>
+                        <table style="width:825px;">
+                            <td><group>
+                                <field name="retencion"/>
+                             </group></td>
+                            <td style="padding-left:30px;"><group>
+                            </group></td>
+                        </table>
+                    </sheet>  
+                </form>
+            </field>
+        </record>
+<menuitem id="main_tesoreria_menu" name="Tesoreria"/>
+<menuitem id="ordenes_menu" name="Ordenes de Pago" parent="main_tesoreria_menu" sequence="1"/>
+<menuitem id="detalle_menu" name="Detalle"  parent="ordenes_menu" action="detalle_list_action" />
+    </data>
+</openerp>

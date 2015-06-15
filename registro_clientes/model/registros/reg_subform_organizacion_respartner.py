@@ -40,7 +40,7 @@ class subform_organizacion_respartner_reg(models.Model):
 
     def _organizacion_cupo(self, cr, uid, ids, context=None):
         for self_obj in self.browse(cr, uid, ids, context=context):
-            if (self_obj.cupo) > (self_obj.organizacion.cant_puesto) or (self_obj.cupo) <= 0 : 
+            if (self_obj.cupo) > (self_obj.organizacion.control_documento.cant_cupos) or (self_obj.cupo) <= 0 : 
                     return False
         return True
     
@@ -53,9 +53,9 @@ class subform_organizacion_respartner_reg(models.Model):
             
     
     organizacion = fields.Many2one ('res.partner')
-    cedula_rif = fields.Char('organizacion.cedula_rif', store=True, readonly=True)
-    telefono = fields.Char('organizacion.phone', store=True, readonly=True)
-    celular = fields.Char('organizacion.mobile', store=True, readonly=True)
+    cedula_rif = fields.Integer(related='organizacion.cedula_rif', readonly=True)
+    telefono = fields.Char(related='organizacion.phone', readonly=True)
+    celular = fields.Char(related='organizacion.mobile', readonly=True)
     cupo = fields.Integer(string="Cupo", size=5, required=True) #Nro del Cupo en la Organizacion
     activo = fields.Boolean(default = True)
     bloquear = fields.Boolean('Bloquear')

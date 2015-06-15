@@ -19,21 +19,11 @@ class Creditos_Adicionales(models.Model):
     movimientos      = fields.One2many('presupuesto.creditos_movimientos', 'creditos', "Movimientos", ondelete='cascade')
     status           = fields.Selection((('borrador','Borrador'),('confirmado','Confirmado'),('cancelado','Cancelado')),'Estatus',required=True, default='borrador')
     
-    def completar_nombre(self, cr, uid, ids,proyecto,codigo,context=None):
-	values = {}
-	if not proyecto: return values
-	cr.execute('SELECT nombre_proyecto FROM presupuesto_proyecto WHERE id='+str(proyecto))
-	nombre_proyecto= cr.fetchone()[0]
-	cr.execute('SELECT codigo FROM presupuesto_proyecto WHERE id='+str(proyecto))
-    	codigo_proyecto= cr.fetchone()[0]
-	cr.execute('SELECT codigo FROM presupuesto_codigo WHERE id='+str(codigo))
-	codigo_codigo= cr.fetchone()[0]
-        values.update({
-	    #'serial':codigo_codigo+'-'+codigo_proyecto,
-	    'unidad':nombre_proyecto,
-	})
-	return {'value' : values}
-    
+    @api.onchange('proyecto_padre') 
+    def onchange_monto_inicial(self):
+	for val in self.proyecto_padre:
+	    nombre_proyecto_ = val.nombre_proyecto
+	    self.unidad = nombre_proyecto_
     
     def confirmar(self, cr, uid, ids, context=None):
 	values = {}
@@ -46,7 +36,6 @@ class Creditos_Adicionales(models.Model):
                 result=float(dis)+float(aum)
 		cr.execute("UPDATE distribucion_especifica Set disponibilidad_distribucion="+str(result)+" WHERE id='"+str(cod_serial)+"'")
 	return self.write(cr, uid, ids, {'status':'confirmado'}, context=None)
-    
     
     def cancelar(self, cr, uid, ids, context=None):
 	browse_acciones =self.browse(cr,  uid, ids, context=context)
@@ -61,7 +50,6 @@ class Creditos_Adicionales(models.Model):
 		
 	return self.write(cr, uid, ids, {'status':'cancelado'}, context=None)
     
-
 class Creditos_Movimientos(models.Model):
     _name = "presupuesto.creditos_movimientos"
     _rec_name ='partida'
@@ -74,19 +62,13 @@ class Creditos_Movimientos(models.Model):
     aumentar               = fields.Float(string="Aumentar:",required=False)
     creditos               = fields.Many2one("presupuesto.creditos_adicionales","Traspaso",required=False)
     
-    def completar_campos(self, cr, uid, ids,serial, context=None):
-	    values = {}
-	    if not serial:return values
-	    cr.execute('SELECT serial FROM distribucion_especifica WHERE id='+str(serial))
-	    partida= cr.fetchone()[0]
-	    cr.execute('SELECT nombre_distribucion FROM distribucion_especifica WHERE id='+str(serial))
-	    nom_partida= cr.fetchone()[0]
-	    cr.execute('SELECT disponibilidad_distribucion FROM distribucion_especifica WHERE id='+str(serial))
-	    dispo_partida= cr.fetchone()[0]
-	    values.update({
-		'nombre_partida':nom_partida,
-		'disponibilidad_real':dispo_partida,
-		'disponibilidad_virtual':dispo_partida,
-		'serial': partida,
-	    })
-	    return {'value' : values}
+    @api.onchange('partida') 
+    def onchange_serial(self):
+	for val in self.partida:
+	    serial_ = val.serial
+	    nombre_distribucion_ = val.nombre_distribucion
+	    disponibilidad_distribucion_ = val.disponibilidad_distribucion
+	    self.nombre_partida = nombre_distribucion_
+	    self.disponibilidad_real = disponibilidad_distribucion_
+	    self.disponibilidad_virtual = disponibilidad_distribucion_
+	    self.serial = serial_

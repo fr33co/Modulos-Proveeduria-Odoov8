@@ -10,6 +10,7 @@
         'data': [
         'view/ordenes/ordenes_pago.xml',
         'view/ordenes/cheques.xml',
+        'view/detalle_contable/detalle.xml',
         ],
 }
 

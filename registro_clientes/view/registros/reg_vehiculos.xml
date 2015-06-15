@@ -17,11 +17,12 @@
             <field name="model">reg.vehiculos</field>
             <field name="arch" type="xml">
                 <form string="Vehículo Formulario" version="7.0">
-                    <sheet>
-                        <header>
+                    <header>
                             <button name="action_button" type="object" string="Validar Estado" class="oe_highlight"/>
                             <field name="estado" widget="statusbar" />                           
-                        </header>
+                    </header>
+                    <sheet>
+                        
                         <group>
                         <group colpan="2">
                             <separator string="" colspan="2"/>

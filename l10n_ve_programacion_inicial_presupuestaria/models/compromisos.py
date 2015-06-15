@@ -1,11 +1,10 @@
 # -*- encoding: utf-8 -*-
 from openerp import models, fields, api
 
-
 class Compromisos(models.Model):
 
-    _name = "presupuesto.compromisos"
-    _rec_name= 'numero'
+    _name = 'presupuesto.compromisos'
+    _rec_name = 'numero'
         
     codigo_padre     = fields.Many2one('presupuesto.codigo','Codigo:', required=True)
     proyecto_padre   = fields.Many2one('presupuesto.proyecto','Proyecto:', required=True, domain="[('codigo_padre','=', codigo_padre)]" )
@@ -16,34 +15,50 @@ class Compromisos(models.Model):
     fecha_resolucion = fields.Date(string="Fecha de Resolucion:", required=False)
     motivo           = fields.Char(string="Motivo:", required=False)
     referencia       = fields.Many2one('purchase.order','Referencia:', required=True)
+    impuesto	     = fields.One2many('presupuesto.impuestos_movimientos', 'conexion', "impuesto", ondelete='cascade')
     movimientos      = fields.One2many('presupuesto.compromisos_movimientos', 'compromisos', "Movimientos", ondelete='cascade')
-    status	     = fields.Selection((('borrador','Borrador'),('compromiso','Comprometido'),('confirmado','Causado'),('pagado','Pagado'),('cancelado','Cancelado')),'Estatus',required=False, default='borrador')
-	
+    status	     = fields.Selection((('borrador','Borrador'),('compromiso','Comprometido'),('causado','Causado'),('pagado','Pagado'),('cancelado','Cancelado')),'Estatus',required=False, default='borrador')
+    
     @api.onchange('referencia') 
     def onchange_referencia(self):
-        #datos_src = self.env['purchase.order'].search([['name', '=', self.referencia.name]])
-        values = {}
 	movimientos = []
+	impuestos   = []
 	for val in self.referencia:
-	    '''Verifico purchase.order'''
-	    for a in val.order_line:
-		'''Traigo datos de purchase.order.line desde purchase.order'''
-		movimientos.append([0, 0, {'producto': a.product_id.name,
-				'cantidad': a.product_qty,
-				#'descripcion': val.order_line.description,
-				'precio_unit': a.price_unit,
-				'total': a.price_subtotal,
-				}])
-		self.movimientos = movimientos		
+		for a in val.order_line:
+		    movimientos.append(
+			[0, 0, {'producto': a.product_id.name,
+			'cantidad': a.product_qty,
+			'precio_unit': a.price_unit,
+			'total': a.price_subtotal,
+					}])
+		    self.movimientos = movimientos
+		    
+	for val1 in self.referencia:
+		impuestos.append(
+			[0, 0, {'total': val1.amount_tax,
+			
+					}])
+		self.impuesto = impuestos
+	    
+		    
+    def causar(self, cr, uid, ids, context=None):
+	values = {}
+	browse_acciones =self.browse(cr,  uid, ids, context=context)
+        for form in browse_acciones:
+	    for mov in form.movimientos:
+		cod_serial=mov.cod_partida.id
+		dis=mov.disponibilidad_real
+		resta=mov.total
+                result=float(dis)-float(resta)
+		cr.execute("UPDATE distribucion_especifica Set disponibilidad_distribucion="+str(result)+" WHERE id='"+str(cod_serial)+"'")
+	return self.write(cr, uid, ids, {'status':'causado'}, context=None)
 
 class Compromisos_Movimientos(models.Model):
     _name = "presupuesto.compromisos_movimientos"
     _rec_name ='producto'
        
-    compromisos    = fields.Many2one("presupuesto.creditos_adicionales","Traspaso",required=False)
+    compromisos    = fields.Many2one("presupuesto.compromisos","Traspaso",required=False)
     producto       = fields.Char(string="Producto",required=False)
-    #Elimianar campo descipcion
-    descripcion    = fields.Char(string="Descripción",required=False)
     cantidad       = fields.Float(string="Cantidad",required=False)
     precio_unit    = fields.Float(string="Precio Unit",readonly=False)
     total          = fields.Float(string="Total",required=False)
@@ -51,21 +66,28 @@ class Compromisos_Movimientos(models.Model):
     nom_partida    = fields.Char(string="Nom.Partida",required=False)
     disponibilidad_real    = fields.Char(string="Disponibilidad Real",readonly=False)
     disponibilidad_virtual = fields.Char(string="Disponibilidad Virtual",required=False)
+
+    @api.onchange('cod_partida') 
+    def onchange_partida(self):
+	for record in self.cod_partida:
+	    nombre_partida = record.nombre_distribucion
+	    disponibilidad = record.disponibilidad_distribucion
+	    self.nom_partida=nombre_partida
+	    self.disponibilidad_real=disponibilidad 
+	    self.disponibilidad_virtual=disponibilidad
+	    
+	    
+class Impuestos_Movimientos(models.Model):
+    _name = "presupuesto.impuestos_movimientos"
+    _rec_name ='cod_partida'
     
-    #Modificar al nuevo api
-    def completar_campos(self, cr, uid, ids,serial, context=None):
-        values = {}
-        if not serial:return values
-        cr.execute('SELECT serial FROM distribucion_especifica WHERE id='+str(serial))
-        partida= cr.fetchone()[0]
-        cr.execute('SELECT nombre_distribucion FROM distribucion_especifica WHERE id='+str(serial))
-        nom_partida= cr.fetchone()[0]
-        cr.execute('SELECT disponibilidad_distribucion FROM distribucion_especifica WHERE id='+str(serial))
-        dispo_partida= cr.fetchone()[0]
-        values.update({
-            'nom_partida':nom_partida,
-            'disponibilidad_real':dispo_partida,
-            'disponibilidad_virtual':dispo_partida,
-            
-        })
-        return {'value' : values}
+    conexion       = fields.Many2one("presupuesto.compromisos","Traspaso",required=False)   
+    cod_partida    = fields.Many2one('distribucion.especifica','Cod.Partida:',ondelete='cascade',required=False)
+    nom_partida    = fields.Char(string="Nom.Partida",required=False)
+    total          = fields.Float(string="Total",readonly=False)
+    
+    @api.onchange('cod_partida') 
+    def onchange_partida(self):
+	for record in self.cod_partida:
+	    nombre_partida = record.nombre_distribucion 
+	    self.nom_partida=nombre_partida

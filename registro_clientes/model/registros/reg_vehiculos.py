@@ -88,7 +88,6 @@ class vehiculos(models.Model):
     propietario_ids = fields.One2many ('reg.subform.propietario.respartner', 'propietario_ids')
         
     estado = fields.Selection([('borrador','Borrador'),('incompleto', 'Incompleto'), ('completo','Completo'), ('bloquear', 'Bloqueado')], string="Estado")
-    res_partner_id = fields.Many2one ('res.partner', 'Organizacion o Propietario')
     
     _order = 'cupo asc'
     

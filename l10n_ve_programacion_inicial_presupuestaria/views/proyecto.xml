@@ -34,12 +34,12 @@
                         <separator string="PROYECTO"/>
                         <table style="width:700px;">
                             <td><group>
-                                <field name="codigo_padre"        on_change="construccion_multiple(codigo_a_asignar,nombre_proyecto,codigo_padre,monto_inic_proyecto)"/>
-                                <field name="codigo_a_asignar"    on_change="construccion_multiple(codigo_a_asignar,nombre_proyecto,codigo_padre,monto_inic_proyecto)"/>
+                                <field name="codigo_padre"/>
+                                <field name="codigo_a_asignar"/>
                             </group></td>
                             <td style="padding-left:30px;"><group>
-                                <field name="nombre_proyecto"     on_change="construccion_multiple(codigo_a_asignar,nombre_proyecto,codigo_padre,monto_inic_proyecto)"/>
-                                <field name="monto_inic_proyecto" on_change="construccion_multiple(codigo_a_asignar,nombre_proyecto,codigo_padre,monto_inic_proyecto)" />
+                                <field name="nombre_proyecto"/>
+                                <field name="monto_inic_proyecto" />
                                 <field name="monto_distribuido" string="Monto Distribuido" invisible="1"/>
                                 <field name="disponibilidad_proyecto" invisible="1"/>
                                 <field name="codigo_nombre_proyecto" invisible="1"/>                       

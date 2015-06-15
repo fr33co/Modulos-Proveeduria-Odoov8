@@ -35,25 +35,23 @@
             <field name="mobile" position="replace">
                 <field name="mobile" required="True"/>
             </field>
-            
-            <field name="email" position="before">
-                <field name="cant_puesto" required="1"  placeholder="Ejemplo: 120" attrs="{'invisible': [('is_company','=', False)]}"/>
-            </field>
+	    
+	    <xpath expr="//page[@string='Contacts']" position="before" >
+		<page string="Control de Documento" attrs="{'invisible': [('is_company','=', False)]}">
+		    <field name="control_documento" nolabel="1" >
+			<tree editable="bottom">
+			    <field name="documento"  placeholder="Seleccione el documento..."
+				   domain="[('activo','=',True),('organizacion','=',True)]" eval='2'/>
+			    <field name="periodo" />
+			    <field name="cantidad_dias" string="Cantidad Dias"/>
+			    <field name="cant_cupos" string="Cantidad Cupos" required="1"/>
+			    <field name="fecha_inicial" string="Fecha Registro" />
+			    <field name="fecha_final" eval='5' />
+			</tree>
+		    </field>
+		</page>
+	    </xpath>
 
-	    <xpath expr="//form/sheet/notebook/page[@string='Contacts']" position="before">
-                    <page string="Vehiculos asociados">
-                        <field name="vehiculos_ids">
-			    <tree string="Vehiculos">
-				<field name="tipo_vehiculo" string="Tipo de Vehiculo"/>
-				<field name="color" string="Color"/>
-				<field name="carroceria" string="Carroceria"/>
-				<field name="placa" string="Placa"/>
-			    </tree>
-			</field>
-		    </page>
-            </xpath>
-	    
-	    
         </field>
        </record>
        

@@ -15,36 +15,13 @@ class Codigo(models.Model):
     codigo_nombre_codigo  = fields.Char(string="Codigo y nombre:",required=False)
     codigo                = fields.Char(string="Codigo:",required=False, default='00')
 
- 
-#    @api.onchange('codigo_a_asignar', 'nombre_codigo')
-#    def construir_codigo_nombre(self):
-#	values = {}
-#	if not self.codigo_a_asignar:return values
-#	if not self.nombre_codigo:return values
-#        codigo_nombre = self.codigo_a_asignar+'-'+self.nombre_codigo
-#        values.update({
-#	    'codigo_nombre_codigo':codigo_nombre,
-#	    'codigo':self.codigo,
-#	    'codigo_codigo':self.codigo+'-'+str('00')
-#	})
-#	return {'value' : values}
-
-    def construir_codigo_nombre(self, cr, uid, ids, codigo, nombre, context=None):
-	    values = {}
-	    if not codigo:return values
-	    if not nombre:return values
-	    codigo_nombre = codigo+'-'+nombre
-	    values.update({
-		'codigo_nombre_codigo':codigo_nombre,
-		'codigo':codigo,
-		'codigo_codigo':codigo+'-'+str('00')
-	    })
-	    return {'value' : values}
+    @api.onchange('codigo_a_asignar', 'nombre_codigo') 
+    def onchange_codigo_nombre(self):
+	codigo_nombre = str(self.codigo_a_asignar)+'-'+str(self.nombre_codigo)
+	self.codigo_nombre_codigo = codigo_nombre
+	self.codigo = self.codigo_a_asignar 
+	self.codigo_codigo = str(self.codigo_a_asignar)+'-'+str('00') 
     
-    def monto_inicial(self, cr, uid, ids, monto, context=None):
-	values = {}
-	if not monto:return values
-        values.update({
-	    'disponibilidad_codigo':monto,
-	})
-	return {'value' : values}
+    @api.onchange('monto_inic_codigo') 
+    def onchange_monto_inicial(self):
+	self.disponibilidad_codigo = self.monto_inic_codigo

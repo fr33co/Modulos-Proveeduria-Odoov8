@@ -48,9 +48,9 @@ class subform_propietario_respartner_reg(models.Model):
     
     
     propietario = fields.Many2one ('res.partner')
-    cedula_rif = fields.Char('propietario.cedula_rif', store=True, readonly=True)
-    telefono = fields.Char('propietario.phone', store=True, readonly=True)
-    celular = fields.Char('propietario.mobile', store=True, readonly=True)
+    cedula_rif = fields.Integer(related='propietario.cedula_rif', readonly=True)
+    telefono = fields.Char(related='propietario.phone', readonly=True)
+    celular = fields.Char(related='propietario.mobile', readonly=True)
         
     activo = fields.Boolean(default = True)
     bloquear = fields.Boolean('Bloquear')

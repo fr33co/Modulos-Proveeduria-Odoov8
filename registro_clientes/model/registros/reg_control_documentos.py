@@ -24,7 +24,7 @@ class control_documentos(models.Model):
             self.vencimiento = min(result['values'])
         return result
                 
-    vencimiento = fields.Date('Vencimiento')
+    vencimiento = fields.Date(string="Vencimiento")
     fecha_actual = fields.Date(default= lambda *a: time.strftime('%Y-%m-%d'))
                 
     vehiculo = fields.Many2one ('reg.vehiculos', ondelete='cascade', string='Vehiculo', required= True)
@@ -33,6 +33,7 @@ class control_documentos(models.Model):
     cantidad_puestos = fields.Char (related='vehiculo.cantidad_puestos', readonly=True)
     tipo_vehiculo = fields.Many2one (related='vehiculo.tipo_vehiculo', readonly=True)
     control_documentos = fields.One2many ('reg.subform.control.documentos', 'control_documentos', ondelete='cascade')
+    
     
     _sql_constraints = [
         ('vehiculo_unico',

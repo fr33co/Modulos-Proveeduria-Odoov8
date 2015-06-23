@@ -18,5 +18,7 @@
 
     'data': [
         'views/compras_presupuesto.xml',
+        "groups/groups.xml",
+	"segurity/manager/ir.model.access.csv",
     ],
 }

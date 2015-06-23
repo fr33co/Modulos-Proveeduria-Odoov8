@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <openerp>
+        <data>
+<!--
+					GRUPO PARA MANAGER
+-->
+					<record id="group_manager" model="res.groups">
+						<field name="name">Clasificador presupuestario</field>
+					</record>
+					
+
+					
+    	</data>
+	</openerp>

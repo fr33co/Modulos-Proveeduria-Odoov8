@@ -22,6 +22,11 @@
             <field name="model">tesoreria.ordenes_pago</field>
             <field name="arch" type="xml" >
                 <form string="Formulario de Ordenes de Pago" version="7.0">
+                    <header>
+                        <button name="causar"  class="oe_highlight" type="object" string="Pagar" confirm="¿Esta usted seguro de cambiar al estado seleccionado?"   attrs="{'invisible':[('status','=','pagado')]}"/>
+                        <button name="cancelar"   type="object" string="Cancelar" confirm="¿Esta usted seguro que desea cancelar este traspaso y revertir los cambios?" attrs="{'invisible':[('status','=','pagado')]}"/>
+                        <field name="status"  widget="statusbar" />
+                    </header>
                     <table>
                     <td style="padding-left:30px;"><group>
                             <field name="n_orden"/>
@@ -40,6 +45,7 @@
                             <td style="padding-left:30px;"><group>
                                 <!--<field name="numero"/>-->
                                 <field name="n_compromiso"/>
+                                
                                 <field name="fecha_creacion" invisible='0'/>
                             </group></td>
                         </table>
@@ -50,6 +56,7 @@
                             </tr>
                         </table>
                         <separator string="Partidas Presupuestarias" style="text-align:center;"/>
+                                   
                          <field name="partidas">
                                 <tree string="Partidas" version="7.0" editable="bottom" >
                                     <field name="partida"/>
@@ -62,27 +69,54 @@
                                 <!--<field name="sub_total_p" widget="monetary" readonly="1"/>-->
                                 <!--<field name="total_p" widget="monetary" readonly="1"/>-->
                                 <div class="oe_subtotal_footer_separator oe_inline">
-                                    <label for="total_p"/>
+                                    <label for="total_d"/>
                                 </div>
                                 <field name="total_d" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary" readonly="1"/>
                             </group>
+                         <separator string="Deducciones" style="text-align:center;"/>
+                                <table style="width:825px;">
+                            <td><group>
+                                <field name="iva"/>
+                                <field name="fiscal"/>
+                             </group></td>
+                            <td style="padding-left:30px;"><group>
+                                <field name="islr"/>
+                            </group></td>
+                        </table>
                          <separator string="Detalle Contable de la Orden de Pago" style="text-align:center;"/>
+                         
+                            
                          <field name="detalles">
                                 <tree string="Detalles" version="7.0" editable="bottom" >
-                                    <field name="deducciones"/>
+                                    <field name="partida"/>
+                                    <field name="nombre"/>
                                     <field name="debe"/>
                                     <field name="haber" />
                                 </tree>
                             </field>
                          <group class="oe_subtotal_footer oe_right">
-                                <field name="sub_total_p" widget="monetary" readonly="1"/>
-                                <field name="total_p" widget="monetary" readonly="1"/>
+                                <!--<field name="sub_total_p" widget="monetary" readonly="1"/>
+                                <field name="total_p" widget="monetary" readonly="1"/>-->
                                 <div class="oe_subtotal_footer_separator oe_inline">
                                     <label for="total_p"/>
                                 </div>
                                 <field name="total_p" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary" readonly="1"/>
                             </group>
-                <separator string="" style="text-align:center;"/>
+                         <separator string="" style="text-align:center;"/>
+                        <table><tr><td><th><span>Monto en Letra:</span></th></td></tr></table>
+                        <table><field name="monto_letra"/> </table>
+                        <table style="width:825px;"> 
+                            <td><group>
+                                <field name="fecha_cheq"/>
+                                <field name="n_cheque"/>
+                                <field name="accion"/>
+                             </group></td>
+                            <td style="padding-left:30px;"><group>
+                                <field name="banco"/>
+                                <field name="n_cuenta"/>
+                                <field name="proyecto"/>
+                            </group></td>
+                        </table>
                          </sheet>  
                 </form>
             </field>

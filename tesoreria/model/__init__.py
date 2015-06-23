@@ -1,3 +1,3 @@
 import ordenes
-import detalle_contable
+#import detalle_contable
 

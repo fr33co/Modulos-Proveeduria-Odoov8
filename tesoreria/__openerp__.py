@@ -10,7 +10,9 @@
         'data': [
         'view/ordenes/ordenes_pago.xml',
         'view/ordenes/cheques.xml',
-        'view/detalle_contable/detalle.xml',
+        #'view/detalle_contable/detalle.xml',
+        "groups/groups.xml",
+	"segurity/manager/ir.model.access.csv",
         ],
 }
 

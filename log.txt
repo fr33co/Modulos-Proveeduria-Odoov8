@@ -1,0 +1,321 @@
+commit 94a866d6c4b3b566dc2994cb2814158cc4d6da3e
+Merge: 8aec363 bbc4207
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu May 14 19:48:28 2015 -0430
+
+    Merge pull request #34 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    FIX - Se modifica el onchange_referencia del archivo compromisos para mostrar mas de un producto al seleccionar la referencia
+
+commit bbc4207cd4ab7cf83c9e66329ddf5a86d85dc0ab
+Author: Angel Guadarrama <aguadarrama@catuche.com.ve>
+Date:   Thu May 14 19:43:33 2015 -0430
+
+    FIX - Se modifica el onchange_referencia del archivo compromisos para mostrar mas de un producto al seleccionar la referencia
+
+commit 8aec3633af35d0aef7970ae9ca0fc6554577c5b5
+Merge: becdf36 dc7abce
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Wed May 6 14:00:44 2015 -0430
+
+    Merge pull request #33 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    FIX - Se agrega y se mejora el onchange para compromisos utilizando el api v8
+
+commit dc7abcefe61ff15a61f2d92e49cc71c3d338a9c2
+Author: Angel Guadarrama <aguadarrama@catuche.com.ve>
+Date:   Wed May 6 13:56:24 2015 -0430
+
+    FIX - Se agrega y se mejora el onchange para compromisos utilizando el api v8
+
+commit 38636073c3a367995f0465f4074116dd8390a80a
+Merge: 3e8cf40 becdf36
+Author: Angel Guadarrama <aguadarrama@catuche.com.ve>
+Date:   Wed May 6 09:56:48 2015 -0430
+
+    Merge branch 'master' of https://github.com/ProveeduriaOpenERP/addons_proveeduria into ag_addons_proveeduria
+
+commit 3e8cf4076d33d61fad8326a40678f2cad01d36e2
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Thu Apr 30 15:13:22 2015 -0430
+
+    FIX - Modificacion onchange compromisos
+
+commit becdf36c38da20e080937d8c95821014a784d11f
+Merge: 7c4ef87 6ea884b
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Apr 30 10:44:36 2015 -0430
+
+    Merge pull request #32 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    FIX - Subida de onchange en compromisos
+
+commit 6ea884b4c18ac5ecebbd343a2d4904e8db5aed59
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Thu Apr 30 10:44:28 2015 -0430
+
+    FIX - Subida de onchange en compromisos
+
+commit 7c4ef879d50bcfc3f24712ab530a858a945734a1
+Merge: 7b44165 e248b20
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Mon Apr 27 16:18:46 2015 -0430
+
+    Merge pull request #31 from ProveeduriaOpenERP/victor2_addons_proveeduria
+    
+    Victor2 addons proveeduria
+
+commit e248b200062aaade83de70d0c4d102c8b334b1c7
+Author: administrador <administrador@tecnologia01>
+Date:   Mon Apr 27 10:09:55 2015 -0430
+
+    [ADD] - Actualización de los formularios ordenes de pago, y cheque, ademas se añadio el reporte comprobante de pago
+
+commit f58b0675dba57efe2199b37324e9433af4464bf8
+Author: administrador <administrador@tecnologia01>
+Date:   Wed Apr 22 14:22:05 2015 -0430
+
+    [ADD] - se crearon reportes de creditos adicionales, traspasos y orden de pago
+
+commit 47c9f9936ccccaf5aaea6d5faa436e3dc81ebf9b
+Author: administrador <administrador@tecnologia01>
+Date:   Mon Apr 20 14:58:01 2015 -0430
+
+    [ADD] - se modifico los campos en el formulario compromisos
+
+commit 7b44165ba080e050597591850cf07bcd4e5c35d6
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Apr 16 12:16:31 2015 -0430
+
+    Update README.md
+
+commit 8eda7bf0aa731d9c59f7792f4800a670eb66a2d4
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Apr 16 12:15:19 2015 -0430
+
+    Update README.md
+
+commit d957687d5b193ead6a7e2eb91e34ad31ac815bc8
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Apr 16 12:00:46 2015 -0430
+
+    Update README.md
+
+commit 8a5b39bc86293477547fd447ed6cd4617250e8f3
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Apr 16 11:55:37 2015 -0430
+
+    Update README.md
+
+commit 9791d7932d09097d8cefdd88c1c109540957ea4f
+Merge: 7355055 eb6f849
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Apr 16 09:08:28 2015 -0430
+
+    Merge pull request #30 from ProveeduriaOpenERP/victor2_addons_proveeduria
+    
+    Victor2 addons proveeduria
+
+commit eb6f849ccbc628442d8f1d710374fd20a514383e
+Author: administrador <administrador@tecnologia01>
+Date:   Wed Apr 15 09:25:22 2015 -0430
+
+    [ADD] - se agrego el modulo de tesoreria para realizar pagos con cheques
+
+commit 7f586f5e4a1cae4ece8d566f5d4f65724b1840aa
+Author: administrador <administrador@tecnologia01>
+Date:   Wed Apr 8 10:55:45 2015 -0430
+
+    [ADD] - Se añadio las funcionalidades de los fomularios creditos adicionales y traspasos
+
+commit 73550559a8a4b066e9d4acac451abc88a408e7f9
+Merge: 8b52c7c 7ad00df
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Tue Apr 7 17:44:53 2015 -0430
+
+    Merge pull request #29 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    FIX - Se modifica sequencia del menu configuracion en presupuesto
+
+commit 7ad00df61027651a6d69e4c826c19940db8658cd
+Author: Angel Guadarrama <aguadarrama@catuche.com.ve>
+Date:   Tue Apr 7 17:42:35 2015 -0430
+
+    FIX - Se modifica sequencia del menu configuracion en presupuesto
+
+commit 8b52c7c0c781914ee194c5ac50461ab69cd9a4e4
+Merge: dfa469a 63d0287
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Tue Apr 7 17:38:30 2015 -0430
+
+    Merge pull request #28 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    FIX - Se soluciona permisologia y herencia de la vista formulario de pur.chase requisition. Se deshabilitan botones si no pertenece al grupo de administradores de compras
+
+commit 63d028788629a4018c00cc8d2744596ad02fa624
+Author: Angel Guadarrama <aguadarrama@catuche.com.ve>
+Date:   Tue Apr 7 17:36:04 2015 -0430
+
+    FIX - Se soluciona permisologia y herencia de la vista formulario de purchase requisition. Se deshabilitan botones si no pertenece al grupo de administradores de compras
+
+commit dfa469afd6cedcf2abe543e1f62d954802a893f5
+Merge: 7053e27 d5bd6f4
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Tue Mar 31 14:31:22 2015 -0430
+
+    Merge pull request #26 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    FIX - Se soluciona llamado a la vista de purchase.requisition, pero aun se debbe definir que no modifique la original
+
+commit d5bd6f43cd86e099b899bc5766ba9e3fe40b9890
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Tue Mar 31 14:28:39 2015 -0430
+
+    FIX - Se soluciona llamado a la vista de purchase.requisition, pero aun se debbe definir que no modifique la original
+
+commit 7053e276e691d74d3f0d5f7637cf7102ab34acd6
+Merge: f0ad1b9 e75ffec
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Tue Mar 31 12:58:11 2015 -0430
+
+    Merge pull request #25 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    ADD - Se añade modulo de compras
+
+commit e75ffec621adb4e807330d75f36db35812382916
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Tue Mar 31 12:57:00 2015 -0430
+
+    ADD - Se añade modulo de compras
+
+commit f0ad1b9915e285ab359c8c1c1b075ebfd4215d48
+Merge: d9f0e49 2c66ee1
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Tue Mar 31 11:07:24 2015 -0430
+
+    Merge pull request #24 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    ADD - Se agrega directorio para el modulo de compras ligado a presupuesto
+
+commit 2c66ee1e6f12aa2b7ad3bbdbd1cf28072c1ec6df
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Tue Mar 31 11:05:50 2015 -0430
+
+    ADD - Se agrega directorio para el modulo de compras ligado a presupuesto
+
+commit d9f0e4941b2c9c338ec368abd6228168ebf455d8
+Merge: f08006b 75c9e26
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Tue Mar 31 09:25:19 2015 -0430
+
+    Merge pull request #23 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    ADD - Se agregan modificaciones al modulo de programacion inicial presupuestaria para añadir lo desarrollado por Victor. Ademas se añade el modelo para configuracion y el csv de las cuentas presupuestarias
+
+commit 75c9e26f92596caa8f67ae109ec2d4ad64da0822
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Tue Mar 31 09:24:03 2015 -0430
+
+    ADD - Se agregan modificaciones al modulo de programacion inicial presupuestaria para añadir lo desarrollado por Victor. Ademas se añade el modelo para configuracion y el csv de las cuentas presupuestarias
+
+commit f08006b84a59e41fec4480d62595ed5f8e5bb8b5
+Merge: 319c852 ff0a9bd
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Tue Mar 24 11:25:48 2015 -0430
+
+    Merge pull request #20 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    [ADD] - Se agrega posibilidad de seleccionar los intructivos de la onapre deseados en el menu configuracion. Solo se añade uno de ejemplo
+
+commit ff0a9bdca379e355795fa6152ecfefd82d33d209
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Tue Mar 24 11:21:40 2015 -0430
+
+    [ADD] - Se agrega posibilidad de seleccionar los intructivos de la onapre deseados en el menu configuracion. Solo se añade uno de ejemplo
+
+commit 319c852dfc8fc5c25edb6cab5aa80ec0ffeb67f9
+Merge: d59c85b 97f9c6a
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Mar 19 14:13:53 2015 -0430
+
+    Merge pull request #18 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    [FIX] - Se agrega en onchange company_registry al form
+
+commit 97f9c6a7f55a2e2b1244926043d9fa89dd076e19
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Thu Mar 19 14:12:38 2015 -0430
+
+    [FIX] - Se agrega en onchange company_registry al form
+
+commit d59c85bc71213ed0ba065865d09152516179b6a4
+Merge: 5adc9ac c787221
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Mar 19 13:58:23 2015 -0430
+
+    Merge pull request #17 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    [FIX] - Se agrega en onchange company_registry
+
+commit c78722109c3079259b81c473a2bb044afb7084c8
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Thu Mar 19 13:57:02 2015 -0430
+
+    [FIX] - Se agrega en onchange company_registry
+
+commit 5adc9ac6f542a90e9de0282994eb08b81929d896
+Merge: 591a100 54f6b84
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Mar 19 13:21:51 2015 -0430
+
+    Merge pull request #16 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    [FIX] - Se modifica el modulo de topologia para ajustarlo al instructivo 5 de la onapre para el registro del ente/compañia
+
+commit 54f6b845154dc24ca763f78f2e925bca05f724b6
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Thu Mar 19 13:19:35 2015 -0430
+
+    [FIX] - Se modifica el modulo de topologia para ajustarlo al instructivo 5 de la onapre para el registro del ente/compañia
+
+commit 591a1004a3b155f8706a712d0652fcb237f93930
+Merge: 8ea238d cb29d9a
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Mar 19 10:10:49 2015 -0430
+
+    Merge pull request #15 from ProveeduriaOpenERP/ag_addons_proveeduria
+    
+    [ADD] - Añadido modulo de topologia
+
+commit cb29d9aaeb4aba28c4501795236e7886e4956200
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Thu Mar 19 10:08:24 2015 -0430
+
+    [ADD] - Añadido modulo de topologia
+
+commit 8ea238d5639bc1cb2922910fe2ed7c95ac963af6
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Mar 19 08:36:17 2015 -0430
+
+    Update README.md
+
+commit 66ff7b8ec47e1b39af39a17601b28b7c566f7c05
+Merge: 6cacd78 7647928
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Mar 19 08:35:16 2015 -0430
+
+    Merge pull request #12 from ProveeduriaOpenERP/master
+    
+    Añadido archivo README
+
+commit 76479289d266eda5d2be190174624fb24cc6fbf1
+Author: Angel A. Guadarrama B. <guadarramaangel@gmail.com>
+Date:   Thu Mar 19 08:34:57 2015 -0430
+
+    Añadido archivo README
+
+commit 6cacd78ad842a779b60d214de9b31bdfea148df1
+Author: Angel A. Guadarrama B <aguadarrama@portatil>
+Date:   Thu Mar 19 08:24:08 2015 -0430
+
+    [ADD] - Primer commit, subidos modulos para clasificador presupuestario, la programacion inicial, y la modificacion de los productos para agregar las marcas

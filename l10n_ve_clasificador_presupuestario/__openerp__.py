@@ -25,6 +25,8 @@
     'data': [
 	'config/res_config.xml',
         'views/clasificador_presupuestario.xml',
+	"groups/groups.xml",
+	"segurity/manager/ir.model.access.csv",
     ],
 }
 

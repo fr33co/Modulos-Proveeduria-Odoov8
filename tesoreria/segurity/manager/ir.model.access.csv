@@ -1,0 +1,13 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+
+
+tesoreria.ordenes_pago_full_manager,tesoreria.ordenes_pago_full_manager,model_tesoreria_ordenes_pago,group_manager,1,1,1,1
+tesoreria.ordenes_partida_full_manager,tesoreria.ordenes_partida_full_manager,model_tesoreria_ordenes_partida,group_manager,1,1,1,1
+tesoreria.detalle_contable_full_manager,tesoreria.detalle_contable_full_manager,model_tesoreria_detalle_contable,group_manager,1,1,1,1
+
+
+
+
+
+
+

@@ -32,6 +32,8 @@
         'views/documento_traspaso.xml',
         'views/documento_credito.xml',
         'views/distribucion_especifica.xml',
+        "groups/groups.xml",
+	"segurity/manager/ir.model.access.csv",
         
     ],
 }

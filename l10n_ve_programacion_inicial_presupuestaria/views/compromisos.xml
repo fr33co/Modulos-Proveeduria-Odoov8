@@ -8,7 +8,6 @@
             <field name="view_mode">tree,form</field>
             <!--<field name="help" type="html"></field>-->
         </record>
-        
         <record model="ir.ui.view" id="compromisos_tree_view">
             <field name="name">compromisos.tree</field>
             <field name="model">presupuesto.compromisos</field>
@@ -17,12 +16,10 @@
                     <field name="numero"/>
                     <field name="referencia"/>
                     <field name="tipo_documento"/>
-                    <field name="fecha"/>
-                    
+                    <field name="fecha"/>  
                 </tree>
             </field>
         </record>
-        
         <record model="ir.ui.view" id="compromisos_form_view">
             <field name="name">compromisos.form</field>
             <field name="model">presupuesto.compromisos</field>
@@ -47,7 +44,6 @@
                                 <field name="proyecto_padre"/>
                                 <!--<field name="proyecto_padre" on_change="construir_serial(codigo_padre,proyecto_padre)"/>-->
                                 <field name="tipo_documento"/>
-                                
                                 <field name="referencia"/>
                             </group></td>
                             <td style="padding-left:30px;"><group>
@@ -77,12 +73,19 @@
                                         <field name="total"/>
                                      </tree>
                                 </field>
+                                   <separator string="COMISIONES"/>
+                                  <field name="comisiones">
+                                    <tree string="Comisiones" version="7.0" editable="bottom">
+                                        <field name="cod_partida2"/>
+                                        <field name="nom_partida2"/>
+                                        <field name="total2"/>
+                                     </tree>
+                                </field>
                      </sheet>
                 </form>
             </field>
         </record>
      <menuitem id="modificacion_presupuesto_menu" name="Modificacion Presupuestaria" parent="l10n_ve_clasificador_presupuestario.main_presupuesto_menu" sequence="3"/>
      <menuitem id="compromisos_menu" name="Compromisos"  parent="modificacion_presupuesto_menu" action="compromisos_list_action" />
-        
     </data>
 </openerp>

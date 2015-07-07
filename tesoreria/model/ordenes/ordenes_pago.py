@@ -23,14 +23,14 @@ class Ordenes_Pago(models.Model):
     fiscal         = fields.Selection((('1','0,2'),('2','0,3')), "Retención Timbre Fiscal", required=False)
     islr           = fields.Selection((('1','1%'),('2','2%')), "Retención ISRL", required=False)
     status	   = fields.Selection((('borrador','Borrador'),('compromiso','Comprometido'),('causado','Causado'),('pagado','Pagado'),('cancelado','Cancelado')),'Estatus',required=False, default='causado')
-    
     monto_letra    = fields.Char(string="Monto en letra:",size=100, required=False)
     fecha_cheq     = fields.Date(string="Fecha:",size=100, required=False)
     n_cheque       = fields.Char(string="N_CHQ",size=100, required=False)
-    banco          = fields.Many2one('res.company', string="Banco:",size=100,required=False)
+    banco          = fields.Many2one('res.bank', string="Banco:",size=100,required=False)
     n_cuenta       = fields.Char(string="N° Cuenta:",size=100, required=False)
     accion         = fields.Boolean('Acción Centralizada')
     proyecto       = fields.Boolean('Proyecto')
+    compania       = fields.Many2one('res.company', string="Sede:",size=100,required=False)
 	    
     @api.onchange('n_compromiso') 
     def onchange_n_compromiso(self):
@@ -273,6 +273,25 @@ class Ordenes_Pago(models.Model):
 	else: 
 	    print '90%'
 	    
+	    
+    @api.multi 
+    def pagar(self):
+	self.env[ 'presupuesto.compromisos' ]
+	y = self.n_orden
+#	for form in x.n_compromiso:
+#            y = form.id
+	print y
+	    
+	    
+	    
+    #def pagar(self, cr, uid, ids, context=None):
+	#values = {}
+	#browse_acciones =self.browse(cr,  uid, ids, context=context)
+#        for form in browse_acciones:
+#	    id_compromiso=form.n_compromiso.id
+	    
+	#return self.write(cr, uid, ids, {'status':'pagado'}, context=None)   
+	    
 class Ordenes_Partidas(models.Model):
 
     _name = "tesoreria.ordenes_partida"
@@ -282,7 +301,6 @@ class Ordenes_Partidas(models.Model):
     partida           = fields.Char(string="Partida:",size=100, required=False)
     descripcion       = fields.Char(string="Descripción:",size=100, required=False)
     monto             = fields.Char(string="Monto:",size=100, required=False)
-
     
 class Detalle_Contable(models.Model):
 

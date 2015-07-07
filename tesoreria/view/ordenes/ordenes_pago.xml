@@ -23,8 +23,8 @@
             <field name="arch" type="xml" >
                 <form string="Formulario de Ordenes de Pago" version="7.0">
                     <header>
-                        <button name="causar"  class="oe_highlight" type="object" string="Pagar" confirm="¿Esta usted seguro de cambiar al estado seleccionado?"   attrs="{'invisible':[('status','=','pagado')]}"/>
-                        <button name="cancelar"   type="object" string="Cancelar" confirm="¿Esta usted seguro que desea cancelar este traspaso y revertir los cambios?" attrs="{'invisible':[('status','=','pagado')]}"/>
+                        <button name="pagar"  class="oe_highlight" type="object" string="Pagar" confirm="¿Esta usted seguro de cambiar al estado seleccionado?"   attrs="{'invisible':[('status','=','pagado')]}"/>
+                        <button name="cancelar"   type="object" string="Cancelar" confirm="¿Esta usted seguro que desea cancelar este traspaso y revertir los cambios?" attrs="{'invisible':[('status','!=','pagado')]}"/>
                         <field name="status"  widget="statusbar" />
                     </header>
                     <table>
@@ -103,17 +103,24 @@
                                 <field name="total_p" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary" readonly="1"/>
                             </group>
                          <separator string="" style="text-align:center;"/>
-                        <table><tr><td><th><span>Monto en Letra:</span></th></td></tr></table>
-                        <table><field name="monto_letra"/> </table>
+                        <table style="width:825px;">
+                            <tr>
+                                <td><b>Monto en Letra:</b></td>
+                            </tr>
+                            <tr>
+                                <td><field name="monto_letra"/></td>
+                            </tr>
+                        </table>
                         <table style="width:825px;"> 
                             <td><group>
-                                <field name="fecha_cheq"/>
                                 <field name="n_cheque"/>
-                                <field name="accion"/>
-                             </group></td>
-                            <td style="padding-left:30px;"><group>
                                 <field name="banco"/>
-                                <field name="n_cuenta"/>
+                                <field name="fecha_cheq"/>
+                            </group></td>
+                            <td style="padding-left:30px;"><group>
+                                <!--<field name="compania"/>-->
+                                <!--<field name="n_cuenta"/>-->
+                                <field name="accion"/>
                                 <field name="proyecto"/>
                             </group></td>
                         </table>

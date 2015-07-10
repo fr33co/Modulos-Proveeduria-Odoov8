@@ -16,4 +16,5 @@ Modulos administrativos para la Proveeduria de transporte del estado Aragua en O
 |  #  |         Addon                |       Nombre                        |  Descripción                                                                                                  |
 | --- | --------------------------- | ---------------------------------- | ---------------------------------- |
 |  1  |                             | Presupuesto                        | Presupuesto basado en la ONAPRE    |
+|  2  |                             | Tesoreria                          |                                    |
 |  2  |                             | Compras                            |                                    |
